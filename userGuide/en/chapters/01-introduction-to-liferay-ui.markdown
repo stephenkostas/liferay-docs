@@ -90,7 +90,7 @@ Next on the dockbar is a check box labeled *Edit Controls*. This toggles the edi
 
 ### Go to
 
-The Go to menu is one of the most important navigation tools within Liferay Portal. The control panel is the topmost item in this menu. Initially, your current location is highlighted. This shows you are in the public pages of the *liferay.com* site.
+The Go to menu is your main navigation tool within Liferay Portal. The control panel is the topmost item in this menu. Initially, your current location is highlighted. This shows you are in the public pages of the *liferay.com* site.
 
 ![Figure 1.5: Go To Menu from the Dockbar](../../images/01-go-to-menu-from-dockbar.png)
 
