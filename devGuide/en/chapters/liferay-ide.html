@@ -21,7 +21,7 @@
   </li>
   <li>
     <p>When eclipse opens, go to <em>Help</em> &rarr; <em>Install New Software&hellip;</em>.</p>
-    <p><img src="../../images/ide-install-new-software.png"  alt="Figure 7.x"/></p>
+    <p><img src="../../images/ide-install-new-software.png"  alt="Figure 7.x: Installing new software in Eclipse"/></p>
   </li>
   <li>
     <p>In the <em>Work with</em> field, paste in one of the following update sites:</p>
@@ -36,7 +36,7 @@
   </li>
   <li>
     <p>After pasting in URL press enter.</p>
-    <p><img src="../../images/ide-install-available-software.png"  alt="Figure 7.x"/></p>
+    <p><img src="../../images/ide-install-available-software.png"  alt="Figure 7.x: Entering the information for Liferay IDE"/></p>
   </li>
   <li>
     <p>The Liferay IDE features should be detected, select it before clicking <em>Next</em>.</p>
@@ -49,9 +49,9 @@
   </li>
   <li>
     <p>After restarting Eclipse go to Help &rarr; About and you should see and icon badge for Liferay IDE that shows you have it properly installed.</p>
+    <p><img src="../../images/ide-about-eclipse-liferay.PNG"  alt="Figure 7.x: The Liferay IDE logo in Eclipse"/></p>
   </li>
-</ol>
-<p><img src="../../images/ide-about-eclipse-liferay.PNG"  alt="Figure 7.x"/></p><h3>Alternative installation</h3>
+</ol><h3>Alternative installation</h3>
 <p>The next set of instructions describe how to install Liferay IDE without typing the URL of an update site:</p>
 <ol>
   <li>
@@ -84,8 +84,8 @@
     <p>Open Eclipse with Liferay IDE installed.</p>
   </li>
   <li>
-    <p>Open Preference page for Liferay &rarr; Installed SDKs (Go to Window &rarr; Preferences &rarr; Liferay &rarr; Installed SDKs).</p>
-    <p><img src="../../images/ide-new-project-liferay-project.png"  alt="Figure 7.x"/></p>
+    <p>Open Preference page for Liferay &rarr; Installed SDKs (Go to Window &rarr; Preferences &rarr; Liferay &rarr; Installed Plugin SDKs).</p>
+    <p><img src="../../images/ide-new-project-liferay-project.png"  alt="Figure 7.x: Creating a Liferay plugin project"/></p>
   </li>
   <li>
     <p>Add your SDK using the add button which brings up the Add SDK Dialog.</p>
@@ -95,30 +95,30 @@
   </li>
   <li>
     <p>Select OK and you should see your SDK in the list of Installed SDKs.</p>
-    <p><img src="../../images/ide-select-installed-sdk.png"  alt="Figure 7.x"/></p>
+    <p><img src="../../images/ide-select-installed-sdk.png"  alt="Figure 7.x: Installed SDKs"/></p>
   </li>
 </ol>
 <p>Note: multiple SDKs can be added to the preferences but you will need to select at least one SDK to be the default which is represented by the SDK that has the checkbox selected.</p><h3>Liferay Portal Tomcat Runtime / Server Setup</h3>
 <ol>
   <li>
     <p>In Eclipse open the Runtime environments preference page (Go to Window &rarr; Preferences &rarr; Server &rarr; Runtime environments).</p>
-    <p><img src="../../images/ide-prefs-runtime-env.png"  alt="Figure 7.x"/></p>
+    <p><img src="../../images/ide-prefs-runtime-env.png"  alt="Figure 7.x: Choosing a runtime environment"/></p>
   </li>
   <li>
     <p>Click Add to add a new Liferay runtime and find <em>Liferay v6.1 (Tomcat 7)</em> under the Liferay, Inc. category and click Next.</p>
-    <p><img src="../../images/ide-create-new-local-server.png"  alt="Figure 7.x"/></p>
+    <p><img src="../../images/ide-create-new-local-server.png"  alt="Figure 7.x: Adding a Liferay runtime"/></p>
   </li>
   <li>
     <p>Click Browse and select the location of the liferay-portal-6.1.x directory.</p>
-    <p><img src="../../images/ide-select-liferay-portal-directory.png"  alt="Figure 7.x"/></p>
+    <p><img src="../../images/ide-select-liferay-portal-directory.png"  alt="Figure 7.x: Browsing to your Liferay portal directory"/></p>
   </li>
   <li>
     <p>Once you have selected the Liferay portal directory, if a bundle JRE is present, this bundle will be automatically selected as the JRE to use for launching the server. However, if there is no JRE bundle (Mac and Linux users) then you will need to select the JRE to use for launch.</p>
-    <p><img src="../../images/ide-server-jre.png"  alt="Figure 7.x"/></p>
+    <p><img src="../../images/ide-server-jre.png"  alt="Figure 7.x: Choosing the JRE bundle"/></p>
   </li>
   <li>
     <p>Click finish and you should see the Liferay portal runtime in the list of runtimes in the preference page.</p>
-    <p><img src="../../images/ide-add-server-runtime.png"  alt="Figure 7.x"/></p>
+    <p><img src="../../images/ide-add-server-runtime.png"  alt="Figure 7.x: "/></p>
   </li>
   <li>
     <p>Click ok to save the runtime preferences.</p>
@@ -134,7 +134,6 @@
 </ol><h2>Testing/Launching Liferay Tomcat Server</h2>
 <p>Once your Liferay Portal Server setup is complete you can launch the server from the servers tab of Eclipse. Simply select the server and then click on the green <em>Start the Server button.</em> Once the server is running a red <em>Terminate</em> button will appear which you can use to stop the server.</p>
 <p><img src="../../images/ide-start-server-debug-mode.png"  alt="Figure 7.x"/></p>
-<p><img src="../../images/ide-start-server.png"  alt="Figure 7.x"/></p>
 <p>Alternatively, you can start/stop the server by selecting <em>Run</em> or <em>Terminate</em> from the Run menu of Eclipse.</p>
 <p>Once the server is finish launching you can open the portal home from the context menu of the Liferay Tomcat server in the Servers view:</p>
 <p><img src="../../images/ide-open-portal-home.png"  alt="Figure 7.x"/></p><h2>Creating New Liferay Projects</h2>
@@ -292,7 +291,6 @@
   </li>
   <li>
     <p>Secondly, to make sure the project is now a <em>Liferay IDE</em> project is to check the target runtime project property (right-click project &rarr; properties &rarr; target runtimes) and also check the project facets to make sure both Liferay runtime and Liferay plug-in facets are properly configured.</p>
-    <p><img src="../../images/ide-targeted-runtimes.png"  alt="Figure 7.x"/></p>
     <p><img src="../../images/ide-project-facets.png"  alt="Figure 7.x"/></p>
   </li>
 </ol><h2>Developing on a Remote Server (new TODO)</h2>
