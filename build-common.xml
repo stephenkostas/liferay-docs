@@ -2,15 +2,29 @@
 
 <!-- 
 
-This ant script was created for converting the separate markdown chapter files of our documents into complete markdown, html, odt, and epub files. 
+This ant script was created for converting the separate markdown chapter files 
+of our documents into complete markdown, html, odt, and epub files. 
 
-Remember to use the script in the root directory of the document to be converted, NOT THIS ONE.
+Remember to use the script in the root directory of the document to be 
+converted, NOT THIS ONE.
 
-For example, use the "ant markdown-to-all" command from the documentation/trunk/userGuide directory to convert the userGuide into complete English markdown, html, odt, and epub documents.
+For example, use the "ant markdown-to-all" command from the documentation/trunk/userGuide 
+directory to convert the userGuide into complete English markdown, html, odt, and epub documents.
 
  -->
 
 <project name="Markdown Document Conversion" default="echo-props" basedir=".">
+	<property name="project.dir" value=".." />
+
+	<path id="lib.classpath">
+		<fileset dir="${basedir}/lib" includes="*.jar" />
+		<fileset dir="${basedir}/code/liferay-doc-utils/lib" includes="*.jar" />
+	</path>
+
+	<path id="project.classpath">
+		<pathelement path="${classpath}" />
+		<path refid="lib.classpath" />
+	</path>
 
     <property environment="env" />
 
@@ -28,6 +42,54 @@ For example, use the "ant markdown-to-all" command from the documentation/trunk/
 
     <property name="pandoc.app" location="/home/${user.name}/.cabal/bin/pandoc"/>
 
+	<!-- taskdefs -->
+
+	<taskdef name="checkimgs" classname="com.liferay.documentation.util.CheckImagesTask">
+		<classpath>
+			<fileset dir="${project.dir}/lib" includes="*.jar" />
+			<!-- Use below instead of above fileset when testing changes to classes
+			<pathelement path="${project.dir}/code/liferay-doc-utils/classes"/>
+			-->
+
+			<fileset dir="${project.dir}/code/liferay-doc-utils/lib" includes="*.jar" />
+		</classpath>
+	</taskdef>
+
+	<taskdef name="checkdocprops" classname="com.liferay.documentation.util.CheckDocPropsTask">
+		<classpath>
+			<fileset dir="${project.dir}/lib" includes="*.jar" />
+			<!-- Use below instead of above fileset when testing changes to classes
+			<pathelement path="${project.dir}/code/liferay-doc-utils/classes"/>
+			-->
+
+			<fileset dir="${project.dir}/code/liferay-doc-utils/lib" includes="*.jar" />
+		</classpath>
+	</taskdef>
+
+	<taskdef name="numberheaders" classname="com.liferay.documentation.util.NumberHeadersTask">
+		<classpath>
+			<fileset dir="${project.dir}/lib" includes="*.jar" />
+			<!-- Use below instead of above fileset when testing changes to classes
+			<pathelement path="${project.dir}/code/liferay-doc-utils/classes"/>
+			-->
+
+			<fileset dir="${project.dir}/code/liferay-doc-utils/lib" includes="*.jar" />
+		</classpath>
+	</taskdef>
+
+	<taskdef name="numberimages" classname="com.liferay.documentation.util.NumberImagesTask">
+		<classpath>
+			<fileset dir="${project.dir}/lib" includes="*.jar" />
+			<!-- Use below instead of above fileset when testing changes to classes
+			<pathelement path="${project.dir}/code/liferay-doc-utils/classes"/>
+			-->
+
+			<fileset dir="${project.dir}/code/liferay-doc-utils/lib" includes="*.jar" />
+		</classpath>
+	</taskdef>
+
+	<!-- targets -->
+
     <target name="display-pandoc-version">
         <exec executable="${pandoc.app}">
             <arg value="-v" />
@@ -37,6 +99,16 @@ For example, use the "ant markdown-to-all" command from the documentation/trunk/
     <target name="echo-props">
         <echo message="pandoc.app -> ${pandoc.app}"/>
     </target>
+
+	<target name="check-images" description="verifies all images referenced in markdown files for a document or chapter">
+		<checkimgs docdir="${doc.dir}" lang="${lang}" chapter="${chapter}">
+		</checkimgs>
+	</target>
+
+	<target name="check-doc-props" description="checks that all document dirs have a valid doc.properties file">
+		<checkdocprops lang="${lang}" basedir="${project.dir}">
+		</checkdocprops>
+	</target>
 
     <target name="clean-all" description="deletes residual directories">
         <echo message="... deleting build directory"/>
@@ -63,7 +135,7 @@ For example, use the "ant markdown-to-all" command from the documentation/trunk/
         </copy>
     </target>
 
-    <target name="prepare-dist" description="creates dist directory copying images and overriding with language specific images">
+    <target name="prepare-dist" depends="check-images, number-headers, number-images-dir" description="numbers the headers and images in the files, creates dist directory, copies images and overriding with language specific images">
         <echo message="... creating ${dist.dir}/${lang} directory"/>
         <mkdir dir="${dist.dir}/${lang}"/>
         <copy todir="${dist.dir}/${lang}/images">
@@ -124,7 +196,7 @@ For example, use the "ant markdown-to-all" command from the documentation/trunk/
         </exec>
     </target>
 
-    <target name="markdown-to-html" depends="add-markdown-metadata" description="converts markdown file to an html file">
+    <target name="markdown-to-html" depends="check-images, add-markdown-metadata" description="converts markdown file to an html file">
         <echo message="... converting ${doc.dir} (${lang}) to html"/>
         <!-- pandoc -f markdown -t html -o test-guide.html  test-guide.markdown -->
         <exec executable="${pandoc.app}">
@@ -142,7 +214,7 @@ For example, use the "ant markdown-to-all" command from the documentation/trunk/
         </exec>      
     </target>
 
-    <target name="markdown-to-html-win" depends="concat-markdown-files-win" description="converts markdown file to an html file on windows">
+    <target name="markdown-to-html-win" depends="check-images, concat-markdown-files-win" description="converts markdown file to an html file on windows">
         <echo message="... converting ${doc.dir} (${lang}) to html"/>
         <!-- pandoc -f markdown -t html +RTS K64m -RTS -o 01-chapter-02.html  01-chapter-02.markdown -->
         <exec executable="cmd">
@@ -152,9 +224,9 @@ For example, use the "ant markdown-to-all" command from the documentation/trunk/
             <arg value="markdown"/>
             <arg value="-t"/>
             <arg value="html"/>
-            <arg value="+RTS"/>
+            <!--<arg value="+RTS"/>
             <arg value="-K64m"/>
-            <arg value="-RTS"/>
+            <arg value="-RTS"/>-->
             <arg value="-smart"/>
             <arg value="-o"/>
             <arg value="${build.dir}/${lang}/${lang}-${doc.dir}.html"/>
@@ -227,9 +299,9 @@ For example, use the "ant markdown-to-all" command from the documentation/trunk/
             <arg value="markdown"/>
             <arg value="-t"/>
             <arg value="epub"/>
-            <arg value="+RTS"/>
+            <!--<arg value="+RTS"/>
             <arg value="-K64m"/>
-            <arg value="-RTS"/>
+            <arg value="-RTS"/>-->
             <arg value="-o"/>
             <arg value="${build.dir}/${lang}/${lang}-${doc.dir}.epub"/>
             <arg value="${build.dir}/${lang}/${lang}-${doc.dir}.markdown"/>
@@ -239,14 +311,24 @@ For example, use the "ant markdown-to-all" command from the documentation/trunk/
     <target name="markdown-to-all" depends="markdown-to-html,markdown-to-odt,markdown-to-epub" description="converts markdown file to html, odt, and epub files" />
 
     <target name="markdown-to-all-win" depends="markdown-to-html-win,markdown-to-odt-win,markdown-to-epub-win" description="converts markdown file to html, odt, and epub files on windows" />
-    
+
+	<target name="number-headers" depends="check-doc-props" description="numbers the headers of markdown files found in ${lang}/chapters/">
+		<numberheaders lang="${lang}" docDir="${doc.dir}">
+		</numberheaders>
+	</target>
+
+	<target name="number-images-dir" description="numbers the images of markdown files found in ${lang}/chapters/">
+		<numberimages lang="${lang}" docDir="${doc.dir}">
+		</numberimages>
+	</target>
+
     <target name="copy-single-chapter" depends="prepare" description="copies chapter to be converted">
         <echo message="... copying ${chapter}"/>
         <copy file="./en/chapters/${chapter}.markdown" todir="./${build.dir}/${lang}"/>
         <move file="./${build.dir}/${lang}/${chapter}.markdown" tofile="./${build.dir}/${lang}/${lang}-${chapter}.markdown" />
     </target>
     
-    <target name="chapter-to-html" depends="copy-single-chapter" description="converts single markdown chapter to an html file">
+    <target name="chapter-to-html" depends="check-images, copy-single-chapter" description="converts single markdown chapter to an html file">
         <echo message="... converting ${chapter} (${lang}) to html"/>
         <!-- pandoc -f markdown -t html -o 01-introduction-to-liferay-ui.html 01-introduction-to-liferay-ui.markdown -->
         <exec executable="${pandoc.app}">
@@ -264,7 +346,7 @@ For example, use the "ant markdown-to-all" command from the documentation/trunk/
         </exec>      
     </target>
     
-    <target name="chapter-to-html-win" depends="copy-single-chapter" description="converts single markdown chapter to an html file on windows">
+    <target name="chapter-to-html-win" depends="check-images, copy-single-chapter" description="converts single markdown chapter to an html file on windows">
         <echo message="... converting ${chapter} (${lang}) to html"/>
         <!-- pandoc -f markdown -t html -o 01-introduction-to-liferay-ui.html 01-introduction-to-liferay-ui.markdown -->
         <exec executable="cmd">
@@ -274,9 +356,9 @@ For example, use the "ant markdown-to-all" command from the documentation/trunk/
             <arg value="markdown"/>
             <arg value="-t"/>
             <arg value="html"/>
-            <arg value="+RTS"/>
+            <!--<arg value="+RTS"/>
             <arg value="-K64m"/>
-            <arg value="-RTS"/>
+            <arg value="-RTS"/>-->
             <arg value="-smart"/>
             <arg value="-o"/>
             <arg value="${build.dir}/${lang}/${lang}-${chapter}.html"/>
@@ -312,9 +394,9 @@ For example, use the "ant markdown-to-all" command from the documentation/trunk/
             <arg value="markdown"/>
             <arg value="-t"/>
             <arg value="odt"/>
-            <arg value="+RTS"/>
+            <!--<arg value="+RTS"/>
             <arg value="-K64m"/>
-            <arg value="-RTS"/>
+            <arg value="-RTS"/>-->
             <arg value="-smart"/>
             <arg value="-o"/>
             <arg value="${build.dir}/${lang}/${lang}-${chapter}.odt"/>
@@ -350,9 +432,9 @@ For example, use the "ant markdown-to-all" command from the documentation/trunk/
             <arg value="markdown"/>
             <arg value="-t"/>
             <arg value="epub"/>
-            <arg value="+RTS"/>
+            <!--<arg value="+RTS"/>
             <arg value="-K64m"/>
-            <arg value="-RTS"/>
+            <arg value="-RTS"/>-->
             <arg value="-smart"/>
             <arg value="-o"/>
             <arg value="${build.dir}/${lang}/${lang}-${chapter}.epub"/>
