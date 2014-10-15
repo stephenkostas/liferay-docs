@@ -1,28 +1,26 @@
 <?xml version="1.0"?> 
 
 <!-- 
-
-This ant script was created for converting the separate markdown chapter files 
-of our documents into complete markdown, html, odt, and epub files. 
+Use the targets in this script to convert the separate markdown chapter files of
+our documents into complete markdown, html, odt, and epub files. 
 
 Remember to use the script in the root directory of the document to be 
 converted, NOT THIS ONE.
 
-For example, use the "ant markdown-to-all" command from the documentation/trunk/userGuide 
-directory to convert the userGuide into complete English markdown, html, odt, and epub documents.
-
+For example, use the "ant markdown-to-all" command from the
+documentation/trunk/userGuide directory to convert the userGuide into complete
+English markdown, html, odt, and epub documents.
  -->
 
 <project name="Markdown Document Conversion" default="echo-props" basedir=".">
 	<property name="project.dir" value=".." />
 
 	<path id="lib.classpath">
-		<fileset dir="${basedir}/lib" includes="*.jar" />
-		<fileset dir="${basedir}/code/liferay-doc-utils/lib" includes="*.jar" />
+		<fileset dir="${project.dir}/lib" includes="*.jar" />
+		<fileset dir="${project.dir}/code/liferay-doc-utils/lib" includes="*.jar" />
 	</path>
 
 	<path id="project.classpath">
-		<pathelement path="${classpath}" />
 		<path refid="lib.classpath" />
 	</path>
 
@@ -66,7 +64,7 @@ directory to convert the userGuide into complete English markdown, html, odt, an
 		</classpath>
 	</taskdef>
 
-	<taskdef name="numberheaders" classname="com.liferay.documentation.util.NumberHeadersTask">
+	<taskdef name="cleanimgs" classname="com.liferay.documentation.util.CleanImagesTask">
 		<classpath>
 			<fileset dir="${project.dir}/lib" includes="*.jar" />
 			<!-- Use below instead of above fileset when testing changes to classes
@@ -132,6 +130,11 @@ directory to convert the userGuide into complete English markdown, html, odt, an
         <delete dir="${dist.dir}"/>
     </target>
 
+    <target name="clean-images" description="removes unused images for a document">
+	<cleanimgs docdir="${doc.dir}" lang="${lang}">
+	</cleanimgs>
+    </target>
+
     <target name="clean-lang" description="deletes build/${lang} directory">
         <echo message="... deleting language specific residual directories"/>
         <delete dir="${build.dir}/${lang}"/>
@@ -158,32 +161,22 @@ directory to convert the userGuide into complete English markdown, html, odt, an
     </target>
 
     <target name="dist" depends="clean-lang, prepare-dist, concat-markdown-files" description="prepares document zip file for asset import">
+        <property file="./doc.properties" />
         <copy todir="${dist.dir}/${lang}">
 		    <fileset dir="${build.dir}/${lang}">
-                <include name="${lang}-${doc.dir}.markdown"/>
+                <include name="${lang}-${product.abbrev}-${product.version}-${doc.dir}.markdown"/>
             </fileset>
         </copy>
-        <zip destfile="${dist.dir}/${lang}/${lang}-${doc.dir}.zip">
+        <zip destfile="${dist.dir}/${lang}/${lang}-${product.abbrev}-${product.version}-${doc.dir}.zip">
             <fileset dir="${dist.dir}/${lang}" includes="images/*.*"/>
-            <fileset dir="${dist.dir}/${lang}" includes="${lang}-${doc.dir}.markdown"/>
+            <fileset dir="${dist.dir}/${lang}" includes="${lang}-${product.abbrev}-${product.version}-${doc.dir}.markdown"/>
         </zip>
     </target>
 
-    <target name="dist-win" depends="clean-lang, prepare-dist, concat-markdown-files" description="prepares document zip file for asset import on windows">
-        <copy todir="${dist.dir}/${lang}">
-            <fileset dir="${build.dir}/${lang}">
-                <include name="${lang}-${doc.dir}.markdown"/>
-            </fileset>
-        </copy>
-        <zip destfile="${dist.dir}/${lang}/${lang}-${doc.dir}.zip">
-            <fileset dir="${dist.dir}/${lang}" includes="images/*.*"/>
-            <fileset dir="${dist.dir}/${lang}" includes="${lang}-${doc.dir}.markdown"/>
-        </zip>
-    </target>
-
-    <target name="concat-markdown-files" depends="prepare" description="concatinates multiple markdown files into a single one">
-        <echo message="... concatinating markdown files for ${doc.dir} (${lang})"/>
-        <concat destfile="./${build.dir}/${lang}/${lang}-${doc.dir}.markdown" fixlastline = "yes">
+    <target name="concat-markdown-files" depends="prepare" description="concatenates multiple markdown files into a single one">
+        <property file="./doc.properties" />
+        <echo message="... concatenating markdown files for ${product.name} ${product.version}-${doc.name} (${lang})"/>
+        <concat destfile="./${build.dir}/${lang}/${lang}-${product.abbrev}-${product.version}-${doc.dir}.markdown" fixlastline = "yes">
             <fileset dir="./${lang}" casesensitive="yes">
                 <include name="**/*.markdown"/>
             </fileset>
@@ -191,7 +184,7 @@ directory to convert the userGuide into complete English markdown, html, odt, an
     </target>
 
     <target name="markdown-to-html" depends="check-images, add-markdown-metadata" description="converts markdown file to an html file">
-        <echo message="... converting ${doc.dir} (${lang}) to html"/>
+        <echo message="... converting ${product.name} ${product.version}-${doc.name} (${lang}) to html"/>
         <!-- pandoc -f markdown -t html -o test-guide.html  test-guide.markdown -->
         <exec executable="${pandoc.app}">
             <arg value="-f" />
@@ -203,15 +196,15 @@ directory to convert the userGuide into complete English markdown, html, odt, an
             <arg value="-RTS"/>
             <arg value="-smart"/>-->
             <arg value="-o"/>
-            <arg value="${build.dir}/${lang}/${lang}-${doc.dir}.html"/>
-            <arg value="${build.dir}/${lang}/${lang}-${doc.dir}.markdown"/>
+            <arg value="${build.dir}/${lang}/${lang}-${product.abbrev}-${product.version}-${doc.dir}.html"/>
+            <arg value="${build.dir}/${lang}/${lang}-${product.abbrev}-${product.version}-${doc.dir}.markdown"/>
         </exec>      
     </target>
 
     <target name="markdown-to-html-win" depends="check-images, concat-markdown-files" description="converts markdown file to an html file on windows">
-        <echo message="... converting ${doc.dir} (${lang}) to html"/>
+        <echo message="... converting ${product.name} ${product.version}-${doc.name} (${lang}) to html"/>
         <!-- pandoc -f markdown -t html +RTS K64m -RTS -o 01-chapter-02.html  01-chapter-02.markdown -->
-        <exec executable="cmd">
+	<exec executable="cmd" dir="${build.dir}/${lang}">
             <arg value="/C" />
             <arg value="pandoc"/>
             <arg value="-f" />
@@ -223,13 +216,13 @@ directory to convert the userGuide into complete English markdown, html, odt, an
             <arg value="-RTS"/>-->
             <arg value="-smart"/>
             <arg value="-o"/>
-            <arg value="${build.dir}/${lang}/${lang}-${doc.dir}.html"/>
-            <arg value="${build.dir}/${lang}/${lang}-${doc.dir}.markdown"/>
+            <arg value="${lang}-${product.abbrev}-${product.version}-${doc.dir}.html"/>
+            <arg value="${lang}-${product.abbrev}-${product.version}-${doc.dir}.markdown"/>
         </exec>      
     </target>
 
-    <target name="markdown-to-odt" depends="add-markdown-metadata" description="converts markdown file to an odt file">
-        <echo message="... converting ${doc.dir} (${lang}) to odt"/>
+    <target name="markdown-to-odt" depends="check-images, add-markdown-metadata" description="converts markdown file to an odt file">
+        <echo message="... converting ${product.name} ${product.version}-${doc.name} (${lang}) to odt"/>
         <!-- pandoc -f markdown -t odt -o test-guide.odt  test-guide.markdown -->
         <exec executable="${pandoc.app}" dir="${build.dir}/${lang}">
             <arg value="-f" />
@@ -241,15 +234,15 @@ directory to convert the userGuide into complete English markdown, html, odt, an
             <arg value="-RTS"/>
             <arg value="-smart"/>
             <arg value="-o"/>
-            <arg value="./${lang}-${doc.dir}.odt"/>
-            <arg value="./${lang}-${doc.dir}.markdown"/>
+            <arg value="./${lang}-${product.abbrev}-${product.version}-${doc.dir}.odt"/>
+            <arg value="./${lang}-${product.abbrev}-${product.version}-${doc.dir}.markdown"/>
         </exec>      
     </target>
 
-    <target name="markdown-to-odt-win" depends="concat-markdown-files" description="converts markdown file to an ODT file on Windows">
-        <echo message="... converting ${doc.dir} (${lang}) to odt on windows"/>
+    <target name="markdown-to-odt-win" depends="check-images, concat-markdown-files" description="converts markdown file to an ODT file on Windows">
+        <echo message="... converting ${product.name} ${product.version}-${doc.name} (${lang}) to odt on windows"/>
         <!-- pandoc -f markdown -t odt +RTS K64m -RTS -o 01-chapter-02.odt 01-chapter-02.markdown -->
-        <exec executable="cmd">
+	<exec executable="cmd" dir="${build.dir}/${lang}">
             <arg value="/C" />
             <arg value="pandoc"/>
             <arg value="-f" />
@@ -261,15 +254,15 @@ directory to convert the userGuide into complete English markdown, html, odt, an
             <arg value="-RTS"/>
             <arg value="-smart"/>
             <arg value="-o"/>
-            <arg value="${build.dir}/${lang}/${lang}-${doc.dir}.odt"/>
-            <arg value="${build.dir}/${lang}/${lang}-${doc.dir}.markdown"/>
+            <arg value="${lang}-${product.abbrev}-${product.version}-${doc.dir}.odt"/>
+            <arg value="${lang}-${product.abbrev}-${product.version}-${doc.dir}.markdown"/>
         </exec>      
     </target>
 
-    <target name="markdown-to-epub" depends="add-markdown-metadata" description="converts markdown file to an epub file">
-        <echo message="... converting ${doc.dir} (${lang}) to epub"/>
+    <target name="markdown-to-epub" depends="check-images, add-markdown-metadata" description="converts markdown file to an epub file">
+        <echo message="... converting ${product.name} ${product.version}-${doc.name} (${lang}) to epub"/>
         <!-- pandoc -f markdown -t epub -o test-guide.epub  test-guide.markdown -->
-        <exec executable="${pandoc.app}">
+        <exec executable="${pandoc.app}" dir="${build.dir}/${lang}">
             <arg value="-f" />
             <arg value="markdown"/>
             <arg value="-t"/>
@@ -279,14 +272,14 @@ directory to convert the userGuide into complete English markdown, html, odt, an
             <arg value="-RTS"/>
             <arg value="-smart"/>-->
             <arg value="-o"/>
-            <arg value="${build.dir}/${lang}/${lang}-${doc.dir}.epub"/>
-            <arg value="${build.dir}/${lang}/${lang}-${doc.dir}.markdown"/>
+            <arg value="${lang}-${product.abbrev}-${product.version}-${doc.dir}.epub"/>
+            <arg value="${lang}-${product.abbrev}-${product.version}-${doc.dir}.markdown"/>
         </exec>      
     </target>
 
-    <target name="markdown-to-epub-win" depends="concat-markdown-files" description="converts markdown file to an epub file on windows">
-        <echo message="... converting ${doc.dir} (${lang}) to epub"/>
-        <exec executable="cmd">
+    <target name="markdown-to-epub-win" depends="check-images, concat-markdown-files" description="converts markdown file to an epub file on windows">
+        <echo message="... converting ${product.name} ${product.version}-${doc.name} (${lang}) to epub"/>
+	<exec executable="cmd" dir="${build.dir}/${lang}">
             <arg value="/C" />
             <arg value="pandoc"/>
             <arg value="-f" />
@@ -297,8 +290,8 @@ directory to convert the userGuide into complete English markdown, html, odt, an
             <arg value="-K64m"/>
             <arg value="-RTS"/>-->
             <arg value="-o"/>
-            <arg value="${build.dir}/${lang}/${lang}-${doc.dir}.epub"/>
-            <arg value="${build.dir}/${lang}/${lang}-${doc.dir}.markdown"/>
+            <arg value="${lang}-${product.abbrev}-${product.version}-${doc.dir}.epub"/>
+            <arg value="${lang}-${product.abbrev}-${product.version}-${doc.dir}.markdown"/>
         </exec>      
     </target>
 
@@ -307,8 +300,15 @@ directory to convert the userGuide into complete English markdown, html, odt, an
     <target name="markdown-to-all-win" depends="markdown-to-html-win,markdown-to-odt-win,markdown-to-epub-win" description="converts markdown file to html, odt, and epub files on windows" />
 
 	<target name="number-headers" depends="check-doc-props" description="numbers the headers of markdown files found in ${lang}/chapters/">
-		<numberheaders lang="${lang}" docDir="${doc.dir}">
-		</numberheaders>
+		<java
+			classname="com.liferay.documentation.util.NumberHeadersTask"
+			classpathref="project.classpath"
+			failonerror="true"
+			fork="true"
+		>
+			<arg value="${doc.dir}"/>
+			<arg value="${lang}"/>
+		</java>
 	</target>
 
 	<target name="number-images-dir" description="numbers the images of markdown files found in ${lang}/chapters/">
@@ -330,7 +330,7 @@ directory to convert the userGuide into complete English markdown, html, odt, an
     <target name="chapter-to-html" depends="check-images, copy-single-chapter" description="converts single markdown chapter to an html file">
         <echo message="... converting ${chapter} (${lang}) to html"/>
         <!-- pandoc -f markdown -t html -o 01-introduction-to-liferay-ui.html 01-introduction-to-liferay-ui.markdown -->
-        <exec executable="${pandoc.app}">
+	<exec executable="${pandoc.app}" dir="${build.dir}/${lang}">
             <arg value="-f" />
             <arg value="markdown"/>
             <arg value="-t"/>
@@ -340,15 +340,15 @@ directory to convert the userGuide into complete English markdown, html, odt, an
             <arg value="-RTS"/>
             <arg value="-smart"/>-->
             <arg value="-o"/>
-            <arg value="${build.dir}/${lang}/${lang}-${chapter}.html"/>
-            <arg value="${build.dir}/${lang}/${lang}-${chapter}.markdown"/>
+            <arg value="${lang}-${chapter}.html"/>
+            <arg value="${lang}-${chapter}.markdown"/>
         </exec>      
     </target>
     
     <target name="chapter-to-html-win" depends="check-images, copy-single-chapter" description="converts single markdown chapter to an html file on windows">
         <echo message="... converting ${chapter} (${lang}) to html"/>
         <!-- pandoc -f markdown -t html -o 01-introduction-to-liferay-ui.html 01-introduction-to-liferay-ui.markdown -->
-        <exec executable="cmd">
+	<exec executable="cmd" dir="${build.dir}/${lang}">
             <arg value="/C" />
             <arg value="pandoc"/>
             <arg value="-f" />
@@ -360,8 +360,8 @@ directory to convert the userGuide into complete English markdown, html, odt, an
             <arg value="-RTS"/>-->
             <arg value="-smart"/>
             <arg value="-o"/>
-            <arg value="${build.dir}/${lang}/${lang}-${chapter}.html"/>
-            <arg value="${build.dir}/${lang}/${lang}-${chapter}.markdown"/>
+            <arg value="${lang}-${chapter}.html"/>
+            <arg value="${lang}-${chapter}.markdown"/>
         </exec>      
     </target>
     
@@ -467,10 +467,10 @@ directory to convert the userGuide into complete English markdown, html, odt, an
 
  <!-- deprecated on Jan. 6, 2012 -->
     <target name="add-markdown-metadata" depends="concat-markdown-files" description="adds metadata to the top of a concatenated markdown file">
-        <echo message="... adding metadata to ${doc.dir} (${lang})"/>
+        <echo message="... adding metadata to ${product.name} ${product.version}-${doc.name} (${lang})"/>
         <java jar="../lib/liferay-doc-utils.jar" fork="true">
 	    <arg value="AddMarkdownMetadata"/>
-            <arg value="./${build.dir}/${lang}/${lang}-${doc.dir}.markdown"/>
+            <arg value="./${build.dir}/${lang}/${lang}-${product.abbrev}-${product.version}-${doc.dir}.markdown"/>
             <arg value="${title}"/>
             <arg value="${author}"/>
             <arg value="${date}"/>
@@ -484,5 +484,24 @@ directory to convert the userGuide into complete English markdown, html, odt, an
             <arg value="./${lang}/chapters/${chapter}.markdown"/>
         </java>
     </target>
+
+	<target name="add-index" description="adds an index to the LaTeX source of a document before converting it to PDF">
+		<echo message="... adding index"/>
+		<java jar="../lib/liferay-doc-utils.jar" fork="true">
+			<arg value="AddIndex"/>
+			<arg value="en/print/en-userGuide.tex"/>
+			<arg value="userguide.lexicon"/>
+			<arg value="en/print/indexed-en-userGuide.tex"/>
+		</java>
+		<exec executable="xelatex">
+			<arg value="en/print/indexed-en-userGuide.tex"/>
+		</exec>
+		<exec executable="makeindex">
+			<arg value="en/print/indexed-en-userGuide"/>
+		</exec>
+		<exec executable="xelatex">
+			<arg value="en/print/indexed-en-userGuide.tex"/>
+		</exec>
+	</target>
 
 </project>

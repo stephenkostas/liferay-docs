@@ -91,8 +91,8 @@ it sing a song. *
 
 *Singing a Song*
 
-*You'd think that making Liferay sing would be hard, but it is in fact easy. All
-you have to do....*
+You'd think that making Liferay sing would be hard, but it is in fact easy. All
+you have to do....
 
 ## Text Conventions 
 
@@ -118,7 +118,7 @@ this:
 Markdown, this is done by placing your code inside a left accent character,
 which on US keyboards is to the left of the number 1 key, like this: 
 
-	\`my code is here\`
+	`my code is here`
 
 We are not writing code; we are writing instructions for human beings to be able
 to write code or use our software. Obviously, if you are documenting something
@@ -140,7 +140,7 @@ providing. Of course, make sure your code works.
 
 When you need to refer to a file name, put the file name in a code font as well. 
 
-**Example:** You will want to use the **Software Catalog** portlet if you will
+**Example:** You will want to use the Software Catalog portlet if you will
 have multiple users submitting portlets into the repository, and if you don't
 want to worry about creating the `liferay-plugin-repository.xml` file yourself. 
 
@@ -154,7 +154,7 @@ not to include the quotation marks when copying and pasting these values.
 Programmers are used to writing code, not prose. Because of this, programmers
 like to put periods, commas, and other punctuation outside the quotation marks,
 which is incorrect punctuation--but good programming syntax. If you do need to
-use quotes for something, please remember the punctuation goes `inside` the
+use quotes for something, please remember the punctuation goes *inside* the
 quotes. 
 
 ### Italics 
@@ -183,6 +183,19 @@ after they are introduced.
 When you're telling the user to click on something in the UI, italicize it. 
 
 **Example:** Click the *Save* button to continue. 
+
+If you're referring to a UI element, but there's no direction for the user,
+capitalize it, but *don't* italicize it. 
+
+**Example:** After clicking the button, the Configuration page appears. 
+
+To provide as much clarity on UI elements as possible, let's combine the above
+two rules: 
+
+**Example:** On the Configuration page, click the *Add* button. 
+
+As you can see, the UI element that contains direction for the user is
+italicized, but the UI element that has no direction is not. 
 
 ### Bold 
 
@@ -217,7 +230,7 @@ use a period. If it's not a sentence, don't.
 
 Use a period for bullets that are sentences, like: 
 
-*  Roll your mouse over the Dock and click //Sign In//. 
+*  Roll your mouse over the Dock and click *Sign In*. 
 *  Enter your email address and password.
 
 Never end a section with bullet points, like I was about to do before I typed
@@ -233,7 +246,7 @@ during the editing process, when this becomes necessary.
 There should never be more than one trailing space after a sentence, paragraph,
 or bullet point. 
 
-### Spaces vs. Tabs
+### Spaces vs. Tabs 
 
 Unlike the Liferay source code, Liferay documentation should have no tabs in it.
 This is so that you can more easily differentiate various constructs within
