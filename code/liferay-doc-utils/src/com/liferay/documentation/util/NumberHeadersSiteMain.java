@@ -32,14 +32,60 @@ public class NumberHeadersSiteMain extends Task {
 		token = "@" + token + "@";
 		boolean dxpBuild = false;
 		boolean foundDuplicateIds = false;
+<<<<<<< HEAD
 		
 		ceFileList = getFileList(docDir, "");
+=======
+
+		File articlesDir = new File("../" + docDir + "/articles");
+		File docSetDir = new File("../" + docDir);
+		System.out.println(
+			"Numbering headers for files in " + articlesDir.getPath() + " ...");
+
+		if (!articlesDir.exists() || !articlesDir.isDirectory()) {
+			throw new Exception(
+				"FAILURE - bad articles directory " + articlesDir);
+		}
+
+		List<File> docSetDirFolders = new ArrayList<File>();
+		Queue<File> q = new LinkedList<File>();
+		
+		File articlesDirContents[] = articlesDir.listFiles();
+		for (File f : articlesDirContents) {
+			if (f.isDirectory()) {
+				q.add(f);
+			}
+		}
+	
+		while (!q.isEmpty()) {
+			File f = q.remove();
+			docSetDirFolders.add(f);
+			File[] files = f.listFiles();
+		
+			for (File file : files) {
+				if (file.isDirectory()) {
+					q.add(file);
+				}
+			}
+		}
+		
+		docSetDirFolders.add(articlesDir);
+		docSetDirFolders.add(docSetDir);
+		
+		// Create an Array from the article directories ArrayList
+		File docSetDirFoldersArray[] = docSetDirFolders.toArray(new File[docSetDirFolders.size()]);
+>>>>>>> 05a5ad11f39c2f768f2195faed9ebb6d07af1b0e
 		
 		List<String> dirTypes = new ArrayList<String>();
 		dirTypes.add("");
 
+<<<<<<< HEAD
 		if (productType.equals("dxp")) {
 			File articlesDxpDir = new File("../" + docDir + "/articles-dxp");
+=======
+		// Add the markdown articles in each articles directory to the fileList ArrayList
+		for(int i=0; i < docSetDirFoldersArray.length; i++) {
+>>>>>>> 05a5ad11f39c2f768f2195faed9ebb6d07af1b0e
 			
 			if (articlesDxpDir.exists()) {
 				dirTypes.add("-dxp");
@@ -62,6 +108,7 @@ public class NumberHeadersSiteMain extends Task {
 			duplicateFiles = getDuplicateFiles(docDir, dirTypes);
 		}
 
+<<<<<<< HEAD
 		for (String dirType : dirTypes) {
 			
 			System.out.println(
@@ -76,6 +123,14 @@ public class NumberHeadersSiteMain extends Task {
 			else {
 				fileList = ceFileList;
 			}
+=======
+		// Number the headers for each file in fileList
+		for (int i = 0; i < fileList.size(); i++) {
+			String filename = fileList.get(i);
+			File inFile = new File(filename);
+			File outFile = new File(filename);
+			String outFileTmp = outFile + ".tmp";
+>>>>>>> 05a5ad11f39c2f768f2195faed9ebb6d07af1b0e
 
 			for (int i = 0; i < fileList.size(); i++) {
 				String filename = fileList.get(i);

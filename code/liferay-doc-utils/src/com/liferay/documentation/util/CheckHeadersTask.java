@@ -8,7 +8,10 @@ import java.io.LineNumberReader;
 import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.List;
+<<<<<<< HEAD
 import java.util.Map;
+=======
+>>>>>>> 05a5ad11f39c2f768f2195faed9ebb6d07af1b0e
 import java.util.Queue;
 import java.util.regex.Pattern;
 
@@ -31,6 +34,7 @@ public class CheckHeadersTask {
 			dirTypes.add("-dxp");
 		}
 
+<<<<<<< HEAD
 		for (String dirType : dirTypes) {
 
 			File articlesDir = new File("../" + docDir + "/articles" + dirType);
@@ -39,10 +43,36 @@ public class CheckHeadersTask {
 			if (!articlesDir.exists() || !articlesDir.isDirectory()) {
 				throw new Exception(
 						"FAILURE - bad articles directory " + articlesDir);
+=======
+		List<File> docSetDirFolders = new ArrayList<File>();
+		Queue<File> q = new LinkedList<File>();
+		
+		File articlesDirContents[] = articlesDir.listFiles();
+		for (File f : articlesDirContents) {
+			if (f.isDirectory()) {
+				q.add(f);
+			}
+		}
+	
+		while (!q.isEmpty()) {
+			File f = q.remove();
+			docSetDirFolders.add(f);
+			File[] files = f.listFiles();
+		
+			for (File file : files) {
+				if (file.isDirectory()) {
+					q.add(file);
+				}
+>>>>>>> 05a5ad11f39c2f768f2195faed9ebb6d07af1b0e
 			}
 
+<<<<<<< HEAD
 			List<File> docSetDirFolders = new ArrayList<File>();
 			Queue<File> q = new LinkedList<File>();
+=======
+		docSetDirFolders.add(articlesDir);
+		docSetDirFolders.add(docSetDir);
+>>>>>>> 05a5ad11f39c2f768f2195faed9ebb6d07af1b0e
 
 			File articlesDirContents[] = articlesDir.listFiles();
 			for (File f : articlesDirContents) {
