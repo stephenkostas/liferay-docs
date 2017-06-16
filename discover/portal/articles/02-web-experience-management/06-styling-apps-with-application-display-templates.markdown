@@ -27,6 +27,15 @@ available for your apps. These sample templates differ from the default
 templates already configured in the apps. If you choose a site to host your
 template, you must create a custom template for that site's apps.
 
++$$$
+
+**Note:** Under the hood, Application Display Templates are based on Liferay's
+Dynamic Data Mapping (DDM) framework. To better understand the how DDM ties into
+your web experience across @product@ you can learn more in [Using the Dynamic Data Mapping Framework](https://dev.liferay.com/discover/portal/-/knowledge_base/7-0/need-link)
+
+$$$
+
+
 ![Figure 1: The Site Administration dropdown menu lets you choose the context in which your application display template resides.](../../images/context-selector.png)
 
 If you'd like to add an existing ADT, select the template from the list. The
