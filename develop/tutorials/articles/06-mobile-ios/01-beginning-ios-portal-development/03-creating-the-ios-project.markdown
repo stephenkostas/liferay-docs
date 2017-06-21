@@ -21,7 +21,7 @@ Follow these steps to create the Liferay Guestbook iOS project:
 2.  In the *Application* section of the *iOS* tab, select *Single View 
     Application* and click *Next*. 
 
-    ![Figure 1: Use the Single View Application project template.](../../../ios-lp-create-app-01.png)
+    ![Figure 1: Use the Single View Application project template.](../../../images/ios-lp-create-app-01.png)
 
 3.  Enter the following fields as listed here: 
 
@@ -33,7 +33,7 @@ Follow these steps to create the Liferay Guestbook iOS project:
 
     Make sure the checkboxes below these fields are unchecked, and click *Next*. 
 
-    ![Figure 2: Fill out this form as shown.](../../../ios-lp-create-app-02.png)
+    ![Figure 2: Fill out this form as shown.](../../../images/ios-lp-create-app-02.png)
 
 4.  Select a location for your project and click *Create*. Xcode creates and 
     opens your new project. 

@@ -91,11 +91,11 @@ put them in a JAR file. To do this, make sure you're still in the
 `modules/guestbook-portlet` folder on the command line and run the following 
 command: 
 
-    `../../gradlew zip`
+    ../../gradlew zip
 
 This command generates this ZIP file: 
 
-    `modules/guestbook-portlet/build/liferay-guestbook-portlet-ios-sdk-1.0.zip`
+    modules/guestbook-portlet/build/liferay-guestbook-portlet-ios-sdk-1.0.zip
 
 This ZIP file is the Guestbook Mobile SDK. It contains the service classes 
 required to call the Guestbook portlet's remote services. 
