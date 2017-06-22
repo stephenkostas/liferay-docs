@@ -38,8 +38,7 @@ Screenlet framework. The list Screenlet framework makes it easy for developers
 to write Screenlets that display lists of entities from a Liferay Portal 
 instance. 
 
-<!-- Insert app design image -->
-![Figure 1: After login, the user transitions to the Guestbooks scene where Guestbook List Screenlet displays a list of guestbooks. Upon selecting a guestbook, the Entries scene displays a list of that guestbook's entries with Entry List Screenlet. The user can navigate back to the Guestbooks scene via the back button in the navigation bar.](../../../images/ios-app-design.png)
+![Figure 1: After login, the user transitions to the Guestbooks scene where Guestbook List Screenlet displays a list of guestbooks. Upon selecting a guestbook, the Entries scene displays a list of that guestbook's entries with Entry List Screenlet. Because the Guestbooks and Entries scenes are embedded in a navigation controller, the user can navigate back to the Guestbooks scene via the back button in the navigation bar.](../../../images/ios-app-design.png)
 
 Awesome! Now you have a basic UI design and know the Screenlets you'll create to 
 implement it. But where in the app can you use these Screenlets? Currently, the 
