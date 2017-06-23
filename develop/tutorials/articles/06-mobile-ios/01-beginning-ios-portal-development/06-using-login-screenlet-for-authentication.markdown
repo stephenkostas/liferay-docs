@@ -53,19 +53,19 @@ Follow these steps to add Login Screenlet to the scene:
 
     ![Figure 3: These alignment constraints center Login Screenlet in the scene.](../../../images/ios-lp-alignment-constraints.png)
 
-4.  Login Screenlet stretches or compresses to fill the view (it's compressed at 
-    the moment because of the alignment constraints). To avoid any ill-effects 
+4.  Login Screenlet stretches or compresses to fill the view. It's compressed at 
+    the moment because of the alignment constraints. To avoid any ill-effects 
     brought on by automatic resizing, you'll set constraints that set the 
     Screenlet to a fixed size. With the view selected, open the *Add New 
     Constraints* menu at the bottom-right of the canvas. In this menu, set the 
     *Width* to 270 and the *Height* to 185, and click the *Add 2 Constraints* 
     button. The Screenlet looks better now, and the Auto Layout errors are gone. 
-    However, note that you don't have to use these exact width and height values 
-    when using Login Screenlet. You can size the Screenlet however you wish. 
+    Note that you don't have to use these exact width and height values when 
+    using Login Screenlet. You can size the Screenlet however you wish. 
 
     ![Figure 3: Setting these size constraints ensures that Login Screenlet isn't too stretched out or compressed.](../../../images/ios-lp-size-constraints.png)
 
-    ![Figure 4: With the alignment and size constraints set, Login Screenlet appears in the center of the scene and its UI components aren't too compressed or stretched out.](../../../images/ios-lp-size-constraints.png)
+    ![Figure 4: With the alignment and size constraints set, Login Screenlet appears in the center of the scene and its UI components aren't too compressed or stretched out.](../../../images/ios-lp-login-scene.png)
 
 Nicely done! The scene now contains Login Screenlet. Next, you'll conform 
 `ViewController` (the scene's view controller class) to the 
