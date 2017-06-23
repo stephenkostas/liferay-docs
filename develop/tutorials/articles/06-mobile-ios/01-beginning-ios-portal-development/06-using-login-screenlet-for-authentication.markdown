@@ -82,3 +82,85 @@ delegate defines methods for both.
 
 Follow these steps to conform `ViewController` to the `LoginScreenletDelegate` 
 protocol: 
+
+1.  Import `LiferayScreens`, and in the class declaration, set `ViewController` 
+    to adopt the `LoginScreenletDelegate` protocol. The first few lines of the 
+    class should look like this: 
+
+        import UIKit
+        import LiferayScreens
+
+        class ViewController: UIViewController, LoginScreenletDelegate {...
+
+2.  Implement the `LoginScreenletDelegate` method 
+    `screenlet(_:onLoginResponseUserAttributes:)`. This method is called when 
+    authentication with Login Screenlet succeeds. Right now, you don't need to 
+    do anything in this method besides indicate that login succeeded: 
+
+        func screenlet(_ screenlet: BaseScreenlet, onLoginResponseUserAttributes attributes: [String:AnyObject]) {
+            print("Login Successful!")
+        }
+
+3.  Implement the `LoginScreenletDelegate` method `screenlet(_:onLoginError:)`. 
+    This method is called when authentication with Login Screenlet fails. All 
+    you need to do in this method is print a message indicating that login 
+    failed:
+
+        func screenlet(_ screenlet: BaseScreenlet, onLoginError error: NSError) {
+            print("Login Failed!")
+        }
+
+4.  Now you must get a Login Screenlet reference in `ViewController`. You'll do 
+    this by creating an outlet to the Screenlet. Return to your storyboard and 
+    enter the Assistant editor to display `ViewController`'s code and the 
+    storyboard side by side. With Login Screenlet selected in the storyboard, 
+    Control-drag from the Screenlet to the `ViewController` class to create the 
+    outlet. In the dialog that appears upon releasing your mouse button, enter 
+    the following information and click *Connect*: 
+
+    - **Connection:** Outlet
+    - **Name:** loginScreenlet
+    - **Type:** LoginScreenlet
+    - **Storage:** Weak
+
+    Xcode then adds the following code inside the `ViewController` class: 
+
+        @IBOutlet weak var loginScreenlet: LoginScreenlet!
+
+    ![Figure 5: Create an outlet from Login Screenlet to the `ViewController` class.](../../../images/ios-lp-login-screenlet-outlet.png)
+
+5.  In the `ViewController` class, use the new `loginScreenlet` variable to set 
+    the view controller as the Screenlet's delegate. Do this in the 
+    `viewDidLoad()` method by deleting the placeholder comment and inserting 
+    this code below the call to `super.viewDidLoad()`:
+
+        self.loginScreenlet?.delegate = self
+
+Great, you're finished! Before running the app, make sure that your 
+`ViewController` class looks like this: 
+
+    import UIKit
+    import LiferayScreens
+
+    class ViewController: UIViewController, LoginScreenletDelegate {
+
+        @IBOutlet weak var loginScreenlet: LoginScreenlet!
+
+        override func viewDidLoad() {
+            super.viewDidLoad()
+            self.loginScreenlet?.delegate = self
+        }
+
+        override func didReceiveMemoryWarning() {
+            super.didReceiveMemoryWarning()
+        }
+
+        func screenlet(_ screenlet: BaseScreenlet, onLoginResponseUserAttributes attributes: [String:AnyObject]) {
+            print("Login Successful!")
+        }
+
+        func screenlet(_ screenlet: BaseScreenlet, onLoginError error: NSError) {
+            print("Login Failed!")
+        }
+
+    }
