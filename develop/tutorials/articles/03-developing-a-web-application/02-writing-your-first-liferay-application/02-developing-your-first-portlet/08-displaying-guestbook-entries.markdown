@@ -96,22 +96,22 @@ which it's currently inheriting from its parent class, `MVCPortlet`.
 1.  Open `GuestbookMvcPortlet.java` and add the following method below your
     `addEntry` method:
 
-		@Override
-		         public void render(RenderRequest renderRequest, RenderResponse renderResponse)
-		                 throws PortletException, IOException {
-		 
-		             PortletPreferences prefs = renderRequest.getPreferences();
-		             String[] guestbookEntries = prefs.getValues("guestbook-entries",
-		                     new String[1]);
-		 
-		             if (guestbookEntries != null) {
-		                 List<Entry> entries = parseEntries(guestbookEntries);
-		 
-		                 renderRequest.setAttribute("entries", entries);
-		             }
-		 
-		             super.render(renderRequest, renderResponse);
-		         }
+	@Override
+    public void render(RenderRequest renderRequest, RenderResponse renderResponse)
+            throws PortletException, IOException {
+
+        PortletPreferences prefs = renderRequest.getPreferences();
+        String[] guestbookEntries = prefs.getValues("guestbook-entries",
+                new String[1]);
+
+        if (guestbookEntries[0] != null) {
+            List<Entry> entries = parseEntries(guestbookEntries);
+
+            renderRequest.setAttribute("entries", entries);
+        }
+
+        super.render(renderRequest, renderResponse);
+    }
 
     This method retrieves the guestbook entries from the Configuration, 
 	converts it to a `List` of `Entry` objects, and places that

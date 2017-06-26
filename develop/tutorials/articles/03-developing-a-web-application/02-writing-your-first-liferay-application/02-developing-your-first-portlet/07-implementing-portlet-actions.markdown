@@ -55,8 +55,8 @@ $$$
 The following method implements adding a guestbook entry to a portlet preference
 called `guestbook-entries`:
  
-	public void addEntry(ActionRequest request, ActionResponse response) {
-        try {
+	public void addEntry (ActionRequest request, ActionResponse response) {
+		try {
             PortletPreferences prefs = request.getPreferences();
 
             String[] guestbookEntries = prefs.getValues("guestbook-entries",
@@ -64,9 +64,13 @@ called `guestbook-entries`:
 
             ArrayList<String> entries = new ArrayList<String>();
 
-            if (guestbookEntries != null) {
+            if (guestbookEntries[0] != null) {
                 entries = new ArrayList<String>(Arrays.asList(prefs.getValues(
                         "guestbook-entries", new String[1])));
+            } else { 
+
+            	entries = new ArrayList<String>();
+
             }
 
             String userName = ParamUtil.getString(request, "name");
@@ -96,7 +100,7 @@ called `guestbook-entries`:
             Logger.getLogger(GuestbookMvcPortlet.class.getName()).log(
                     Level.SEVERE, null, ex);
         }
-    }
+	}
 
 1.  Replace your existing `addEntry` method with the above method.
 
