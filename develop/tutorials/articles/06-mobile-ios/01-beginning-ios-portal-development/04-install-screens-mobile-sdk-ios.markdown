@@ -211,6 +211,31 @@ attributes:
     *Site Administration* &rarr; *Configuration* from the Dockbar. The site ID 
     is listed on the *Site Settings* tab. 
 
+Next, you'll configure iOS App Transport Security. 
+
+## Configuring App Transport Security
+
+App Transport Security is an iOS security feature that restricts all network 
+activity to HTTPS. For development and testing purposes, however, this isn't 
+necessary. Since your local Liferay Portal instance uses HTTP by default, App 
+Transport Security prevents your app from communicating with the portal. You 
+must therefore disable App Transport Security. Follow these steps to do so: 
+
+1.  Select your project in Xcode's Project navigator. With the *Liferay 
+    Guestbook* target selected in the editor, click the *Info* tab. 
+
+    ![Figure 9: You'll disable App Transport Security in the Info tab.](../../../images/ios-lp-ats-01.png)
+
+2.  In *Custom iOS Target Properties*, right-click *Bundle OS Type Code* and 
+    select *Add Row*. In the new row's text field, enter *App Transport Security 
+    Settings*. 
+
+3.  Click the *+* icon next to App Transport Security Settings and select *Allow 
+    Arbitrary Loads*. Then select *YES* for this field's value. 
+
+    ![Figure 10: Your App Transport Security settings should look like this.](../../../images/ios-lp-ats-02.png)
+
 Stupendous! You've successfully installed Liferay Screens and the Guestbook 
 Mobile SDK, and configured your app to communicate with your Liferay Portal 
-instance. 
+instance. Before starting work on the app, however, you should learn the app's 
+design. The next article walks you through this. 

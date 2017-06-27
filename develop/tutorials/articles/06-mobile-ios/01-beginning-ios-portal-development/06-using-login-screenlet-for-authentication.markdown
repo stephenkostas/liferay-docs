@@ -164,3 +164,15 @@ Great, you're finished! Before running the app, make sure that your
         }
 
     }
+
+Now you're ready to test your work. With your Liferay Portal instance running, 
+launch the app using the iPhone simulator (any iPhone version supported by Xcode 
+will work). Enter your credentials when Login Screenlet appears and click *SIGN 
+IN*. In Xcode, the `Login Successful!` message appears in the console. 
+
+![Figure 6: It worked!](../../../images/ios-lp-login-successful.png)
+
+Nice job! Nothing else happens, though. Your app still displays Login Screenlet. 
+This is expected. There aren't any other scenes for your app to navigate to. In 
+the next article, you'll create the scene for displaying guestbooks: the 
+guestbooks scene. 
