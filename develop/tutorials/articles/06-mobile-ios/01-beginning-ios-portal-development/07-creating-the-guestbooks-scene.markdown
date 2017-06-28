@@ -27,7 +27,7 @@ Follow these steps to add a view controller to the storyboard:
 1.  Open your storyboard and drag and drop a *View Controller* from the Object 
     Library to the right of the login scene. 
 
-    ![Figure 1: The arrow shows where to drag and drop the View Controller to create the new guestbooks scene.](../../images/ios-lp-add-gb-vc.png)
+    ![Figure 1: The arrow shows where to drag and drop the View Controller to create the new guestbooks scene.](../../../images/ios-lp-add-gb-vc.png)
 
 2.  Now you must embed this view controller in a 
     [navigation controller](https://developer.apple.com/library/content/documentation/WindowsViews/Conceptual/ViewControllerCatalog/Chapters/NavigationControllers.html). 
@@ -46,13 +46,13 @@ Follow these steps to add a view controller to the storyboard:
 3.  Double-click the guestbooks scene's navigation bar and type in *Guestbooks*. 
     Your storyboard should now look like this: 
 
-    ![Figure 2: The new guestbooks scene is now embedded in a navigation controller. Also note that the navigation bar's title reflects what the scene will be used for.](../../images/ios-lp-nav-controller.png)
+    ![Figure 2: The new guestbooks scene is now embedded in a navigation controller. Also note that the navigation bar's title reflects what the scene will be used for.](../../../images/ios-lp-nav-controller.png)
 
 4.  With the guestbooks scene's view controller selected in the storyboard, open 
     the Attributes inspector and uncheck *Adjust Scroll View Insets*. This 
     ensures that the scene's contents are flush with the navigation bar.
 
-    ![Figure 3: Make sure the view controller's *Adjust Scroll View Insets* option is unchecked in the Attributes inspector.](../../images/ios-lp-adj-scroll-view-ins.png)
+    ![Figure 3: Make sure the view controller's *Adjust Scroll View Insets* option is unchecked in the Attributes inspector.](../../../images/ios-lp-adj-scroll-view-ins.png)
 
 Great! You now have the guestbooks scene, embedded in a navigation controller. 
 For this scene's view controller to work, it must have a class that controls its 
@@ -78,7 +78,7 @@ class.
     - **Also create XIB file:** Unchecked
     - **Language:** Swift
 
-    ![Figure 4: Set these options when creating the view controller's class.](../../images/ios-lp-gb-vc-class.png)
+    ![Figure 4: Set these options when creating the view controller's class.](../../../images/ios-lp-gb-vc-class.png)
 
 3.  The final screen in the dialog lets you set the class's location, group, and 
     targets. Make sure *Liferay Guestbook* is selected for both the *Group* and 
@@ -87,4 +87,4 @@ class.
 4.  In the storyboard, select the guestbooks scene's view controller. In the 
     Identity inspector, set `GuestbooksViewController` as the Custom Class. 
 
-    ![Figure 5: Set `GuestbooksViewController` as the custom class of the guestbooks scene's view controller.](../../images/ios-lp-gb-vc-cc.png)
+    ![Figure 5: Set `GuestbooksViewController` as the custom class of the guestbooks scene's view controller.](../../../images/ios-lp-gb-vc-cc.png)
