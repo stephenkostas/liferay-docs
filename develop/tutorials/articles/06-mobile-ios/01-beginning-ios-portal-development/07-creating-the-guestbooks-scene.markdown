@@ -61,8 +61,8 @@ behavior. You'll create this class next.
 ## Creating the Guestbooks Scene's View Controller Class
 
 Each view controller must have a class that controls its behavior. In this 
-section, you'll create this class for the guestboooks scene's view controller. 
-In the storyboard, you'll then set this class as the view controller's custom 
+section, you'll create this class for the guestbooks scene's view controller. In 
+the storyboard, you'll then set this class as the view controller's custom 
 class. 
 
 1.  Right-click the *Liferay Guestbook* folder in Xcode's project navigator and 
@@ -88,3 +88,61 @@ class.
     Identity inspector, set `GuestbooksViewController` as the Custom Class. 
 
     ![Figure 5: Set `GuestbooksViewController` as the custom class of the guestbooks scene's view controller.](../../../images/ios-lp-gb-vc-cc.png)
+
+Nice! The guestbooks scene's view controller now has a class that governs its 
+behavior. You may have noticed a big problem, though. There's no way for the 
+user to get from the login scene to the guestbooks scene. This is because 
+there's no segue from the login scene to the navigation controller the 
+guestbooks scene is embedded in. You'll fix this next. 
+
+## Creating the Segue
+
+Follow these steps to create and trigger the segue: 
+
+1.  Control-drag from the login scene's view controller to the navigation 
+    controller. In the dialog that appears, select *show* for the segue type. 
+    The segue now connects the login scene's view controller and the navigation 
+    controller. 
+
+    ![Figure 6: A segue now exists from the login scene to the navigation controller.](../../../images/ios-lp-login-segue.png)
+
+2.  Now you must tell the login scene's view controller when to perform this 
+    segue. You'll do this programmatically in the `ViewController` class. 
+    To perform a segue programmatically, you must first give it an identifier in 
+    your storyboard. You'll then use this identifier in `ViewController` to 
+    perform the segue when a user logs in. 
+
+    In your storyboard, select the segue and then enter the Attributes 
+    inspector. Enter *loginsegue* in the *Identifier* field, and press 
+    *return*. 
+
+    ![Figure 7: Set the segue's ID in the Attributes inspector.](../../../images/ios-lp-login-segue-id.png)
+
+3.  Recall that the `ViewController` class's 
+    `screenlet(_:onLoginResponseUserAttributes:)` method is called upon 
+    successful login. You'll therefore trigger the segue in this method. 
+    Currently, this method only prints a success message. Below the line that 
+    prints this message, add the following code: 
+
+        performSegue(withIdentifier: "loginsegue", sender: nil)
+
+    The `performSegue(withIdentifier:sender:)` method performs the segue with 
+    the specified identifier, and includes any additional sender code. You send 
+    `nil` here since you don't need to send any information with the segue. Your 
+    `screenlet(_:onLoginResponseUserAttributes:)` method should now look like 
+    this: 
+
+        func screenlet(_ screenlet: BaseScreenlet, onLoginResponseUserAttributes attributes: [String:AnyObject]) {
+            print("Login Successful!")
+            performSegue(withIdentifier: "loginsegue", sender: nil)
+        }
+
+Great! Your app can now navigate to the guestbooks scene after login. To verify 
+this, run the app and log in. 
+
+![Figure 8: The app now navigates to the empty guestbooks scene following successful login.](../../../images/ios-lp-gb-scene-empty.png)
+
+Awesome! You've successfully added a scene for displaying guestbooks, and set 
+the app to take the user there after login. Now you're ready to develop 
+Guestbook List Screenlet. The next section in this Learning Path walks you 
+through this. 
