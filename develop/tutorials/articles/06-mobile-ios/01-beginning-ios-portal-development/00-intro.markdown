@@ -19,5 +19,6 @@ This section of the Learning Path covers these topics:
 4.  Installing the Guestbook Mobile SDK and Liferay Screens in the iOS project 
 5.  Designing Your App
 6.  Using Login Screenlet for Authentication
+7.  Creating the Guestbooks Scene
 
 When you finish, you'll be ready to start developing your first Screenlet. 
