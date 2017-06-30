@@ -31,7 +31,7 @@ Follow these steps to create your Theme's folder:
     target. Then click *Finish*. The `Themes/Default` folder structure now 
     appears in your project. 
 
-    ![Figure 2: After adding the `Themes` folder, your project should look something like this.](../../../images/ios-lp-themes-proj-nav.png)
+    ![Figure 2: After adding the `Themes` folder to your project, the `Themes/Default` folder structure should appear in the Project navigator.](../../../images/ios-lp-themes-proj-nav.png)
 
 Now you're ready to start creating your Theme. First, you'll create its XIB 
 file. 
@@ -46,5 +46,40 @@ steps to create your Theme's XIB file:
     &rarr; *Empty*, and click *Next*. Name the file 
     `GuestbookListView_default.xib`, and ensure that *Default* is selected for 
     the save location and group. The *Liferay Guestbook* target should also be 
-    selected. Click *Create*. The file should open in Interface Builder. 
+    selected. Click *Create*. The file should then open in Interface Builder. 
 
+2.  In Interface Builder, drag and drop a View from the Object Library onto the 
+    canvas. Then add a Table View to the View. Set the Table View to take up the 
+    entire View. 
+
+3.  With the Table View selected, open the *Add New Constraints* menu at the 
+    bottom-right of the canvas. In this menu, set *Spacing to nearest neighbor* 
+    to 0 on all sides, select *Constrain to margins*, and then click the *Add 4 
+    Constraints* button. 
+
+    ![Figure 3: Add these constraints to the Table View in the XIB.](../../../images/ios-lp-xib-constraints.png)
+
+## Creating the Theme's View Class
+
+Every Theme needs a View class that controls its behavior. Since the XIB file 
+uses a `UITableView` to show a list of guestbooks, your View class must extend 
+[the `BaseListTableView` class](https://github.com/liferay/liferay-screens/blob/master/ios/Framework/Core/Base/BaseListScreenlet/TableView/BaseListTableView.swift). 
+Screens provides this class to serve as the foundation for your list Screenlet's 
+View class. Since `BaseListTableView` provides most of the functionality needed 
+by a list Screenlet's View class, extending it lets you focus on the parts of 
+your View class that are unique to your Screenlet. 
+
+Follow these steps to create your Screenlet's View class:
+
+1.  In the Project navigator, right-click the `Default` folder and select *New 
+    File*. In the dialog that appears, fill out each screen as follows: 
+
+    - Select *iOS* &rarr; *Source* &rarr; *Cocoa Touch Class*, and click *Next*. 
+    - Name the class `GuestbookListView_default`, set it to extend 
+      `BaseListTableView`, select *Swift* for the language, and click *Next*.
+    - Make sure the `Default` folder and group is selected, as well as the 
+      *Liferay Guestbook* target (these should be selected by default). Click 
+      *Create*. 
+
+2.  In `GuestbookListView_default`, add an import for `LiferayScreens` and 
+    delete any placeholder comments in the class body. 
