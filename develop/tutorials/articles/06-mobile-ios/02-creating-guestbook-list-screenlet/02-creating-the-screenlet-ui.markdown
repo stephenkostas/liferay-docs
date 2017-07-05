@@ -83,3 +83,50 @@ Follow these steps to create your Screenlet's View class:
 
 2.  In `GuestbookListView_default`, add an import for `LiferayScreens` and 
     delete any placeholder comments in the class body. 
+
+3.  Now you must override the View class methods that fill the table cells' 
+    contents. There are two methods for this, depending on the cell type: 
+
+    - **Normal cells:** the cells that show the entities. These cells typically 
+    use `UILabel`, `UIImage`, or another UI component to show the entity. 
+    Override the `doFillLoadedCell` method to fill these cells. Guestbook List 
+    Screenlet's View class must override `doFillLoadedCell` to set each cell's 
+    `textLabel` to a guestbook's name: 
+
+        override public func doFillLoadedCell(row: Int, cell: UITableViewCell, object: AnyObject) {
+            let guestbook = object as! GuestbookModel
+
+            cell.textLabel?.text = guestbook.name
+        }
+
+    - **Progress cell:** the cell at the bottom of the list that indicates the 
+    list is loading the next page of items. Override the `doFillInProgressCell` 
+    method to fill this cell. Guestbook List Screenlet's View class must 
+    override this method to set the cell's `textLabel` to the string 
+    `"Loading..."`: 
+
+        override public func doFillInProgressCell(row: Int, cell: UITableViewCell) {
+            cell.textLabel?.text = "Loading..."
+        }
+
+Your complete View class should look like this: 
+
+    import UIKit
+    import LiferayScreens
+
+    class GuestbookListView_default: BaseListTableView {
+
+        override public func doFillLoadedCell(row: Int, cell: UITableViewCell, object: AnyObject) {
+            let guestbook = object as! GuestbookModel
+
+            cell.textLabel?.text = guestbook.name
+        }
+
+        override public func doFillInProgressCell(row: Int, cell: UITableViewCell) {
+            cell.textLabel?.text = "Loading..."
+        }
+
+    }
+
+Great! Your Theme is finished. Next, you'll create Guestbook List Screenlet's 
+Connector. 
