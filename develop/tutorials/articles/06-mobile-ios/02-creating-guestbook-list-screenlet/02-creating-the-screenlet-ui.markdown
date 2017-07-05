@@ -93,11 +93,11 @@ Follow these steps to create your Screenlet's View class:
     Screenlet's View class must override `doFillLoadedCell` to set each cell's 
     `textLabel` to a guestbook's name: 
 
-        override public func doFillLoadedCell(row: Int, cell: UITableViewCell, object: AnyObject) {
-            let guestbook = object as! GuestbookModel
+            override public func doFillLoadedCell(row: Int, cell: UITableViewCell, object: AnyObject) {
+                let guestbook = object as! GuestbookModel
 
-            cell.textLabel?.text = guestbook.name
-        }
+                cell.textLabel?.text = guestbook.name
+            }
 
     - **Progress cell:** the cell at the bottom of the list that indicates the 
     list is loading the next page of items. Override the `doFillInProgressCell` 
@@ -105,9 +105,9 @@ Follow these steps to create your Screenlet's View class:
     override this method to set the cell's `textLabel` to the string 
     `"Loading..."`: 
 
-        override public func doFillInProgressCell(row: Int, cell: UITableViewCell) {
-            cell.textLabel?.text = "Loading..."
-        }
+            override public func doFillInProgressCell(row: Int, cell: UITableViewCell) {
+                cell.textLabel?.text = "Loading..."
+            }
 
 Your complete View class should look like this: 
 
