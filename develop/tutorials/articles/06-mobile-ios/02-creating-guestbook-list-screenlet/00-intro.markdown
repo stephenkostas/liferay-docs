@@ -26,7 +26,9 @@ You'll use these steps to create Guestbook List Screenlet:
     calls. 
 4.  Create the Interactor. Interactors are Screenlet components that instantiate 
     Connectors and receive their results. 
-5.  Create the Screenlet class. The Screenlet class governs the Screenlet's 
+5.  Create the delegate. Screenlet delegates let other classes respond to the 
+    Screenlet's events. 
+6.  Create the Screenlet class. The Screenlet class governs the Screenlet's 
     behavior. 
 
 As background material, the following materials are helpful: 
