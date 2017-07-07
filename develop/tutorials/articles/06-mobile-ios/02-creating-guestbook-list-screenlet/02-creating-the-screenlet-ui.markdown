@@ -59,6 +59,8 @@ steps to create your Theme's XIB file:
 
     ![Figure 3: Add these constraints to the Table View in the XIB.](../../../images/ios-lp-xib-constraints.png)
 
+Your Theme's XIB is now finished. Next, you'll create your View class. 
+
 ## Creating the Theme's View Class
 
 Every Theme needs a View class that controls its behavior. Since the XIB file 
@@ -109,24 +111,42 @@ Follow these steps to create your Screenlet's View class:
                 cell.textLabel?.text = "Loading..."
             }
 
-Your complete View class should look like this: 
+    Your complete View class should look like this: 
 
-    import UIKit
-    import LiferayScreens
+        import UIKit
+        import LiferayScreens
 
-    class GuestbookListView_default: BaseListTableView {
+        class GuestbookListView_default: BaseListTableView {
 
-        override public func doFillLoadedCell(row: Int, cell: UITableViewCell, object: AnyObject) {
-            let guestbook = object as! GuestbookModel
+            override public func doFillLoadedCell(row: Int, cell: UITableViewCell, object: AnyObject) {
+                let guestbook = object as! GuestbookModel
 
-            cell.textLabel?.text = guestbook.name
+                cell.textLabel?.text = guestbook.name
+            }
+
+            override public func doFillInProgressCell(row: Int, cell: UITableViewCell) {
+                cell.textLabel?.text = "Loading..."
+            }
+
         }
 
-        override public func doFillInProgressCell(row: Int, cell: UITableViewCell) {
-            cell.textLabel?.text = "Loading..."
-        }
+4.  Return to the Theme's XIB in Interface Builder, and set 
+    `GuestbookListView_default` as the the parent View's custom class. To do 
+    this, select the Table View's parent View, click the Identity inspector, and 
+    enter `GuestbookListView_default` as the custom class.
 
-    }
+    ![Figure 3: In the XIB file, set the custom class of the Table View's parent View to `GuestbookListView_default`.](../../../images/ios-lp-gb-theme-custom-class.png)
+
+5.  With the Theme's XIB still open in Interface Builder, set the parent View's 
+    `tableView` outlet to the Table View. To do this, select the parent View and 
+    click the Connections inspector. In the *Outlets* section, drag and drop 
+    from the `tableView`'s circle icon (on mouseover, it turns into a plus icon) 
+    to the Table View in the XIB. The new outlet then appears in the Connections 
+    inspector. 
+
+    ![Figure 4: Drag the `tableView` outlet onto the Table View in the XIB.](../../../images/ios-lp-table-view-outlet-01.png)
+
+    ![Figure 5: After creating the connection, the outlet looks like this in the Connections inspector.](../../../images/ios-lp-table-view-outlet-02.png)
 
 Great! Your Theme is finished. Next, you'll create Guestbook List Screenlet's 
 Connector. 

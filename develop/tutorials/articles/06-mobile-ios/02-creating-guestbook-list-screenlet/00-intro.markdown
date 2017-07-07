@@ -18,9 +18,10 @@ it's time to make a sandwich.
 
 You'll use these steps to create Guestbook List Screenlet: 
 
-1.  Create the model class. The model class creates objects that represent 
-    guestbooks retrieved from the portlet. This makes it easier to work with 
-    results in your app. 
+1.  Getting started: Create the Screenlet's folder, and the model class. The 
+    model class creates objects that represent guestbooks retrieved from the 
+    portlet. This makes it easier to work with the server call's results in your 
+    app. 
 2.  Create the Screenlet's UI (its Theme). 
 3.  Create the Connector. Connectors are Screenlet components that make server 
     calls. 
