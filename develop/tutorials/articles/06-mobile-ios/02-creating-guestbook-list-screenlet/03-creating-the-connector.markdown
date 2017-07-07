@@ -86,7 +86,6 @@ Follow these steps to create Guestbook List Screenlet's Connector:
     (`LRGuestbookService_v62`) from the session. Then call the service's 
     `getGuestbooksWithGroupId` method with the `groupId`, `startRow`, and 
     `endRow`:
-    <!-- Explain comment in catch statement -->
 
         public override func doAddPageRowsServiceCall(session: LRBatchSession, startRow: Int, endRow: Int, 
             obc: LRJSONObjectWrapper?) {
@@ -96,11 +95,14 @@ Follow these steps to create Guestbook List Screenlet's Connector:
                     try service!.getGuestbooksWithGroupId(groupId, start: Int32(startRow), end: Int32(endRow))
                 }
                 catch {
-                    // ignore error: the method returns nil (converted to an error)
-                    // because the request isn't actually sent
+                    // ignore error: the service method returns nil because the request is sent asynchronously
                 }
 
         }
+
+    Note that you don't need to do anything in the `catch` statement because the 
+    request is sent asynchronously and the service method returns `nil`. You'll 
+    receive the request's results elsewhere, once the request completes. 
 
 5.  Override the `doAddRowCountServiceCall` method to make the server call that 
     retrieves the total number of guestbooks from the portlet. This enables 
@@ -108,7 +110,6 @@ Follow these steps to create Guestbook List Screenlet's Connector:
     `getGuestbooksCount`, which retrieves guestbooks. To do this, you must first 
     create a service instance (`LRGuestbookService_v62`) from the session. Then 
     call the service's `getGuestbooksCount` method with the `groupId`:
-    <!-- Explain comment in catch statement -->
 
         override public func doAddRowCountServiceCall(session: LRBatchSession) {
             let service = LRGuestbookService_v62(session: session)
@@ -117,8 +118,7 @@ Follow these steps to create Guestbook List Screenlet's Connector:
                 try service!.getGuestbooksCount(withGroupId: groupId)
             }
             catch {
-                // ignore error: the method returns nil (converted to an error) because
-                // the request is not actually sent
+                // ignore error: the service method returns nil because the request is sent asynchronously
             }
         }
 
