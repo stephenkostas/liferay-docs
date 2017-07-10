@@ -78,7 +78,6 @@ Follow these steps to create your Screenlet's View class:
       *Create*. 
 
 2.  Replace the class file's contents with this code: 
-    <!-- Add explanation that references Guestbook List Screenlet's article -->
 
         import UIKit
         import LiferayScreens
@@ -101,3 +100,34 @@ Follow these steps to create your Screenlet's View class:
             }
 
         }
+
+    Note that this code is almost identical to that of Guestbook List 
+    Screenlet's View class, `GuestbookListView_default`. The only difference is 
+    that this class handles entries (`EntryModel`) instead of guestbooks 
+    (`GuestbookModel`). The `doFillLoadedCell` method sets the cell's main text 
+    label to the entry's message, and the cell's secondary text label to the 
+    name of the person who left the message. This way, a single cell displays 
+    both pieces of information. For a description of the rest of the class, 
+    which is shared with `GuestbookListView_default`, see 
+    [the article on creating Guestbook List Screenlet's Theme](https://www.liferay.com/). 
+
+3.  Return to the Theme's XIB in Interface Builder, and set 
+    `EntryListView_default` as the the parent View's custom class. To do this, 
+    select the Table View's parent View, click the Identity inspector, and enter 
+    `EntryListView_default` as the custom class. 
+
+    ![Figure 3: In the XIB file, set the custom class of the Table View's parent View to `EntryListView_default`.](../../../images/ios-lp-entry-theme-custom-class.png)
+
+4.  With the Theme's XIB still open in Interface Builder, set the parent View's 
+    `tableView` outlet to the Table View. To do this, select the parent View and 
+    click the Connections inspector. In the *Outlets* section, drag and drop 
+    from the `tableView`'s circle icon (on mouseover, it turns into a plus icon) 
+    to the Table View in the XIB. The new outlet then appears in the Connections 
+    inspector. 
+
+    ![Figure 4: Drag the `tableView` outlet onto the Table View in the XIB.](../../../images/ios-lp-table-view-outlet-01.png)
+
+    ![Figure 5: After creating the connection, the outlet looks like this in the Connections inspector.](../../../images/ios-lp-table-view-outlet-02.png)
+
+Great! Your Theme is finished. Next, you'll create Entry List Screenlet's 
+Connector. 

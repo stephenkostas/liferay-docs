@@ -95,14 +95,15 @@ Follow these steps to create Guestbook List Screenlet's Connector:
                     try service!.getGuestbooksWithGroupId(groupId, start: Int32(startRow), end: Int32(endRow))
                 }
                 catch {
-                    // ignore error: the service method returns nil because the request is sent asynchronously
+                    // ignore error: the service method returns nil because the request is sent later, in batch
                 }
 
         }
 
     Note that you don't need to do anything in the `catch` statement because the 
-    request is sent asynchronously and the service method returns `nil`. You'll 
-    receive the request's results elsewhere, once the request completes. 
+    request is sent later, in batch. The `session` type `LRBatchSession` handles 
+    this for you. You'll receive the request's results elsewhere, once the 
+    request completes. 
 
 5.  Override the `doAddRowCountServiceCall` method to make the server call that 
     retrieves the total number of guestbooks from the portlet. This enables 
@@ -118,7 +119,7 @@ Follow these steps to create Guestbook List Screenlet's Connector:
                 try service!.getGuestbooksCount(withGroupId: groupId)
             }
             catch {
-                // ignore error: the service method returns nil because the request is sent asynchronously
+                // ignore error: the service method returns nil because the request is sent later, in batch
             }
         }
 
