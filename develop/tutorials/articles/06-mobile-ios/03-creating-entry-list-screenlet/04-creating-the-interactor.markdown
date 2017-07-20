@@ -98,5 +98,15 @@ Follow these steps to create Entry List Screenlet's Interactor:
         }
 
     This class is almost identical to Guestbook List Screenlet's Interactor, 
-    `GuestbookListPageLoadInteractor`. 
-    <!-- explain unique code -->
+    `GuestbookListPageLoadInteractor`. The only real difference is that 
+    `EntryListPageLoadInteractor` handles entries. To do this, it needs a 
+    `guestbookId` variable to define the guestbook to retrieve entries from. 
+    This variable is set in the initializer and then used in the 
+    `createListPageConnector` method to create a `EntryListPageLiferayConnector` 
+    instance. The `convertResult` method receives the each entry retrieved from 
+    the server and transforms it into an `EntryModel` object. Also recall that 
+    the `cacheKey` method must return a key that can be used with online mode. 
+    For entries, a combination of the `groupId` and `guestbookId` is a 
+    sufficient key. 
+
+Great! Your Interactor is finished. Next, you'll create the delegate. 
