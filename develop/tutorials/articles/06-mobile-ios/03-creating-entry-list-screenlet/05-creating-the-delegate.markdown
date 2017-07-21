@@ -6,12 +6,14 @@ Entry List Screenlet that can respond to a successful server call, a failed
 server call, and an item selection in the list. This delegate must therefore 
 define these methods: 
 
--   `screenlet(_:onEntryListResponse:)`: Returns the `EntryModel` results when 
-    the server call succeeds. 
--   `screenlet(_:onEntryListError:)`: Returns the `NSError` object when the 
-    server call fails. 
--   `screenlet(_:onEntrySelected:)`: Returns the `EntryModel` when a user 
-    selects it in the list. 
+-   `screenlet(_:onEntryListResponse:)`: Receives the `EntryModel` results when 
+    the server call succeeds. This lets app developers respond to a successful 
+    server call. 
+-   `screenlet(_:onEntryListError:)`: Receives the `NSError` object when the 
+    server call fails. This lets app developers respond to a failed server call. 
+-   `screenlet(_:onEntrySelected:)`: Receives the `EntryModel` when a user 
+    selects it in the list. This lets app developers respond to an entry 
+    selection by the user. 
 
 You'll create this delegate in the same file as the Screenlet class. Later, 
 you'll finish creating the Screenlet class itself. 

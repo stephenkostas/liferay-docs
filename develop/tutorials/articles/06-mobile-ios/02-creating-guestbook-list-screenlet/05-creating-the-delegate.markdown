@@ -12,12 +12,14 @@ delegate methods.
 You can also create a delegate for your own Screenlet. Guestbook List Screenlet 
 should have a delegate protocol that defines the following methods: 
 
--   `screenlet(_:onGuestbookListResponse:)`: Returns the `GuestbookModel` 
-    results when the server call succeeds. 
--   `screenlet(_:onGuestbookListError:)`: Returns the `NSError` object when the 
-    server call fails. 
--   `screenlet(_:onGuestbookSelected:)`: Returns the `GuestbookModel` when a 
-    user selects it in the list. 
+-   `screenlet(_:onGuestbookListResponse:)`: Receives the `GuestbookModel` 
+    results when the server call succeeds. This lets app developers respond to a 
+    successful server call. 
+-   `screenlet(_:onGuestbookListError:)`: Receives the `NSError` object when the 
+    server call fails. This lets app developers respond to a failed server call. 
+-   `screenlet(_:onGuestbookSelected:)`: Receives the `GuestbookModel` when a 
+    user selects it in the list. This lets app developers respond to a guestbook 
+    selection by the user. 
 
 You'll create this delegate in the same file as the Screenlet class. Later, 
 you'll finish creating the Screenlet class itself. 
