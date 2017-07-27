@@ -101,10 +101,47 @@ Follow these steps to conform `GuestbooksViewController` to the
             performSegue(withIdentifier: "entriessegue", sender: guestbook)
         }
 
-5.  Now you must get a Guestbook List Screenlet reference. You'll do this by 
-    creating an outlet to the Screenlet. Return to your storyboard and 
-    enter the Assistant editor to display `GuestbooksViewController`'s code and 
-    the storyboard side by side. With Guestbook List Screenlet selected in the 
+5.  Next, you must set the segue's destination view controller to an 
+    `EntriesViewController` instance, and set that instance's 
+    `selectedGuestbook` variable to the selected guestbook. This ensures that 
+    Entry List Screenlet receives the guestbook you sent in the previous step 
+    with `performSegue(withIdentifier:sender:)`. 
+
+    You do this by overriding the `prepare(for:sender:)` method. This method is 
+    called by `performSegue(withIdentifier:sender:)` before the segue occurs. 
+    The `prepare(for:sender:)` method's `sender` parameter receives the 
+    guestbook sent by `performSegue(withIdentifier:sender:)`. Currently, 
+    `prepare(for:sender:)` is commented out at the bottom of 
+    `GuestbooksViewController`. Xcode created this method for you when you 
+    used the Cocoa Touch Class template to create a view controller class. 
+    Uncomment the method, and replace it with this: 
+
+        override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+
+            guard segue.identifier ==  "entriessegue",
+                let entriesViewController = segue.destination as? EntriesViewController,
+                let selectedGuestbook = sender as? GuestbookModel
+                else {return}
+
+            entriesViewController.selectedGuestbook = selectedGuestbook
+        }
+
+    The `guard` statement ensures that the code only runs when the segue ID is 
+    `entriessegue`, the destination view controller is `EntriesViewController`, 
+    and the `sender` is a `GuestbookModel`. In other words, the code only runs 
+    in preparation for the segue to the entries scene. The code that runs when 
+    that condition is met is only one line long: 
+
+        entriesViewController.selectedGuestbook = selectedGuestbook
+
+    This sets the guestbook received by `prepare(for:sender:)` to the guestbook 
+    in `EntriesViewController`. As the variable names indicate, this is the 
+    guestbook the user selects in Guestbook List Screenlet. 
+
+6.  Now you must get a Guestbook List Screenlet reference. You'll do this by 
+    creating an outlet to the Screenlet. Return to your storyboard and enter the 
+    Assistant editor to display `GuestbooksViewController`'s code and the 
+    storyboard side by side. With Guestbook List Screenlet selected in the 
     storyboard, Control-drag from the Screenlet to the 
     `GuestbooksViewController` class to create the outlet. In the dialog that 
     appears upon releasing your mouse button, enter the following information 
@@ -120,7 +157,7 @@ Follow these steps to conform `GuestbooksViewController` to the
 
         @IBOutlet weak var screenlet: GuestbookListScreenlet!
 
-6.  Use the new `screenlet` variable to set the view controller as the 
+7.  Use the new `screenlet` variable to set the view controller as the 
     Screenlet's delegate. Do this in the `viewDidLoad()` method by deleting the 
     placeholder comment and inserting this code below the call to 
     `super.viewDidLoad()`:

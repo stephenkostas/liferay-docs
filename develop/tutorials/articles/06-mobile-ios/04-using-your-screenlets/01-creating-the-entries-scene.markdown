@@ -32,6 +32,8 @@ Follow these steps to create a view controller for the entries scene:
     use this identifier to perform the segue programmatically when a user 
     selects a guestbook in Guestbook List Screenlet. 
 
+![Figure 1: The entries scene now exists to the right of the guestbooks scene, with a segue connecting the two scenes.](../../../images/ios-lp-entries-scene-01.png)
+
 Great! The entries scene now exists, and there's a segue going to it from the 
 guestbooks scene. Next, you'll create the entries scene's view controller class. 
 
@@ -59,7 +61,15 @@ class.
     targets. Make sure *Liferay Guestbook* is selected for both the *Group* and 
     *Targets* menus, and click *Create*. 
 
-4.  In the storyboard, select the entries scene's view controller. In the 
+4.  `EntriesViewController` needs a `GuestbookModel` variable for the guestbook 
+    it shows entries from. Add this variable to the top of the class: 
+
+        var selectedGuestbook: GuestbookModel?
+
+    As its name implies, this variable holds the guestbook the user selects in 
+    Guestbook List Screenlet. 
+
+5.  In the storyboard, select the entries scene's view controller. In the 
     Identity inspector, set `EntriesViewController` as the Custom Class. 
 
 Nice work! The entries scene's view controller now has a class that governs its 
