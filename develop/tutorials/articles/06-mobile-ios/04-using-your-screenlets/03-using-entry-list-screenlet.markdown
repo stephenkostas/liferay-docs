@@ -37,3 +37,116 @@ conform to the `EntryListScreenletDelegate` protocol. You created this delegate
 when creating the Screenlet. This delegate defines methods for responding to the 
 success or failure to retrieve entries, and the selection of an entry in the 
 list. 
+
+Follow these steps to conform `EntriesViewController` to the 
+`EntryListScreenletDelegate` protocol: 
+
+1.  Import `LiferayScreens`, and in the class declaration, set 
+    `EntriesViewController` to adopt the `EntryListScreenletDelegate` protocol. 
+    The first few lines of the class should look like this: 
+
+        import UIKit
+        import LiferayScreens
+
+        class EntriesViewController: UIViewController, EntryListScreenletDelegate {...
+
+2.  Implement the `EntryListScreenletDelegate` method 
+    `screenlet(_:onEntryListResponse:)`. Recall that this method lets you   
+    respond to a successful Screenlet call. Its arguments include the 
+    `EntryModel` objects that result from such a call. Since the Screenlet 
+    already displays these, you don't need to do anything in this method: 
+
+        func screenlet(screenlet: EntryListScreenlet, onEntryListResponse entries: [EntryModel]) {
+
+        }
+
+3.  Implement the `EntryListScreenletDelegate` method 
+    `screenlet(_:onEntryListError:)`. Recall that this method lets you respond 
+    to a failed Screenlet call. Its arguments include the resulting `NSError` 
+    object. You don't have to do anything in this method, but it's a good idea 
+    to print the error:
+
+        func screenlet(screenlet: EntryListScreenlet, onEntryListError error: NSError) {
+            print("Failed to retrieve guestbook entries: \(error.localizedDescription)")
+        }
+
+4.  Implement the `EntryListScreenletDelegate` method 
+    `screenlet(_:onEntrySelected:)`. Recall that this method lets you respond 
+    when a user selects an entry in the list. It does so by including the 
+    selected `EntryModel` object in its arguments. Since there's currently not a 
+    scene or other action that handles detailed information about an entry, you 
+    don't need to do anything in this method: 
+
+        func screenlet(screenlet: EntryListScreenlet, onEntrySelected entry: EntryModel) {
+
+        }
+
+5.  Now you must get an Entry List Screenlet reference. You'll do this by 
+    creating an outlet to the Screenlet. Return to your storyboard and enter the 
+    Assistant editor to display `EntriesViewController`'s code and the 
+    storyboard side by side. With Entry List Screenlet selected in the 
+    storyboard, Control-drag from the Screenlet to the `EntriesViewController` 
+    class to create the outlet. In the dialog that appears upon releasing your 
+    mouse button, enter the following information and click *Connect*: 
+
+    - **Connection:** Outlet
+    - **Name:** screenlet
+    - **Type:** EntryListScreenlet
+    - **Storage:** Weak
+
+    Xcode then adds the following code inside the `EntriesViewController` class: 
+
+        @IBOutlet weak var screenlet: EntryListScreenlet!
+
+6.  Use the new `screenlet` variable to set the view controller as the 
+    Screenlet's delegate. Do this in the `viewDidLoad()` method by deleting the 
+    placeholder comment and inserting this code below the call to 
+    `super.viewDidLoad()`:
+
+        self.screenlet.delegate = self
+
+7.  Next, you must set the guestbook the Screenlet retrieves entries from. To do 
+    this, set the Screenlet's `guestbookId` property to the selected guestbook's 
+    ID, immediately below the Screenlet's delegate assignment in the 
+    `viewDidLoad()` method: 
+
+        self.screenlet.guestbookId = selectedGuestbook!.guestbookId
+
+8.  Lastly, you must set the selected guestbook's name to the navigation bar's 
+    title. This lets the scene reflect the guestbook selection in the UI. To do 
+    this, add the following line of code at the end of the `viewDidLoad()` 
+    method: 
+
+        self.navigationItem.title = selectedGuestbook!.name
+
+    Your `viewDidLoad()` method should now look like this: 
+
+        override func viewDidLoad() {
+            super.viewDidLoad()
+
+            self.screenlet.delegate = self
+            self.screenlet.guestbookId = selectedGuestbook!.guestbookId
+            self.navigationItem.title = selectedGuestbook!.name
+        }
+
+Now you're ready to test your handiwork. Make sure your portal containing the 
+Guestbook portlet is running, and that the portlet contains a couple guestbooks 
+that have entries. Then run the app, and log in with your credentials. You 
+should see the list of guestbooks, displayed by Guestbook List Screenlet. 
+
+![Figure 1: After login, Guestbook List Screenlet displays the list of guestbooks from the portlet.](../../../images/ios-lp-gb-screenlet.png)
+
+Select a guestbook in the list. This takes you to the entries scene, which uses 
+Entry List Screenlet to display a list of that guestbook's entries. Pressing the 
+back button returns you to the guestbooks scene, where you can select a 
+different guestbook. 
+
+![Figure 2: Selecting a guestbook displays a list of that guestbook's entries via Entry List Screenlet.](../../../images/ios-lp-entries-screenlet.png)
+
+Congratulations! Now you know how to use Liferay Screens and create your own 
+Screenlets. This opens up a world of possibilities for developing apps that 
+leverage Liferay Portal. Although you learned a great deal in this Learning 
+Path, there’s still more. You can customize your Screenlet's appearance, package 
+Screenlets and Themes for redistribution, and even add multiple actions to a 
+Screenlet. These topics, and more, are covered in 
+[the tutorials on iOS apps with Liferay Screens](/develop/tutorials/-/knowledge_base/6-2/ios-apps-with-liferay-screens). 
