@@ -31,8 +31,8 @@ You'll use
 [CocoaPods](https://cocoapods.org/) 
 to install Liferay Screens. 
 [Click here](https://guides.cocoapods.org/using/getting-started.html) 
-for instructions on installing CocoaPods. After installing CocoaPods, use these 
-steps to install Screens: 
+for instructions on installing CocoaPods. After installing it, use these steps 
+to install Screens: 
 
 1.  In your project's root folder, create a file named `Podfile` that contains 
     the following: 
@@ -54,6 +54,11 @@ steps to install Screens:
             end
         end
 
+    This adds Liferay Screens 2.1.2 (the most recent version at the time this 
+    Learning Path was published) as a dependency. Note that the `post_install` 
+    code is optional--it's a workaround for a benign bug that causes Screenlet 
+    previews not to render in Interface Builder. 
+
 2.  On the terminal, navigate to your project's root folder and run this 
     command: 
 
@@ -66,8 +71,9 @@ steps to install Screens:
 
         pod install
 
+    This installs the Liferay Screens dependency specified in your `Podfile`. 
     Once this completes, quit Xcode and reopen your project by using the 
-    `LiferayGuestbook.xcworkspace` file in your project's directory. From now 
+    `LiferayGuestbook.xcworkspace` file in your project's folder. From now 
     on, you must use this file to open your project. 
 
 Great! You just installed Liferay Screens and the Liferay Mobile SDK! Next, 
@@ -78,10 +84,11 @@ you'll install the Guestbook Mobile SDK.
 To install the Guestbook Mobile SDK, you must add its service classes to your 
 project. Recall that these service classes are Objective-C. 
 [To use them from your project's Swift code](https://developer.apple.com/library/ios/documentation/Swift/Conceptual/BuildingCocoaApps/MixandMatch.html), 
-you must also add and configure an Objective-C bridging header. This section 
-shows you how to do these things. 
+you must also add and configure an Objective-C bridging header. You'll do these 
+things now: 
 
-1.  Recall that you created the following ZIP file for the Guestbook Mobile SDK: 
+1.  Recall that you created the following ZIP file containing the Guestbook 
+    Mobile SDK: 
 
         modules/guestbook-portlet/build/liferay-guestbook-portlet-ios-sdk-1.0.zip
 
@@ -105,7 +112,7 @@ shows you how to do these things.
 3.  The `v62` folder and its contents are now inside your Xcode project. Now you 
     must change each Objective-C class header file in the Guestbook Mobile SDK 
     to import the Liferay Mobile SDK framework. This is necessary because you 
-    used `use_frameworks!` in your Podfile. In `LREntryService_v62.h` and 
+    used `use_frameworks!` in your `Podfile`. In `LREntryService_v62.h` and 
     `LRGuestbookService_v62.h`, replace `#import "LRBaseService.h"` with 
     `@import LRMobileSDK;`. Don't worry if Xcode doesn't recognize this 
     import--you'll fix this by adding and configuring an Objective-C bridging 
@@ -149,7 +156,7 @@ instructions to do so:
     Liferay Guestbook project on the left and then click *Build Settings*. 
     Search for *Objective-C Bridging Header* in the search box. The only build 
     setting that appears is *Objective-C Bridging Header*, under the *Swift 
-    Compiler - General* section. In the two Liferay Guestbook fields for this 
+    Compiler - General* section. In the two *Liferay Guestbook* fields for this 
     build setting, enter the bridging header's file name. 
 
     ![Figure 6: The project is now configured to use your Objective-C bridging header.](../../../images/ios-lp-build-settings-header.png)
@@ -168,20 +175,20 @@ attributes:
 
 1.  In Xcode's project navigator, right-click the *Liferay Guestbook* folder 
     (not the top-level project) and select *New File*. In the dialog that 
-    appears, select the *iOS* tab, then scroll down to the *Resource* section 
-    and select *Property List*. Click *Next*.
+    appears, select the *iOS* tab then scroll down to the *Resource* section and 
+    select *Property List*. Click *Next*. 
 
     ![Figure 7: Use the Property List template to create a new `plist` file.](../../../images/ios-lp-plist-01.png)
 
-2.  Name the file `liferay-server-context.plist`, and make sure you're creating 
-    it in the *Liferay Guestbook* folder, which should also be selected in the 
+2.  Name the file `liferay-server-context.plist` and make sure you're creating 
+    it in the *Liferay Guestbook* folder, which should be selected in the 
     *Group* menu. Also make sure that *Liferay Guestbook* is selected in the 
     *Targets* menu. Then click *Create*. 
 
     ![Figure 8: Create the `plist` file as shown here.](../../../images/ios-lp-plist-02.png)
 
 3.  The `plist` file now opens in the editor. Right-click the file in the 
-    project navigator and select *Open As* &rarr; *Source Code*. Replace the 
+    Project navigator and select *Open As* &rarr; *Source Code*. Replace the 
     file's contents with this code: 
 
         <?xml version="1.0" encoding="UTF-8"?>
@@ -209,7 +216,7 @@ attributes:
     the *Instance ID* column. You can find your site ID from the site you put 
     the Guestbook portlet on. Navigate to this site and select *Admin* &rarr; 
     *Site Administration* &rarr; *Configuration* from the Dockbar. The site ID 
-    is listed on the *Site Settings* tab. 
+    is listed in the *Site Settings* tab. 
 
 Next, you'll configure iOS App Transport Security. 
 
@@ -222,7 +229,7 @@ Transport Security prevents your app from communicating with the portal. You
 must therefore disable App Transport Security. Follow these steps to do so: 
 
 1.  Select your project in Xcode's Project navigator. With the *Liferay 
-    Guestbook* target selected in the editor, click the *Info* tab. 
+    Guestbook* target selected in the outline, click the *Info* tab. 
 
     ![Figure 9: You'll disable App Transport Security in the Info tab.](../../../images/ios-lp-ats-01.png)
 

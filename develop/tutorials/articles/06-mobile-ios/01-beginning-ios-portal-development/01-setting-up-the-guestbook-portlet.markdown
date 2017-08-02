@@ -21,11 +21,11 @@ First, download a Liferay Portal 6.2 Tomcat bundle from
 Then 
 [click here](/discover/deployment/-/knowledge_base/6-2/installing-a-bundle)
 and follow the instructions to install the bundle. To follow best practices, you 
-should create a `bundles` folder and unzip it there. The bundle's root 
-folder is referred to as *Liferay Home* and is named according to the 
-version, edition, and specific Liferay Portal release. For example, if you 
-downloaded Liferay Portal 6.2 CE GA6 and unzipped it to a `bundles` folder on 
-your machine, that bundle's Liferay Home folder path is: 
+should create a `bundles` folder and unzip it there. The bundle's root folder is 
+referred to as *Liferay Home* and is named according to the version, edition, 
+and specific Liferay Portal release. For example, if you downloaded Liferay 
+Portal 6.2 CE GA6 and unzipped it to a `bundles` folder on your machine, that 
+bundle's Liferay Home folder is: 
 
     bundles/liferay-portal-6.2-ce-ga6
 
