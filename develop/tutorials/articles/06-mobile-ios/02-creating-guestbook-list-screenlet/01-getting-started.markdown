@@ -13,7 +13,7 @@ Since you'll use Guestbook List Screenlet in only this app, you can create it in
 a new folder inside the app's project. Create this folder now: 
 
 1.  In the Finder, create the `GuestbookListScreenlet` folder inside your 
-    project's folder (the top-level `Liferay Guestbook` folder). 
+    project's top-level `Liferay Guestbook` folder. 
 
     ![Figure 1: The new `GuestbookListScreenlet` folder should be inside your project's top-level `Liferay Guestbook` folder.](../../../images/ios-lp-guestbook-screenlet-finder.png)
 
@@ -25,8 +25,9 @@ a new folder inside the app's project. Create this folder now:
 
     ![Figure 2: After adding the `GuestbookListScreenlet` folder, your project should look something like this. Note that you can reorder items in the Project navigator via drag and drop.](../../../images/ios-lp-gb-screenlet-proj-nav.png)
 
-Before getting started, you should understand how pagination works in in list 
-Screenlets.
+Great! Now you have a folder to create Guestbook List Screenlet in. Before 
+getting started, you should understand how pagination works in in list 
+Screenlets. 
 
 ## Pagination
 
@@ -37,17 +38,17 @@ Support for this is built into the list Screenlet framework. You'll see this as
 you construct your list Screenlet. For example, several methods have parameters 
 for the start row and end row of a page in the list. 
 
-Now you're ready to begin! 
+Now you're ready to begin creating the Screenlet! 
 
 ## Creating the Model Class
 
-Liferay Screens typically receives entities from a Liferay instance as a 
+Liferay Screens typically receives entities from a Liferay Portal instance as a 
 `[String:AnyObject]` dictionary, where `String` is the entity's attribute and 
 `AnyObject` is the attribute's value. Although your Screenlet can use these 
 dictionary objects, it's often easier to create a *model class* that converts 
 each into an object that represents the corresponding entity in the portal. 
 Model classes are especially convenient for complex entities composed of many 
-attribute-value pairs, such as guestbooks in the Guestbooks portlet. 
+attribute-value pairs, like guestbooks in the Guestbooks portlet. 
 
 Your model class must contain all the code necessary to transform each 
 `[String:AnyObject]` dictionary that comes back from the server into a model 
@@ -66,8 +67,8 @@ clear that this class doesn't belong exclusively to a single Screenlet.
 
 Follow these steps to create Guestbook List Screenlet's model class: 
 
-1.  In the Finder, create the `model` folder inside your project's folder (the 
-    top-level `Liferay Guestbook` folder). 
+1.  In the Finder, create the `model` folder inside your project's top-level 
+    `Liferay Guestbook` folder. 
 
     ![Figure 3: The new `model` folder should be inside your project's top-level `Liferay Guestbook` folder.](../../../images/ios-lp-model-finder.png)
 
@@ -140,12 +141,12 @@ Follow these steps to create Guestbook List Screenlet's model class:
 
 This class creates `GuestbookModel` objects that represent guestbooks from the 
 Guestbook portlet. The `[String:AnyObject]` dictionary contains the data of a 
-guestbook retrieved from the Guestbooks portlet. The initializer sets this 
-dictionary to the `attributes` property. Each computed property returns the 
-value of a guestbook parameter in `attributes`. For example, the `guestbookId` 
-property returns the value of the `guestbookId` parameter, the `groupId` 
-property returns the value of the `groupId` parameter, and so on. To see how the 
-Guestbooks portlet defines these parameters, see the 
+guestbook retrieved from the portlet. The initializer sets this dictionary to 
+the `attributes` property. Each computed property returns the value of a 
+guestbook parameter in `attributes`. For example, the `guestbookId` property 
+returns the value of the `guestbookId` parameter, the `groupId` property returns 
+the value of the `groupId` parameter, and so on. To see how the Guestbooks 
+portlet defines these parameters, see the 
 [Liferay MVC Learning Path article on Service Builder](/develop/tutorials/-/knowledge_base/6-2/using-service-builder-to-generate-a-persistence-fr). 
 
 Also note that each computed property defaults to an empty string or `0`, 

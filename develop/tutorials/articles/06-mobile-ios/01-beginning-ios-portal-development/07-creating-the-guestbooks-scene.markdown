@@ -15,7 +15,7 @@ article shows you how to do this with the following steps:
 2.  Create the guestbook scene's view controller class. This class controls the 
     view controller's behavior. 
 
-3.  Create a segue from the login scene to the guestbooks scene. After login, 
+3.  Create a segue from the login scene to the guestbooks scene. Upon login, 
     this segue takes the user to the guestbooks scene. 
 
 First, you'll add a view controller to the storyboard. 
@@ -32,7 +32,7 @@ Follow these steps to add a view controller to the storyboard:
 2.  Now you must embed this view controller in a 
     [navigation controller](https://developer.apple.com/library/content/documentation/WindowsViews/Conceptual/ViewControllerCatalog/Chapters/NavigationControllers.html). 
     Navigation controllers in iOS implement a *navigation stack*. You can 
-    loosely think of a navigation stack as a deck of cards, where each card is a 
+    loosely think of a navigation stack as a deck of cards where each card is a 
     view controller with a navigation bar. The navigation bar contains a back 
     button that lets you navigate to the previous view controller in the stack. 
     You can also change the navigation bar's title to reflect the scene's 
@@ -49,10 +49,10 @@ Follow these steps to add a view controller to the storyboard:
     ![Figure 2: The new guestbooks scene is now embedded in a navigation controller. Also note that the navigation bar's title reflects what the scene will be used for.](../../../images/ios-lp-nav-controller.png)
 
 4.  With the guestbooks scene's navigation bar selected, enter the Attributes 
-    inspector, type a single space into the *Back Button* field under the 
-    *Navigation Item* category, and press return. This ensures that the back 
-    button in the Navigation controller has no label; the left chevron alone 
-    adequately indicates the button's purpose. 
+    inspector, type a single space into the *Back Button* field (under the 
+    *Navigation Item* category), and press return. This ensures that the back 
+    button in the Navigation controller has no label--the default left chevron 
+    indicates the button's purpose without the need for additional text. 
 
     ![Figure 3: Set the back button's label to an empty space.](../../../images/ios-lp-back-button-label.png)
 
@@ -108,15 +108,15 @@ guestbooks scene is embedded in. You'll fix this next.
 Follow these steps to create and trigger the segue: 
 
 1.  Control-drag from the login scene's view controller to the navigation 
-    controller. In the dialog that appears, select *show* for the segue type. 
-    The segue now connects the login scene's view controller and the navigation 
-    controller. 
+    controller. In the dialog that appears when you release your mouse button, 
+    select *show* for the segue type. The segue now connects the login scene's 
+    view controller and the navigation controller. 
 
     ![Figure 7: A segue now exists from the login scene to the navigation controller.](../../../images/ios-lp-login-segue.png)
 
 2.  Now you must tell the login scene's view controller when to perform this 
-    segue. You'll do this programmatically in the `ViewController` class. 
-    To perform a segue programmatically, you must first give it an identifier in 
+    segue. You'll do this programmatically in the `ViewController` class. To 
+    perform a segue programmatically, you must first give it an identifier in 
     your storyboard. You'll then use this identifier in `ViewController` to 
     perform the segue when a user logs in. 
 
@@ -135,20 +135,21 @@ Follow these steps to create and trigger the segue:
         performSegue(withIdentifier: "loginsegue", sender: nil)
 
     The `performSegue(withIdentifier:sender:)` method performs the segue with 
-    the specified identifier, and includes any additional sender code. You send 
+    the specified identifier and includes any additional sender code. You send 
     `nil` here since you don't need to send any information with the segue. Your 
     `screenlet(_:onLoginResponseUserAttributes:)` method should now look like 
     this: 
 
-        func screenlet(_ screenlet: BaseScreenlet, onLoginResponseUserAttributes attributes: [String:AnyObject]) {
-            print("Login Successful!")
-            performSegue(withIdentifier: "loginsegue", sender: nil)
+        func screenlet(_ screenlet: BaseScreenlet, 
+            onLoginResponseUserAttributes attributes: [String:AnyObject]) {
+                print("Login Successful!")
+                performSegue(withIdentifier: "loginsegue", sender: nil)
         }
 
 Great! Your app can now navigate to the guestbooks scene after login. To verify 
 this, run the app and log in. 
 
-![Figure 9: The app now navigates to the empty guestbooks scene following successful login.](../../../images/ios-lp-gb-scene-empty.png)
+![Figure 9: Following successful login, the app now navigates to the empty guestbooks scene.](../../../images/ios-lp-gb-scene-empty.png)
 
 Awesome! You've successfully added a scene for displaying guestbooks, and set 
 the app to take the user there after login. Now you're ready to develop 

@@ -14,15 +14,13 @@ To use any Screenlet, you must follow two steps:
     You do this by adding an empty view to the scene, and then setting the 
     Screenlet class as the view's custom class. 
 
-2.  Conform the view controller's class to the Screenlet's delegate protocol. 
-    This lets the view controller respond to the Screenlet's events. 
+2.  Conform the scene's view controller's class to the Screenlet's delegate 
+    protocol. This lets the view controller respond to the Screenlet's events. 
 
 In this app, you'll use Login Screenlet in the app's first (and at this time, 
-only) scene. After adding the Screenlet to the scene in the storyboard, you'll 
-conform `ViewController` (the scene's view controller class) to the 
+only) scene. After adding the Screenlet to this scene, you'll conform 
+`ViewController` (the scene's view controller class) to the 
 `LoginScreenletDelegate` protocol. 
-
-You'll begin by adding Login Screenlet to the scene.
 
 ## Adding Login Screenlet to the Scene
 
@@ -36,9 +34,9 @@ Follow these steps to add Login Screenlet to the scene:
     ![Figure 1: The new view is nested under the view controller's existing view.](../../../images/ios-lp-new-view-outline.png)
 
 2.  With the new view selected, open the Identity inspector and set the view's 
-    Custom Class as `LoginScreenlet`. This causes Xcode to build the project, 
-    and render Login Screenlet's preview in the view. Also note that the view 
-    now appears as Login Screenlet in the outline view.
+    Custom Class as `LoginScreenlet`. Xcode now builds the project and renders 
+    Login Screenlet's preview in the view. Also note that the view now appears 
+    as Login Screenlet in the outline view. 
 
     ![Figure 2: You must set the view's Custom Class to `LoginScreenlet`.](../../../images/ios-lp-custom-class.png)
 
@@ -53,15 +51,15 @@ Follow these steps to add Login Screenlet to the scene:
 
     ![Figure 3: These alignment constraints center Login Screenlet in the scene.](../../../images/ios-lp-alignment-constraints.png)
 
-4.  Login Screenlet stretches or compresses to fill the view. It's compressed at 
-    the moment because of the alignment constraints. To avoid any ill-effects 
-    brought on by automatic resizing, you'll set constraints that set the 
-    Screenlet to a fixed size. With the view selected, open the *Add New 
-    Constraints* menu at the bottom-right of the canvas. In this menu, set the 
-    *Width* to 270 and the *Height* to 185, and click the *Add 2 Constraints* 
-    button. The Screenlet looks better now, and the Auto Layout errors are gone. 
-    Note that you don't have to use these exact width and height values when 
-    using Login Screenlet. You can size the Screenlet however you wish. 
+4.  By default, Login Screenlet stretches or compresses to fill the view. It's 
+    compressed at the moment because of the alignment constraints. To avoid any 
+    ill-effects caused by automatic resizing, you'll set the Screenlet to a 
+    fixed size. With the view selected, open the *Add New Constraints* menu at 
+    the bottom-right of the canvas. In this menu, set the *Width* to 270 and the 
+    *Height* to 185, and click the *Add 2 Constraints* button. The Screenlet 
+    looks better now and the Auto Layout errors are gone. Note that you don't 
+    have to use these exact width and height values when using Login Screenlet. 
+    You can size the Screenlet however you wish. 
 
     ![Figure 3: Setting these size constraints ensures that Login Screenlet isn't too stretched out or compressed.](../../../images/ios-lp-size-constraints.png)
 
@@ -83,9 +81,9 @@ delegate defines methods for both.
 Follow these steps to conform `ViewController` to the `LoginScreenletDelegate` 
 protocol: 
 
-1.  Import `LiferayScreens`, and in the class declaration, set `ViewController` 
-    to adopt the `LoginScreenletDelegate` protocol. The first few lines of the 
-    class should look like this: 
+1.  Import `LiferayScreens` and set `ViewController` to adopt the 
+    `LoginScreenletDelegate` protocol. The first few lines of the class should 
+    look like this: 
 
         import UIKit
         import LiferayScreens
@@ -97,8 +95,9 @@ protocol:
     authentication with Login Screenlet succeeds. Right now, you don't need to 
     do anything in this method besides indicate that login succeeded: 
 
-        func screenlet(_ screenlet: BaseScreenlet, onLoginResponseUserAttributes attributes: [String:AnyObject]) {
-            print("Login Successful!")
+        func screenlet(_ screenlet: BaseScreenlet, 
+            onLoginResponseUserAttributes attributes: [String:AnyObject]) {
+                print("Login Successful!")
         }
 
 3.  Implement the `LoginScreenletDelegate` method `screenlet(_:onLoginError:)`. 
