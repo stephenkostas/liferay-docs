@@ -2,16 +2,16 @@
 
 The Screenlet class is the main component that governs the Screenlet's behavior. 
 When using a Screenlet, app developers primarily interact with its Screenlet 
-class. A list Screenlet's Screenlet class must extend the 
-[`BaseListScreenlet` class](https://github.com/liferay/liferay-screens/blob/master/ios/Framework/Core/Base/BaseListScreenlet/BaseListScreenlet.swift). 
+class. A list Screenlet's Screenlet class must extend 
+[the `BaseListScreenlet` class](https://github.com/liferay/liferay-screens/blob/master/ios/Framework/Core/Base/BaseListScreenlet/BaseListScreenlet.swift). 
 Since `BaseListScreenlet` provides most of the functionality needed by Screenlet 
 classes, extending it lets you focus on the functionality unique to your 
 Screenlet. The Screenlet class must also define the configurable `IBInspectable` 
 properties the Screenlet needs, create and return an instance of your 
 Interactor, and respond to the Screenlet's events via the delegate. 
 
-The Screenlet class you created in the previous step, when you also created the 
-delegate, is currently empty. You'll complete it now. 
+The Screenlet class you created while creating the delegate is currently empty. 
+You'll complete it now. 
 
 Follow these steps to complete the `GuestbookListScreenlet` class in 
 `GuestbookListScreenlet.swift`: 
@@ -31,7 +31,7 @@ Follow these steps to complete the `GuestbookListScreenlet` class in
 2.  Override the `createPageLoadInteractor` method to create and return an 
     instance of your Interactor, `GuestbookListPageLoadInteractor`. This method 
     includes `page` and `computeRowCount` arguments, which you can pass to the 
-    Interactor's constructor along with the `groupId`: 
+    Interactor's constructor along with `groupId`: 
 
         override public func createPageLoadInteractor(
             page: Int,
@@ -50,12 +50,12 @@ Follow these steps to complete the `GuestbookListScreenlet` class in
             return delegate as? GuestbookListScreenletDelegate
         }
 
-    You'll use this property to handle the Screeenlet's events via the 
-    delegate's methods. 
+    You'll use this property to handle the Screenlet's events via the delegate's 
+    methods. 
 
 4.  Override the `BaseListScreenlet` methods that handle the Screenlet's events. 
-    Because these events correspond to the events your delegate methods handle, 
-    you'll call your delegate methods in these `BaseListScreenlet` methods: 
+    Because these methods correspond to your delegate methods, you'll call your 
+    delegate methods in them: 
 
     - `onLoadPageResult`: Called when the Screenlet loads a page successfully. 
       Override this method to call the superclass's `onLoadPageResult` method, 

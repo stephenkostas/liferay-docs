@@ -4,9 +4,9 @@ Interactors implement your Screenlet's actions. In non-list Screenlets, this can
 include making the server call. List Screenlets, however, make server calls via 
 Connectors. Also, loading entities is usually the only action a user can take in 
 a list Screenlet. Therefore, list Screenlet Interactors typically only need to 
-instantiate the Connector and receive the server call's results. This is also 
-the case for Guestbook List Screenlet's Interactor. You'll create this 
-Interactor now. 
+instantiate the Connector and receive the server call's results. This is the 
+case for Guestbook List Screenlet's Interactor. You'll create this Interactor 
+now. 
 
 ## Creating Your Interactor's Folder
 
@@ -28,16 +28,18 @@ Now you're ready to create the Interactor.
 ## Creating the Interactor
 
 The Interactor class of a list Screenlet that implements fluent pagination must 
-extend the 
-[`BaseListPageLoadInteractor` class](https://github.com/liferay/liferay-screens/blob/master/ios/Framework/Core/Base/BaseListScreenlet/BaseListPageLoadInteractor.swift). 
-Your Interactor class must also contain any properties the Screenlet needs, and 
-an initializer that sets them. This initializer also needs arguments for the 
-following properties, which it passes to the superclass initializer: 
+extend 
+[Liferay Screens's `BaseListPageLoadInteractor` class](https://github.com/liferay/liferay-screens/blob/master/ios/Framework/Core/Base/BaseListScreenlet/BaseListPageLoadInteractor.swift). 
+This class provides most of the functionality required by list Screenlet 
+Interactors. Your Interactor class must also contain any properties your 
+Screenlet needs, and an initializer that sets them. This initializer needs 
+arguments for the following properties, which it passes to the superclass 
+initializer: 
 
 - `screenlet`: A `BaseListScreenlet` reference. This ensures the Interactor 
   always has a Screenlet reference. 
 - `page`: The page number to retrieve. 
-- `computeRowCount`: Whether to call the Connector’s `doAddRowCountServiceCall` 
+- `computeRowCount`: Whether to call the Connector's `doAddRowCountServiceCall` 
   method. 
 
 Follow these steps to create Guestbook List Screenlet's Interactor: 
@@ -53,9 +55,9 @@ Follow these steps to create Guestbook List Screenlet's Interactor:
       *Liferay Guestbook* target (these should be selected by default). Click 
       *Create*. 
 
-2.  In the new class, add an import for `LiferayScreens`, and a private `Int64` 
-    constant called `groupId`. This constant defines the site the Interactor 
-    retrieves guestbooks from. Your Interactor should now look like this: 
+2.  In the new class, import `LiferayScreens` and add a private `Int64` constant 
+    called `groupId`. This constant holds the ID of the site guestbooks are 
+    retrieved from. Your Interactor should now look like this: 
 
         import UIKit
         import LiferayScreens
@@ -66,9 +68,9 @@ Follow these steps to create Guestbook List Screenlet's Interactor:
 
         }
 
-3.  Create an initializer that takes `screenlet`, `page`, `computeRowCount`, 
-    and `groupId` as arguments. Inside this initializer, use the `groupId` 
-    argument to set the `groupId` constant, then call the superclass initializer 
+3.  Create an initializer that takes the arguments `screenlet`, `page`, 
+    `computeRowCount`, and `groupId`. In this initializer, set the `groupId` 
+    constant to the corresponding argument, then call the superclass initializer 
     with the remaining arguments. Note that if the the `groupId` is `0`, the 
     `groupId` setting in `liferay-server-context.plist` is used instead. Add the 
     initializer as follows: 

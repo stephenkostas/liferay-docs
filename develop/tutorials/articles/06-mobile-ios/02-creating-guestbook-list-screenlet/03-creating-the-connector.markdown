@@ -1,10 +1,11 @@
 # Creating Guestbook List Screenlet's Connector
 
-Connectors are Screenlet components that make server calls. Note that non-list 
-Screenlets don't require Connectors -- they can make server calls in Interactors 
-instead. Connectors, however, provide a layer of abstraction by making the 
-server call outside the Interactor. By requiring Connectors, list Screenlets 
-exploit this architectural advantage, and support pagination. 
+Connectors are Screenlet components that make server calls. Non-list Screenlets 
+don't require Connectors--they can make server calls in Interactors instead. 
+Connectors, however, provide a layer of abstraction by making the server call 
+outside the Interactor. This leaves the Interactor to instantiate the Connector 
+and receive the server call's results. List Screenlets exploit this 
+architectural advantage by requiring Connectors. 
 
 First, you'll create a folder for the Connector. 
 
@@ -27,19 +28,18 @@ Now you're ready to create the Connector.
 
 ## Creating the Connector
 
-List Screenlet Connectors must extend the 
-[`PaginationLiferayConnector` class](https://github.com/liferay/liferay-screens/blob/master/ios/Framework/Core/Base/BaseListScreenlet/PaginationLiferayConnector.swift), 
+List Screenlet Connectors must extend 
+[the `PaginationLiferayConnector` class](https://github.com/liferay/liferay-screens/blob/master/ios/Framework/Core/Base/BaseListScreenlet/PaginationLiferayConnector.swift), 
 which Liferay Screens provides to enable most of the functionality required by 
-list Screenlet Connectors. By extending this class, you can focus on the 
+list Screenlet Connectors. Extending this class lets you focus on the 
 functionality unique to your Connector. Your list Screenlet's Connector class 
-must also contain any properties it needs to make the server call, and an 
-initializer that sets them. To support pagination, the initializer must also 
-contain the following arguments, which you'll pass to the superclass 
-initializer: 
+must contain any properties it needs to make the server call, and an initializer 
+that sets them. To support pagination, the initializer must also contain the 
+following arguments, which you'll pass to the superclass initializer: 
 
 - `startRow`: The number representing the page's first row. 
 - `endRow`: The number representing the page's last row. 
-- `computeRowCount`: Whether to call the Connector’s `doAddRowCountServiceCall` 
+- `computeRowCount`: Whether to call the Connector's `doAddRowCountServiceCall` 
   method (you'll learn about this method shortly). 
 
 Follow these steps to create Guestbook List Screenlet's Connector: 
@@ -50,14 +50,14 @@ Follow these steps to create Guestbook List Screenlet's Connector:
     - Select *iOS* &rarr; *Source* &rarr; *Cocoa Touch Class*, and click *Next*. 
     - Name the class `GuestbookListPageLiferayConnector`, set it to extend 
       `PaginationLiferayConnector`, select *Swift* for the language, and click 
-      *Next*.
+      *Next*. 
     - Make sure the `Connector` folder and group is selected, as well as the 
       *Liferay Guestbook* target (these should be selected by default). Click 
       *Create*. 
 
-2.  In the new class, add an import for `LiferayScreens`, and a public `Int64` 
-    constant called `groupId`. This constant defines the site the Connector 
-    retrieves guestbooks from. Your Connector should now look like this:
+2.  In the new class, import `LiferayScreens` and add a public `Int64` constant 
+    called `groupId`. This constant holds the ID of the site the Connector 
+    retrieves guestbooks from. Your Connector should now look like this: 
 
         import UIKit
         import LiferayScreens
@@ -68,9 +68,9 @@ Follow these steps to create Guestbook List Screenlet's Connector:
 
         }
 
-3.  Create an initializer that takes `startRow`, `endRow`, `computeRowCount`, 
-    and `groupId` as arguments. Inside this initializer, use the `groupId` 
-    argument to set the `groupId` constant, then call the superclass initializer 
+3.  Create an initializer that takes the arguments `startRow`, `endRow`, 
+    `computeRowCount`, and `groupId`. In this initializer, set the `groupId` 
+    constant to the corresponding argument, then call the superclass initializer 
     with the remaining arguments. Add the initializer as follows: 
 
         public init(startRow: Int, endRow: Int, computeRowCount: Bool, groupId: Int64) {
@@ -82,10 +82,9 @@ Follow these steps to create Guestbook List Screenlet's Connector:
 4.  Override the `doAddPageRowsServiceCall` method to make the server call that 
     retrieves guestbooks from the portlet. This method must call the Guestbook 
     SDK service method `getGuestbooksWithGroupId`, which retrieves guestbooks. 
-    To do this, you must first create a service instance 
-    (`LRGuestbookService_v62`) from the session. Then call the service's 
-    `getGuestbooksWithGroupId` method with the `groupId`, `startRow`, and 
-    `endRow`:
+    To do this, you must first create a `LRGuestbookService_v62` instance from 
+    the session. Then call the service's `getGuestbooksWithGroupId` method with 
+    `groupId`, `startRow`, and `endRow`: 
 
         public override func doAddPageRowsServiceCall(session: LRBatchSession, startRow: Int, endRow: Int, 
             obc: LRJSONObjectWrapper?) {
@@ -95,7 +94,8 @@ Follow these steps to create Guestbook List Screenlet's Connector:
                     try service!.getGuestbooksWithGroupId(groupId, start: Int32(startRow), end: Int32(endRow))
                 }
                 catch {
-                    // ignore error: the service method returns nil because the request is sent later, in batch
+                    // ignore error: the service method returns nil because 
+                    // the request is sent later, in batch
                 }
 
         }
@@ -108,9 +108,10 @@ Follow these steps to create Guestbook List Screenlet's Connector:
 5.  Override the `doAddRowCountServiceCall` method to make the server call that 
     retrieves the total number of guestbooks from the portlet. This enables 
     pagination. This method must call the Guestbook SDK service method 
-    `getGuestbooksCount`, which retrieves guestbooks. To do this, you must first 
-    create a service instance (`LRGuestbookService_v62`) from the session. Then 
-    call the service's `getGuestbooksCount` method with the `groupId`:
+    `getGuestbooksCount`, which retrieves the total number of guestbooks. To do 
+    this, you must first create a `LRGuestbookService_v62` service instance from 
+    the session. Then call the service's `getGuestbooksCount` method with 
+    `groupId`:
 
         override public func doAddRowCountServiceCall(session: LRBatchSession) {
             let service = LRGuestbookService_v62(session: session)
@@ -119,8 +120,12 @@ Follow these steps to create Guestbook List Screenlet's Connector:
                 try service!.getGuestbooksCount(withGroupId: groupId)
             }
             catch {
-                // ignore error: the service method returns nil because the request is sent later, in batch
+                // ignore error: the service method returns nil because 
+                // the request is sent later, in batch
             }
         }
+
+    As in the previous step, you don't need to do anything in the `catch` 
+    statement. 
 
 Awesome! Your Connector is finished. Now you're ready to create the Interactor. 

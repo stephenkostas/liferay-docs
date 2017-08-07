@@ -1,7 +1,7 @@
 # Creating Guestbook List Screenlet's Delegate
 
-A delegate is required if you want other classes to respond to your Screenlet's 
-actions. For example, 
+A delegate is a Screenlet component that lets other classes to respond to a 
+Screenlet's actions. For example, 
 [Login Screenlet's delegate](/develop/reference/-/knowledge_base/6-2/loginscreenlet-for-ios#delegate) 
 lets the app developer implement methods that respond to login success or 
 failure. Note that the 
@@ -37,9 +37,9 @@ Follow these steps to create Guestbook List Screenlet's delegate:
       well as the *Liferay Guestbook* target (these should be selected by 
       default). Click *Create*. 
 
-2.  In the new `GuestbookListScreenlet` class, add an import for 
-    `LiferayScreens`, change the class declaration to `public`, and delete any 
-    placeholder comments in the class body. 
+2.  In the new `GuestbookListScreenlet` class, import `LiferayScreens`, change 
+    the class declaration to `public`, and delete any placeholder comments in 
+    the class body. 
 
 3.  In between the `import` statements and the class declaration, add the 
     following code: 
@@ -58,8 +58,8 @@ Follow these steps to create Guestbook List Screenlet's delegate:
         }
 
     This defines the `GuestbookListScreenletDelegate` protocol, which extends 
-    [the `BaseScreenletDelegate`](https://github.com/liferay/liferay-screens/blob/master/ios/Framework/Core/Base/BaseScreenlet.swift) 
-    protocol. Delegates for custom Screenlets, like Guestbook List Screenlet, 
+    [the `BaseScreenletDelegate` protocol](https://github.com/liferay/liferay-screens/blob/master/ios/Framework/Core/Base/BaseScreenlet.swift). 
+    Delegates for custom Screenlets, like Guestbook List Screenlet, 
     must extend `BaseScreenletDelegate`. The rest of 
     `GuestbookListScreenletDelegate` defines the delegate methods you'll use 
     later to respond to the Screenlet's events. 
