@@ -8,6 +8,7 @@
 .classpath
 .METADATA
 .settings
+.DS_Store
 git-modified-list.txt
 nbbuild.xml
 properties/
