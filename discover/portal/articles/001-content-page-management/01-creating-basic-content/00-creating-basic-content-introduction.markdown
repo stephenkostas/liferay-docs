@@ -10,4 +10,4 @@ download @product@ here: https://www.liferay.com/downloads
 
 For information about setting up Liferay, see the [Installing Liferay Portal tutorial](/discover/deployment/-/knowledge_base/7-0/installing-liferay-portal) 
 
-![Figure X: The finished Content Display page.](../../images/lp-bio-page.png)
+![Figure X: The finished Content Display page.](../../../images/lp-bio-page.png)
