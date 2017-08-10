@@ -1,7 +1,7 @@
 # Using Entry List Screenlet
 
-You'll use Entry List Screenlet the same way you use any Screenlet: insert the 
-Screenlet in a storyboard scene, then conform the view controller's class to the 
+You'll use Entry List Screenlet the same way you use any Screenlet: insert it in 
+a storyboard scene, then conform the scene's view controller class to the 
 Screenlet's delegate protocol. You'll follow these steps now to use Entry List 
 Screenlet in the entries scene. 
 
@@ -9,8 +9,8 @@ Screenlet in the entries scene.
 
 Follow these steps to add Entry List Screenlet to the entries scene: 
 
-1.  In your storyboard, first select the entries scene's view controller. Then 
-    drag and drop a plain view (`UIView`) from the Object Library onto the view 
+1.  In your storyboard, select the entries scene's view controller. Then drag 
+    and drop a plain view (`UIView`) from the Object Library to the view 
     controller. In the outline view, this new view should be nested under the 
     view controller's existing view. 
 
@@ -21,11 +21,11 @@ Follow these steps to add Entry List Screenlet to the entries scene:
     this menu, set *Spacing to nearest neighbor* to 0 on all sides, and click 
     the *Add 4 Constraints* button. 
 
-    ![Figure 2: Set the new view's constraints to 0 on all sides.](../../../images/ios-lp-gb-constraints.png)
+    ![Figure 2: Set the new view's *Spacing to nearest neighbor* constraints to 0 on all sides.](../../../images/ios-lp-gb-constraints.png)
 
-3.  With the new view selected, open the Identity inspector and set the view's 
-    Custom Class to `EntryListScreenlet`. The view now appears as Entry List 
-    Screenlet in the outline view. 
+3.  With the new view still selected, open the Identity inspector and set the 
+    view's custom class to `EntryListScreenlet`. The view now appears as Entry 
+    List Screenlet in the outline view. 
 
 Great! The entries scene now contains Entry List Screenlet. Next, you'll conform 
 the scene's view controller class to the Screenlet's delegate. 
@@ -41,7 +41,7 @@ list.
 Follow these steps to conform `EntriesViewController` to the 
 `EntryListScreenletDelegate` protocol: 
 
-1.  Import `LiferayScreens`, and in the class declaration, set 
+1.  Import `LiferayScreens`, and in the class declaration set 
     `EntriesViewController` to adopt the `EntryListScreenletDelegate` protocol. 
     The first few lines of the class should look like this: 
 
@@ -51,10 +51,10 @@ Follow these steps to conform `EntriesViewController` to the
         class EntriesViewController: UIViewController, EntryListScreenletDelegate {...
 
 2.  Implement the `EntryListScreenletDelegate` method 
-    `screenlet(_:onEntryListResponse:)`. Recall that this method lets you   
-    respond to a successful Screenlet call. Its arguments include the 
-    `EntryModel` objects that result from such a call. Since the Screenlet 
-    already displays these, you don't need to do anything in this method: 
+    `screenlet(_:onEntryListResponse:)`. Recall that this method lets you 
+    respond to a successful server call. Its arguments include the `EntryModel` 
+    objects that result from such a call. Since the Screenlet already displays 
+    these objects, you don't need to do anything in this method: 
 
         func screenlet(screenlet: EntryListScreenlet, onEntryListResponse entries: [EntryModel]) {
 
@@ -62,9 +62,9 @@ Follow these steps to conform `EntriesViewController` to the
 
 3.  Implement the `EntryListScreenletDelegate` method 
     `screenlet(_:onEntryListError:)`. Recall that this method lets you respond 
-    to a failed Screenlet call. Its arguments include the resulting `NSError` 
+    to a failed server call. Its arguments include the resulting `NSError` 
     object. You don't have to do anything in this method, but it's a good idea 
-    to print the error:
+    to print the error: 
 
         func screenlet(screenlet: EntryListScreenlet, onEntryListError error: NSError) {
             print("Failed to retrieve guestbook entries: \(error.localizedDescription)")
@@ -86,8 +86,8 @@ Follow these steps to conform `EntriesViewController` to the
     Assistant editor to display `EntriesViewController`'s code and the 
     storyboard side by side. With Entry List Screenlet selected in the 
     storyboard, Control-drag from the Screenlet to the `EntriesViewController` 
-    class to create the outlet. In the dialog that appears upon releasing your 
-    mouse button, enter the following information and click *Connect*: 
+    class, just below the class declaration. Release your mouse button, enter 
+    the following information in the dialog that appears, and click *Connect*: 
 
     - **Connection:** Outlet
     - **Name:** screenlet
@@ -98,10 +98,10 @@ Follow these steps to conform `EntriesViewController` to the
 
         @IBOutlet weak var screenlet: EntryListScreenlet!
 
-6.  Use the new `screenlet` variable to set the view controller as the 
+6.  Use this new `screenlet` variable to set the view controller as the 
     Screenlet's delegate. Do this in the `viewDidLoad()` method by deleting the 
     placeholder comment and inserting this code below the call to 
-    `super.viewDidLoad()`:
+    `super.viewDidLoad()`: 
 
         self.screenlet.delegate = self
 
@@ -133,13 +133,12 @@ Now you're ready to test your handiwork. Make sure your portal containing the
 Guestbook portlet is running, and that the portlet contains a couple guestbooks 
 that have entries. Then run the app, and log in with your credentials. You 
 should see the list of guestbooks, displayed by Guestbook List Screenlet. 
-
-![Figure 1: After login, Guestbook List Screenlet displays the list of guestbooks from the portlet.](../../../images/ios-lp-gb-screenlet.png)
-
-Select a guestbook in the list. This takes you to the entries scene, which uses 
+Selecting a guestbook in the list takes you to the entries scene, which uses 
 Entry List Screenlet to display a list of that guestbook's entries. Pressing the 
 back button returns you to the guestbooks scene, where you can select a 
 different guestbook. 
+
+![Figure 1: After login, Guestbook List Screenlet displays the list of guestbooks from the portlet.](../../../images/ios-lp-gb-screenlet.png)
 
 ![Figure 2: Selecting a guestbook displays a list of that guestbook's entries via Entry List Screenlet.](../../../images/ios-lp-entries-screenlet.png)
 

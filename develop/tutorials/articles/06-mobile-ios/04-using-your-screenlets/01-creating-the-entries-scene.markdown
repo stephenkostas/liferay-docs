@@ -1,9 +1,9 @@
 # Creating the Entries Scene
 
-Currently, your app only has two scenes: login, and guestbooks. The login scene 
-contains Login Screenlet, and you'll put Guestbook List Screenlet in the 
-guestbooks scene. Before you can use Entry List Screenlet, you must create a 
-scene to put it in: the entries scene. 
+Currently, the login and guestbooks scenes are the only two scenes in your app. 
+The login scene contains Login Screenlet, and you'll put Guestbook List 
+Screenlet in the guestbooks scene. Before you can use Entry List Screenlet, you 
+must create a scene to put it in: the entries scene. 
 
 In this article, you'll use these steps to create the entries scene: 
 
@@ -24,8 +24,9 @@ Follow these steps to create a view controller for the entries scene:
 
 3.  Create a segue from the guestbooks scene's view controller to the new view 
     controller. To do this, control-drag from the guestbooks scene's view 
-    controller to the new view controller. In the dialog that appears, select 
-    *show* for the segue type. The segue now connects the two view controllers. 
+    controller to the new view controller. In the dialog that appears upon 
+    releasing your mouse button, select *show* for the segue type. The segue now 
+    connects the two view controllers. 
 
 4.  Click the new segue, and then enter the Attributes inspector. Enter 
     *entriessegue* in the *Identifier* field, and press *return*. Later, you'll 
@@ -44,7 +45,9 @@ section, you'll create this class for the entries scene's view controller. In
 the storyboard, you'll then set this class as the view controller's custom 
 class. 
 
-1.  Right-click the *Liferay Guestbook* folder in Xcode's project navigator and 
+Follow these steps to create the entries scene's view controller class: 
+
+1.  Right-click the `Liferay Guestbook` folder in Xcode's project navigator and 
     select *New File*. In the *iOS* &rarr; *Source* section of the dialog that 
     appears, select *Cocoa Touch Class* and click *Next*. 
 
@@ -59,10 +62,10 @@ class.
 
 3.  The final screen in the dialog lets you set the class's location, group, and 
     targets. Make sure *Liferay Guestbook* is selected for both the *Group* and 
-    *Targets* menus, and click *Create*. 
+    *Targets* menus (it should be by default), and click *Create*. 
 
-4.  `EntriesViewController` needs a `GuestbookModel` variable for the guestbook 
-    it shows entries from. Add this variable to the top of the class: 
+4.  `EntriesViewController` needs a `GuestbookModel` variable to hold the 
+    guestbook it shows entries from. Add this variable to the top of the class: 
 
         var selectedGuestbook: GuestbookModel?
 
@@ -70,7 +73,7 @@ class.
     Guestbook List Screenlet. 
 
 5.  In the storyboard, select the entries scene's view controller. In the 
-    Identity inspector, set `EntriesViewController` as the Custom Class. 
+    Identity inspector, set `EntriesViewController` as the custom class. 
 
 Nice work! The entries scene's view controller now has a class that governs its 
 behavior. Now you're ready to put your Screenlets to use. 
