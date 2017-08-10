@@ -21,11 +21,11 @@ Now you're ready to begin!
 
 Recall that you need a model class to represent entities retrieved from Liferay 
 Portal. The model class you'll create for guestbook entries, `EntryModel`, 
-creates `EntryModel` objects that serve as guestbook entries retrieved from the 
+creates `EntryModel` objects that represent guestbook entries retrieved from the 
 Guestbook portlet. 
 
 Create the following `EntryModel` class alongside the `GuestbookModel` class in 
-the `model` folder:
+the `model` folder: 
 
 1.  In the Project navigator, right-click the `model` folder and select *New 
     File*. In the dialog that appears, fill out each screen as follows: 
@@ -99,10 +99,8 @@ the `model` folder:
 
         }
 
-Besides working with entries instead of guestbooks, this class works the same as 
-`GuestbookModel`. For an explanation of the code, see 
+Besides working with entries instead of guestbooks, this class is almost 
+identical to `GuestbookModel`. For an explanation of the code, see 
 [the article on getting started with Guestbook List Screenlet](https://www.liferay.com/). 
-<!-- placeholder link -->
 
 Next, you'll create the Screenlet's UI. 
- 

@@ -37,9 +37,8 @@ Follow these steps to create Guestbook List Screenlet's delegate:
       well as the *Liferay Guestbook* target (these should be selected by 
       default). Click *Create*. 
 
-2.  In the new `GuestbookListScreenlet` class, import `LiferayScreens`, change 
-    the class declaration to `public`, and delete any placeholder comments in 
-    the class body. 
+2.  In the new `GuestbookListScreenlet` class, import `LiferayScreens`, make the 
+    class `public`, and delete any placeholder comments in the class body. 
 
 3.  In between the `import` statements and the class declaration, add the 
     following code: 

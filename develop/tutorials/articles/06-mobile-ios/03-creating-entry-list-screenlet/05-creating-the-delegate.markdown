@@ -1,10 +1,10 @@
 # Creating Entry List Screenlet's Delegate
 
-Recall that a delegate is required if you want other classes to respond to your 
-Screenlet's actions. Like Guestbook List Screenlet, you'll create a delegate for 
-Entry List Screenlet that can respond to a successful server call, a failed 
-server call, and an item selection in the list. This delegate must therefore 
-define these methods: 
+Recall that a delegate lets other classes respond to your Screenlet's actions. 
+Like you did for Guestbook List Screenlet, you'll create a delegate for Entry 
+List Screenlet that can respond to a successful server call, a failed server 
+call, and an item selection in the list. This delegate must therefore define 
+these methods: 
 
 -   `screenlet(_:onEntryListResponse:)`: Receives the `EntryModel` results when 
     the server call succeeds. This lets app developers respond to a successful 
@@ -31,9 +31,8 @@ Follow these steps to create Entry List Screenlet's delegate:
       as the *Liferay Guestbook* target (these should be selected by default). 
       Click *Create*. 
 
-2.  In the new `EntryListScreenlet` class, add an import for `LiferayScreens`, 
-    change the class declaration to `public`, and delete any placeholder 
-    comments in the class body. 
+2.  In the new `EntryListScreenlet` class, import `LiferayScreens`, make the 
+    class `public`, and delete any placeholder comments in the class body. 
 
 3.  In between the `import` statements and the class declaration, add the 
     following code: 

@@ -2,8 +2,7 @@
 
 Recall that Connectors are Screenlet components that make server calls. Also 
 recall that by making your server calls in Connectors instead of Interactors, 
-you gain an additional layer of abstraction and can also support list Screenlet 
-pagination. 
+you gain an additional layer of abstraction. 
 
 In this article, you'll create Entry List Screenlet's Connector. Because this 
 Connector is so similar to that of Guestbook List Screenlet, the steps to create 
@@ -28,8 +27,8 @@ Now you're ready to create the Connector.
 
 ## Creating the Connector
 
-Recall that list Screenlet Connectors must extend the 
-[`PaginationLiferayConnector` class](https://github.com/liferay/liferay-screens/blob/master/ios/Framework/Core/Base/BaseListScreenlet/PaginationLiferayConnector.swift). 
+Recall that list Screenlet Connectors must extend 
+[the `PaginationLiferayConnector` class](https://github.com/liferay/liferay-screens/blob/master/ios/Framework/Core/Base/BaseListScreenlet/PaginationLiferayConnector.swift). 
 Your list Screenlet's Connector class must also contain any properties it needs 
 to make the server call, and an initializer that sets them. To support 
 pagination, the initializer must also contain the following arguments, which 
@@ -42,8 +41,9 @@ you'll pass to the superclass initializer:
 
 Follow these steps to create Guestbook List Screenlet's Connector: 
 
-1.  In the Project navigator, right-click the `Connector` folder and select 
-    *New File*. In the dialog that appears, fill out each screen as follows: 
+1.  In the Project navigator, right-click the `Connector` folder you added above 
+    and select *New File*. In the dialog that appears, fill out each screen as 
+    follows: 
 
     - Select *iOS* &rarr; *Source* &rarr; *Cocoa Touch Class*, and click *Next*. 
     - Name the class `EntryListPageLiferayConnector`, set it to extend 
@@ -65,20 +65,25 @@ Follow these steps to create Guestbook List Screenlet's Connector:
 
             //MARK: Initializer
 
-            public init(startRow: Int, endRow: Int, computeRowCount: Bool, groupId: Int64, guestbookId: Int64) {
-                self.groupId = groupId
-                self.guestbookId = guestbookId
+            public init(startRow: Int, endRow: Int, computeRowCount: Bool, groupId: Int64, 
+                guestbookId: Int64) {
 
-                super.init(startRow: startRow, endRow: endRow, computeRowCount: computeRowCount)
+                    self.groupId = groupId
+                    self.guestbookId = guestbookId
+
+                    super.init(startRow: startRow, endRow: endRow, computeRowCount: computeRowCount)
             }
 
             //MARK: PaginationLiferayConnector
 
-            public override func doAddPageRowsServiceCall(session: LRBatchSession, startRow: Int, endRow: Int, obc: LRJSONObjectWrapper?) {
+            public override func doAddPageRowsServiceCall(session: LRBatchSession, startRow: Int, endRow: Int, 
+                obc: LRJSONObjectWrapper?) {
+
                 let service = LREntryService_v62(session: session)
 
                 do {
-                    try service!.getEntriesWithGroupId(groupId, guestbookId: guestbookId, start: Int32(startRow), end: Int32(endRow))
+                    try service!.getEntriesWithGroupId(groupId, guestbookId: guestbookId, 
+                            start: Int32(startRow), end: Int32(endRow))
                 }
                 catch {
                     // the service method returns nil because the request is sent later, in batch

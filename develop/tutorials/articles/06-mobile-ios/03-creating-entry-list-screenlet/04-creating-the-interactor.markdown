@@ -28,8 +28,8 @@ Now you're ready to create the Interactor.
 ## Creating the Interactor
 
 Recall that the Interactor class of a list Screenlet that implements fluent 
-pagination must extend the 
-[`BaseListPageLoadInteractor` class](https://github.com/liferay/liferay-screens/blob/master/ios/Framework/Core/Base/BaseListScreenlet/BaseListPageLoadInteractor.swift). 
+pagination must extend 
+[the `BaseListPageLoadInteractor` class](https://github.com/liferay/liferay-screens/blob/master/ios/Framework/Core/Base/BaseListScreenlet/BaseListPageLoadInteractor.swift). 
 Your Interactor class must also contain any properties the Screenlet needs, and 
 an initializer that sets them. This initializer also needs arguments for the 
 following properties, which it passes to the superclass initializer: 
@@ -42,8 +42,9 @@ following properties, which it passes to the superclass initializer:
 
 Follow these steps to create Entry List Screenlet's Interactor: 
 
-1.  In the Project navigator, right-click the `Interactor` folder and select 
-    *New File*. In the dialog that appears, fill out each screen as follows: 
+1.  In the Project navigator, right-click the `Interactor` folder you added 
+    above and select *New File*. In the dialog that appears, fill out each 
+    screen as follows: 
 
     - Select *iOS* &rarr; *Source* &rarr; *Cocoa Touch Class*, and click *Next*. 
     - Name the class `EntryListPageLoadInteractor`, set it to extend 
@@ -99,14 +100,14 @@ Follow these steps to create Entry List Screenlet's Interactor:
 
     This class is almost identical to Guestbook List Screenlet's Interactor, 
     `GuestbookListPageLoadInteractor`. The only real difference is that 
-    `EntryListPageLoadInteractor` handles entries. To do this, it needs a 
+    `EntryListPageLoadInteractor` handles entries. It therefore needs a 
     `guestbookId` variable to define the guestbook to retrieve entries from. 
     This variable is set in the initializer and then used in the 
     `createListPageConnector` method to create a `EntryListPageLiferayConnector` 
-    instance. The `convertResult` method receives the each entry retrieved from 
-    the server and transforms it into an `EntryModel` object. Also recall that 
-    the `cacheKey` method must return a key that can be used with online mode. 
-    For entries, a combination of the `groupId` and `guestbookId` is a 
-    sufficient key. 
+    instance. The `convertResult` method receives each `[String:AnyObject]` 
+    entry from the server and transforms it into an `EntryModel` object. Also 
+    recall that the `cacheKey` method must return a key that can be used with 
+    online mode. For entries, a combination of the `groupId` and `guestbookId` 
+    is a sufficient key. 
 
 Great! Your Interactor is finished. Next, you'll create the delegate. 

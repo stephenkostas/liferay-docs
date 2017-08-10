@@ -6,8 +6,8 @@ Screenlet's Theme with the same steps you used to create Guestbook List
 Screenlet's Theme: 
 
 1.  Create your Theme's folder and add it to your Xcode project. 
-2.  Create an XIB file, and use it to construct the UI. 
-3.  Create your Theme's View class, and set it as the XIB file's custom class.
+2.  Create an XIB file and use it to construct the UI. 
+3.  Create your Theme's View class and set it as the XIB file's custom class. 
 
 ## Creating Your Theme's Folder
 
@@ -21,9 +21,9 @@ structure in Entry List Screenlet's folder:
 
 2.  Drag and drop the `Themes` folder from the Finder into your Xcode project, 
     under the `EntryListScreenlet` folder. In the dialog that appears, select 
-    *Copy items if needed*, *Create groups*, and the *Liferay Guestbook* target. 
-    Then click *Finish*. The `Themes/Default` folder structure now appears in 
-    your project. 
+    *Copy items if needed*, *Create groups*, and the *Liferay Guestbook* target 
+    (these should be selected by default). Then click *Finish*. The 
+    `Themes/Default` folder structure now appears in your project. 
 
     ![Figure 1: After adding the `Themes` folder to Entry List Screenlet, the `Themes/Default` folder structure should look like this in the Project navigator.](../../../images/ios-lp-themes-proj-nav-02.png)
 
@@ -35,12 +35,12 @@ file.
 A Theme requires an XIB file to define the UI's components and layout. Use these 
 steps to create your Theme's XIB file: 
 
-1.  In the Project navigator, right-click the `Default` folder and select 
-    *New File*. In the dialog that appears, select *iOS* &rarr; *User Interface* 
-    &rarr; *Empty*, and click *Next*. Name the file 
+1.  In the Project navigator, right-click the `Default` folder you added above 
+    and select *New File*. In the dialog that appears, select *iOS* &rarr; *User 
+    Interface* &rarr; *Empty*, and click *Next*. Name the file 
     `EntryListView_default.xib`, and ensure that *Default* is selected for 
     the save location and group. The *Liferay Guestbook* target should also be 
-    selected. Click *Create*. The file should then open in Interface Builder. 
+    selected. Click *Create*. The file then opens in Interface Builder. 
 
 2.  In Interface Builder, drag and drop a View from the Object Library onto the 
     canvas. Then add a Table View to the View. Set the Table View to take up the 
@@ -57,14 +57,13 @@ Your Theme's XIB is now finished. Next, you'll create your View class.
 
 ## Creating the Theme's View Class
 
-Every Theme needs a View class that controls its behavior. Recall that by 
-extending 
-[the `BaseListTableView` class](https://github.com/liferay/liferay-screens/blob/master/ios/Framework/Core/Base/BaseListScreenlet/TableView/BaseListTableView.swift), 
-a list Screenlet's View class gets most of the functionality it needs. You can 
-therefore focus on the parts of your View class that are unique to your 
+Every Theme needs a View class that controls its behavior. Recall that a list 
+Screenlet's View class gets most of its functionality by extending 
+[the `BaseListTableView` class](https://github.com/liferay/liferay-screens/blob/master/ios/Framework/Core/Base/BaseListScreenlet/TableView/BaseListTableView.swift). 
+This lets you focus on the parts of your View class that are unique to your 
 Screenlet. 
 
-Follow these steps to create your Screenlet's View class:
+Follow these steps to create your Screenlet's View class: 
 
 1.  In the Project navigator, right-click Entry List Screenlet's `Default` 
     folder and select *New File*. In the dialog that appears, fill out each 
@@ -101,17 +100,17 @@ Follow these steps to create your Screenlet's View class:
 
         }
 
-    Note that this code is almost identical to that of Guestbook List 
-    Screenlet's View class, `GuestbookListView_default`. The only difference is 
-    that this class handles entries (`EntryModel`) instead of guestbooks 
+    Note that this class is almost identical to Guestbook List Screenlet's View 
+    class, `GuestbookListView_default`. The only difference is that 
+    `EntryListView_default` handles entries (`EntryModel`) instead of guestbooks 
     (`GuestbookModel`). The `doFillLoadedCell` method sets the cell's main text 
-    label to the entry's message, and the cell's secondary text label to the 
-    name of the person who left the message. This way, a single cell displays 
-    both pieces of information. For a description of the rest of the class, 
-    which is shared with `GuestbookListView_default`, see 
+    label to the entry's message, and sets the cell's secondary text label to 
+    the name of the person who left the message. This way, a single cell 
+    displays both pieces of information. For a description of the code shared 
+    with `GuestbookListView_default`, see 
     [the article on creating Guestbook List Screenlet's Theme](https://www.liferay.com/). 
 
-3.  Return to the Theme's XIB in Interface Builder, and set 
+3.  Return to the Theme's XIB in Interface Builder and set 
     `EntryListView_default` as the the parent View's custom class. To do this, 
     select the Table View's parent View, click the Identity inspector, and enter 
     `EntryListView_default` as the custom class. 
@@ -125,7 +124,7 @@ Follow these steps to create your Screenlet's View class:
     to the Table View in the XIB. The new outlet then appears in the Connections 
     inspector. 
 
-    ![Figure 4: Drag the `tableView` outlet onto the Table View in the XIB.](../../../images/ios-lp-table-view-outlet-01.png)
+    ![Figure 4: Drag and drop from the `tableView` outlet to the Table View in the XIB.](../../../images/ios-lp-table-view-outlet-01.png)
 
     ![Figure 5: After creating the connection, the outlet looks like this in the Connections inspector.](../../../images/ios-lp-table-view-outlet-02.png)
 
