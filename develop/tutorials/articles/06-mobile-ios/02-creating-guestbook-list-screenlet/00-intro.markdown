@@ -1,4 +1,4 @@
-# Creating Guestbook List Screenlet
+# Creating Guestbook List Screenlet [](id=creating-guestbook-list-screenlet-ios)
 
 In the previous section, you created an iOS app that contains the Guestbook
 Mobile SDK and Liferay Screens. You also used 

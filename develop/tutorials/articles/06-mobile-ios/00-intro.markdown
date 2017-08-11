@@ -1,4 +1,4 @@
-# Writing an iOS App with Liferay Screens
+# Writing an iOS App with Liferay Screens [](id=writing-an-ios-app-with-liferay-screens)
 
 Users expect to access portal content from their mobile devices. As an intrepid
 developer, you naturally want to turn these expectations into reality. 

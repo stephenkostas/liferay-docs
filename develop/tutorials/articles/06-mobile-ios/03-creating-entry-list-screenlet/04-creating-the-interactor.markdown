@@ -1,4 +1,4 @@
-# Creating Entry List Screenlet's Interactor
+# Creating Entry List Screenlet's Interactor [](id=creating-entry-list-screenlets-interactor-ios)
 
 Recall that list Screenlets require an Interactor to instantiate the Connector 
 and receive the server call's results. In this article, you'll create Entry List 
@@ -10,7 +10,7 @@ few places in the code where the Interactors diverge. For a full explanation of
 the code, see 
 [the article on creating Guestbook List Screenlet's Interactor](https://www.liferay.com/). 
 
-## Creating Your Interactor's Folder
+## Creating Your Interactor's Folder [](id=creating-your-interactors-folder)
 
 Follow these steps to create your Interactor's folder: 
 
@@ -25,7 +25,7 @@ Follow these steps to create your Interactor's folder:
 
 Now you're ready to create the Interactor. 
 
-## Creating the Interactor
+## Creating the Interactor [](id=creating-the-interactor)
 
 Recall that the Interactor class of a list Screenlet that implements fluent 
 pagination must extend 

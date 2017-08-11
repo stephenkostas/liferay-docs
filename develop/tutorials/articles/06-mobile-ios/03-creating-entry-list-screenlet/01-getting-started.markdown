@@ -1,4 +1,4 @@
-# Getting Started with Entry List Screenlet
+# Getting Started with Entry List Screenlet [](id=getting-started-with-entry-list-screenlet-ios)
 
 Like Guestbook List Screenlet, you'll create Entry List Screenlet in its own 
 folder inside your app's project. Create this folder now: 
@@ -17,7 +17,7 @@ folder inside your app's project. Create this folder now:
 
 Now you're ready to begin! 
 
-## Creating the Model Class
+## Creating the Model Class [](id=creating-the-model-class)
 
 Recall that you need a model class to represent entities retrieved from Liferay 
 Portal. The model class you'll create for guestbook entries, `EntryModel`, 

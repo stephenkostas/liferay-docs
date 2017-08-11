@@ -1,4 +1,4 @@
-# Building the Guestbook Mobile SDK
+# Building the Guestbook Mobile SDK [](id=building-the-guestbook-mobile-sdk-ios)
 
 Once you've deployed the Guestbook portlet, you're ready to build the Guestbook
 Mobile SDK. You might be asking yourself, "Why do I have to build a separate

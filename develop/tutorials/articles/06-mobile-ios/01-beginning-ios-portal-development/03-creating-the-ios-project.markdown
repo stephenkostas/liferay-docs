@@ -1,4 +1,4 @@
-# Creating the iOS Project
+# Creating the iOS Project [](id=creating-the-ios-project)
 
 Now that you've built the Guestbook Mobile SDK, you're ready to create the 
 Guestbook iOS app. This article walks you through the steps required to 

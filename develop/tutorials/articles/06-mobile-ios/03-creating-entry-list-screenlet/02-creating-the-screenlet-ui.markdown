@@ -1,4 +1,4 @@
-# Creating Entry List Screenlet's UI
+# Creating Entry List Screenlet's UI [](id=creating-entry-list-screenlets-ui-ios)
 
 Recall that in Liferay Screens for iOS, Screenlet UIs are called *Themes*, and 
 every Screenlet must have at least one Theme. You'll create Entry List 
@@ -9,7 +9,7 @@ Screenlet's Theme:
 2.  Create an XIB file and use it to construct the UI. 
 3.  Create your Theme's View class and set it as the XIB file's custom class. 
 
-## Creating Your Theme's Folder
+## Creating Your Theme's Folder [](id=creating-your-themes-folder)
 
 Like Guestbook List Screenlet's Theme, you'll create Entry List Screenlet's 
 Theme in a `Themes/Default` folder. Follow these steps to create this folder 
@@ -30,7 +30,7 @@ structure in Entry List Screenlet's folder:
 Now you're ready to start creating your Theme. First, you'll create its XIB 
 file. 
 
-## Creating the XIB File
+## Creating the XIB File [](id=creating-the-xib-file)
 
 A Theme requires an XIB file to define the UI's components and layout. Use these 
 steps to create your Theme's XIB file: 
@@ -55,7 +55,7 @@ steps to create your Theme's XIB file:
 
 Your Theme's XIB is now finished. Next, you'll create your View class. 
 
-## Creating the Theme's View Class
+## Creating the Theme's View Class [](id=creating-the-themes-view-class)
 
 Every Theme needs a View class that controls its behavior. Recall that a list 
 Screenlet's View class gets most of its functionality by extending 

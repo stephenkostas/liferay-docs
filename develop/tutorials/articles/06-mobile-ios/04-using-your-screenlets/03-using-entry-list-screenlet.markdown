@@ -1,11 +1,11 @@
-# Using Entry List Screenlet
+# Using Entry List Screenlet [](id=using-entry-list-screenlet-ios)
 
 You'll use Entry List Screenlet the same way you use any Screenlet: insert it in 
 a storyboard scene, then conform the scene's view controller class to the 
 Screenlet's delegate protocol. You'll follow these steps now to use Entry List 
 Screenlet in the entries scene. 
 
-## Adding Entry List Screenlet to the Entries Scene
+## Adding Entry List Screenlet to the Entries Scene [](id=adding-entry-list-screenlet-to-the-entries-scene)
 
 Follow these steps to add Entry List Screenlet to the entries scene: 
 
@@ -30,7 +30,7 @@ Follow these steps to add Entry List Screenlet to the entries scene:
 Great! The entries scene now contains Entry List Screenlet. Next, you'll conform 
 the scene's view controller class to the Screenlet's delegate. 
 
-## Conforming to the Screenlet's Delegate Protocol
+## Conforming to the Screenlet's Delegate Protocol [](id=conforming-to-the-screenlets-delegate-protocol)
 
 To respond to Entry List Screenlet's events, `EntriesViewController` must 
 conform to the `EntryListScreenletDelegate` protocol. You created this delegate 

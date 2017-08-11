@@ -1,4 +1,4 @@
-# Creating Guestbook List Screenlet's Delegate
+# Creating Guestbook List Screenlet's Delegate [](id=creating-guestbook-list-screenlets-delegate)
 
 A delegate is a Screenlet component that lets other classes to respond to a 
 Screenlet's actions. For example, 

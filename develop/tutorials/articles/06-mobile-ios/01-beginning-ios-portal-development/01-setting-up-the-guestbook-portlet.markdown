@@ -1,4 +1,4 @@
-# Setting up the Guestbook Portlet
+# Setting up the Guestbook Portlet [](id=setting-up-the-guestbook-portlet-ios)
 
 Before you begin developing the Guestbook app for iOS, you must set up the 
 Guestbook portlet in a Liferay Portal instance. To do this, follow these steps: 

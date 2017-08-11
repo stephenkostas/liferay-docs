@@ -1,4 +1,4 @@
-# Creating Entry List Screenlet
+# Creating Entry List Screenlet [](id=creating-entry-list-screenlet-ios)
 
 In the previous section, you created Guestbook List Screenlet to retrieve and
 display guestbooks from the Guestbook portlet. You still need a way to retrieve

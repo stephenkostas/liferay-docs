@@ -1,4 +1,4 @@
-# Creating Guestbook List Screenlet's Interactor
+# Creating Guestbook List Screenlet's Interactor [](id=creating-guestbook-list-screenlets-interactor-ios)
 
 Interactors implement your Screenlet's actions. In non-list Screenlets, this can 
 include making the server call. List Screenlets, however, make server calls via 
@@ -8,7 +8,7 @@ instantiate the Connector and receive the server call's results. This is the
 case for Guestbook List Screenlet's Interactor. You'll create this Interactor 
 now. 
 
-## Creating Your Interactor's Folder
+## Creating Your Interactor's Folder [](id=creating-your-interactors-folder)
 
 Follow these steps to create your Interactor's folder: 
 
@@ -25,7 +25,7 @@ Follow these steps to create your Interactor's folder:
 
 Now you're ready to create the Interactor. 
 
-## Creating the Interactor
+## Creating the Interactor [](id=creating-the-interactor)
 
 The Interactor class of a list Screenlet that implements fluent pagination must 
 extend 

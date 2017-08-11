@@ -1,4 +1,4 @@
-# Beginning iOS Development for Your Portal
+# Beginning iOS Development for Your Portal [](id=beginning-ios-development-for-your-portal)
 
 Getting started with Liferay Screens for iOS is straightforward. This series of 
 Learning Path articles walks you through creating an iOS app and preparing it to 

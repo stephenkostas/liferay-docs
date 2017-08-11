@@ -1,4 +1,4 @@
-# Getting Started with Guestbook List Screenlet
+# Getting Started with Guestbook List Screenlet [](id=getting-started-with-guestbook-list-screenlet-ios)
 
 Before creating a Screenlet, you should know how you'll use it. If you plan to 
 use it in only one app, then you can create it in that app's project. If you 
@@ -29,7 +29,7 @@ Great! Now you have a folder to create Guestbook List Screenlet in. Before
 getting started, you should understand how pagination works in in list 
 Screenlets. 
 
-## Pagination
+## Pagination [](id=pagination)
 
 To ensure that users can scroll smoothly through large lists of items, list 
 Screenlets support 
@@ -40,7 +40,7 @@ for the start row and end row of a page in the list.
 
 Now you're ready to begin creating the Screenlet! 
 
-## Creating the Model Class
+## Creating the Model Class [](id=creating-the-model-class)
 
 Liferay Screens typically receives entities from a Liferay Portal instance as a 
 `[String:AnyObject]` dictionary, where `String` is the entity's attribute and 

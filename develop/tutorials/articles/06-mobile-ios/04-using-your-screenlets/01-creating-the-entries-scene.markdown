@@ -1,4 +1,4 @@
-# Creating the Entries Scene
+# Creating the Entries Scene [](id=creating-the-entries-scene)
 
 Currently, the login and guestbooks scenes are the only two scenes in your app. 
 The login scene contains Login Screenlet, and you'll put Guestbook List 
@@ -11,7 +11,7 @@ In this article, you'll use these steps to create the entries scene:
     the guestbooks scene. 
 2.  Create the entries scene's view controller class. 
 
-## Adding a View Controller to the Storyboard
+## Adding a View Controller to the Storyboard [](id=adding-a-view-controller-to-the-storyboard)
 
 Follow these steps to create a view controller for the entries scene: 
 
@@ -38,7 +38,7 @@ Follow these steps to create a view controller for the entries scene:
 Great! The entries scene now exists, and there's a segue going to it from the 
 guestbooks scene. Next, you'll create the entries scene's view controller class. 
 
-## Creating the Entries Scene's View Controller Class
+## Creating the Entries Scene's View Controller Class [](id=creating-the-entries-scenes-view-controller-class)
 
 Each view controller must have a class that controls its behavior. In this 
 section, you'll create this class for the entries scene's view controller. In 

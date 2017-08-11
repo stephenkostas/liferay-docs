@@ -1,4 +1,4 @@
-# Creating Guestbook List Screenlet's UI
+# Creating Guestbook List Screenlet's UI [](id=creating-guestbook-list-screenlets-ui-ios)
 
 In Liferay Screens for iOS, Screenlet UIs are called *Themes*. Every Screenlet 
 must have at least one Theme. You'll use the following steps to create a Theme 
@@ -8,7 +8,7 @@ for Guestbook List Screenlet:
 2.  Create an XIB file and use it to construct the UI. 
 3.  Create your Theme's View class and set it as the XIB file's custom class. 
 
-## Creating Your Theme's Folder
+## Creating Your Theme's Folder [](id=creating-your-themes-folder)
 
 Even if you only plan on creating one Theme, it's best practice to create it in 
 its own folder inside a parent `Themes` folder. The parent `Themes` folder gives 
@@ -35,7 +35,7 @@ Follow these steps to create your Theme's folder:
 Now you're ready to start creating your Theme. First, you'll create its XIB 
 file. 
 
-## Creating the XIB File
+## Creating the XIB File [](id=creating-the-xib-file)
 
 A Theme requires an XIB file to define the UI's components and layout. Use these 
 steps to create your Theme's XIB file: 
@@ -60,7 +60,7 @@ steps to create your Theme's XIB file:
 
 Your Theme's XIB is now finished. Next, you'll create your View class. 
 
-## Creating the Theme's View Class
+## Creating the Theme's View Class [](id=creating-the-themes-view-class)
 
 Every Theme needs a View class that controls its behavior. Since the XIB file 
 uses a `UITableView` to show a list of guestbooks, your View class must extend 
