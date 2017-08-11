@@ -101,6 +101,6 @@ the `model` folder:
 
 Besides working with entries instead of guestbooks, this class is almost 
 identical to `GuestbookModel`. For an explanation of the code, see 
-[the article on getting started with Guestbook List Screenlet](https://www.liferay.com/). 
+[the article on getting started with Guestbook List Screenlet](/develop/tutorials/-/knowledge_base/6-2/getting-started-with-guestbook-list-screenlet-ios). 
 
 Next, you'll create the Screenlet's UI. 
