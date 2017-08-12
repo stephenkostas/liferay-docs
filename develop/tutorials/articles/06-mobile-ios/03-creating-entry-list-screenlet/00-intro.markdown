@@ -31,8 +31,6 @@ discusses the code unique to Entry List Screenlet. Refer back to the previous
 section for detailed explanations of the code shared with Guestbook List 
 Screenlet. 
 
-<!-- 
-If you get confused or stuck, refer to the finished app that contains 
-the Screenlet code 
-[here in GitHub](https://github.com/liferay/liferay-docs/tree/6.2.x/develop/tutorials/code/04-mobile/screenlets-app/LiferayGuestbook). 
--->
+If you get confused or stuck while creating Guestbook List Screenlet, refer to 
+the finished app that contains the Screenlet code 
+[here in GitHub](https://github.com/liferay/liferay-docs/tree/6.2.x/develop/tutorials/code/05-mobile-ios/Liferay%20Guestbook).

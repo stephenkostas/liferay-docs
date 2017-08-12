@@ -11,10 +11,8 @@ To add your Screenlets to the app, you'll follow these steps:
 2.  Add Guestbook List Screenlet to the guestbooks scene.
 3.  Add Entry List Screenlet to the entries scene.
 
-<!--
 If you get confused or stuck at any point in this section of the Learning Path, 
-refer to the finished app's code 
-[here in GitHub](https://github.com/liferay/liferay-docs/tree/6.2.x/develop/tutorials/code/04-mobile/screenlets-app/LiferayGuestbook). 
--->
+refer to the finished app that contains the Screenlet code 
+[here in GitHub](https://github.com/liferay/liferay-docs/tree/6.2.x/develop/tutorials/code/05-mobile-ios/Liferay%20Guestbook).
 
 First, you'll create the entries scene. 
