@@ -57,8 +57,9 @@ Follow these steps to complete the `EntryListScreenlet` class in
     methods. 
 
 4.  Override the `BaseListScreenlet` methods that handle the Screenlet's events. 
-    Because these events correspond those handled by your delegate, you'll call 
-    the corresponding delegate methods in these `BaseListScreenlet` methods: 
+    Because these events correspond to those handled by your delegate, you'll 
+    call the corresponding delegate methods in these `BaseListScreenlet` 
+    methods: 
 
     - `onLoadPageResult`: Called when the Screenlet loads a page successfully. 
       Override this method to call the superclass's `onLoadPageResult` method, 
