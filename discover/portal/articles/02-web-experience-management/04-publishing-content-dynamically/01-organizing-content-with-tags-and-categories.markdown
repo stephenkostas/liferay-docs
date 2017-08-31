@@ -165,6 +165,12 @@ selectors for vocabularies and categories were discussed. The three new
 features are targeted vocabularies, single/multi-valued vocabularies, and
 separated widgets for every vocabulary.
 
++$$$
+
+**Tip:** You can create tags and categories for Users and Organizations. Any categories for Users and Organizations must be created in the Global scope, and any tags applied to them will only appear in tag management in the Global scope. Tags and categories for Organizations and Users will only appear in the Global scope and will not be categorized with items that are scoped to a site or page.
+
+$$$
+
 ### Targeted Vocabularies [](id=targeted-vocabularies)
 
 Targeted Vocabularies allow you to decide which vocabularies can be applied to
