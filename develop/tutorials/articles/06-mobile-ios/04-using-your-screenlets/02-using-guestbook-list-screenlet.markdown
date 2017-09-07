@@ -162,7 +162,7 @@ Follow these steps to conform `GuestbooksViewController` to the
     placeholder comment and inserting this code below the call to 
     `super.viewDidLoad()`:
 
-        self.loginScreenlet?.delegate = self
+        self.screenlet.delegate = self
 
 Great! The guestbooks scene now contains Guestbook List Screenlet. Next, you'll 
 use Entry List Screenlet in the entries scene. 
