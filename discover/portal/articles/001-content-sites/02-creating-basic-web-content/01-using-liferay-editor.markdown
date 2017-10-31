@@ -1,4 +1,8 @@
-# Using @product@'s Content Editor
+# Using @product@'s Content Editor [](id=using-liferays-content-editor)
+
+<div class="learn-path-step">
+    <p>Creating Basic Web Content<br>Step 1 of 2</p>
+</div>
 
 Before you can add content to a page, you must first create that content. In 
 @product@, you create content independent of a page, and then add it to the page 

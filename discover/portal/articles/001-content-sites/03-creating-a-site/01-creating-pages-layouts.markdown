@@ -1,4 +1,8 @@
-# Creating Pages with Layouts
+# Creating Pages with Layouts [](id=creating-pages-with-layouts)
+
+<div class="learn-path-step">
+    <p>Creating A Site<br>Step 1 of 6</p>
+</div>
 
 Up to this point, you haven't concerned yourself with arranging content and 
 applications on a page. Everything on the Welcome page stretches the width of 

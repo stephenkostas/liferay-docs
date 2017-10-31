@@ -1,5 +1,9 @@
 # Setting up @product@
 
+<div class="learn-path-step">
+    <p>Setting up Liferay<br>Step 2 of 3</p>
+</div>
+
 The Basic Configuration page lets you set the following for your portal:
 
 - Portal name
