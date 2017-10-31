@@ -1,4 +1,8 @@
-# Installing @product@ 
+# Installing @product@ [](id=installing-liferay)
+
+<div class="learn-path-step">
+    <p>Setting up Liferay<br>Step 1 of 3</p>
+</div>
 
 The easiest way to start using @product@ for testing or development is to 
 download a standalone bundle. You can download a @product@ bundle from 

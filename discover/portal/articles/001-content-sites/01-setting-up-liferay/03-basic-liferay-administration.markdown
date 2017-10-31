@@ -1,5 +1,9 @@
 # Basic Liferay Administration
 
+<div class="learn-path-step">
+    <p>Setting up Liferay<br>Step 3 of 3</p>
+</div>
+
 Before doing anything in @product@, you need to learn its basic UI. This article 
 gives you a guided tour of the most common UI elements that you'll interact with 
 while managing sites and creating content. 

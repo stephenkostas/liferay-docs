@@ -1,5 +1,9 @@
 # Displaying Basic Content
 
+<div class="learn-path-step">
+    <p>Creating Basic Web Content<br>Step 2 of 2</p>
+</div>
+
 Before learning how to display content, it's useful to know the content 
 hierarchy in @product@. You can loosely think of this as the scaffolding that 
 @product@ uses to display content.
