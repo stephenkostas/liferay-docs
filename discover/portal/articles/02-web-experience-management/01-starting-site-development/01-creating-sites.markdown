@@ -82,16 +82,15 @@ Hierarchy*. The My Sites Directory application is very similar to the Sites
 Directory application, except that it lists only the sites a user belongs to.
 
 Each subsite in the hierarchy has its own administrator, and the Site
-Administrator role permissions do not flow down to child sites in the hierarchy.
-If a Site Administrator creates a subsite, he or she has the same permissions in
-that subsite. This is not, however, because of inheritance. It is only because
-creating a site makes you the Owner of that site. A Site Administrator or a
-parent site has no default role in any subsites created by other Site
-Administrators. 
+Administrator role permissions do not flow down to child sites in the hierarchy 
+by default. If a Site Administrator creates a subsite, he or she has the same 
+permissions in that subsite. This is not, however, because of inheritance. It 
+is only because creating a site makes you the Owner of that site. A Site 
+Administrator or a parent site has no default role in any subsites created by 
+other Site Administrators. 
 
 If you wanted a user to have administrative access to all sites in a
-site/subsite hierarchy, you must create a role based on the Site Administrator
-role that has the permission *Manage Subsites*. 
+site/subsite hierarchy, you can edit the Site Administrator role and activate the *Allow Subsite Management* toggle. This will apply to all site administrators in your portal. If you want to only provide subsite management to some administrators, you can create a role based on the Site Administrator role that has the permission *Manage Subsites*.
 
 The Site Map application is another configurable app that's intended to help
 users navigate among pages within a site. When configuring this app, a site
