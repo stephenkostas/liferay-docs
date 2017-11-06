@@ -90,7 +90,11 @@ Administrator or a parent site has no default role in any subsites created by
 other Site Administrators. 
 
 If you wanted a user to have administrative access to all sites in a
-site/subsite hierarchy, you can edit the Site Administrator role and activate the *Allow Subsite Management* toggle. This will apply to all site administrators in your portal. If you want to only provide subsite management to some administrators, you can create a role based on the Site Administrator role that has the permission *Manage Subsites*.
+site/subsite hierarchy, you can edit the Site Administrator role and activate 
+the *Allow Subsite Management* toggle. This will apply to all site 
+administrators in your portal. If you want to only provide subsite management 
+to some administrators, you can create a role based on the Site Administrator 
+role that has the permission *Manage Subsites*.
 
 The Site Map application is another configurable app that's intended to help
 users navigate among pages within a site. When configuring this app, a site
