@@ -64,7 +64,7 @@ Liferay Portal map to @product-ver@.
 
 App | &nbsp;Social Office 3.x | &nbsp;@product-ver@ | 
 --- | ----------------------- | ------------------- | 
-Announcements | UI enhancements | Included |
+Announcements | UI enhancements | Although the Announcements app is included in @product-ver@, the UI enhancements from Social Office 3.x aren't. See [the Announcements app's documentation](/discover/portal/-/knowledge_base/7-0/sending-alerts-and-announcements) for instructions on using the app in @product-ver@. |
 Document Library File Version Comments | Versioning Improvements | Provided as an add-on module. The [*Module Installation* section below](/discover/deployment/-/knowledge_base/7-0/upgrading-social-office#module-installation) contains a link to this module. |
 Notifications | Various enhancements | Included |
 Chat | Various enhancements | [Click here](https://web.liferay.com/marketplace/-/mp/application/15184463) to get this app for Liferay DXP. Note that Chat isn't available for Liferay Portal CE. |
@@ -90,8 +90,8 @@ WYSIWYG | Provided as an add-on module. [Click here](https://web.liferay.com/mar
 ### UX Enhancements [](id=ux-enhancements)
 
 The UX in @product-ver@ is different than previous versions. It's the first
-version to use Liferay's new 
-[Lexicon Design Language](https://dev.liferay.com/participate/liferaypedia/-/wiki/Main/Lexicon). 
+version to use [Lexicon](https://liferay.github.io/clay/), a web implementation 
+of Liferay's new [Lexicon Experience Language](https://lexicondesign.io/). 
 Social Office components in @product-ver@ use Lexicon for a consistent UX. This 
 also means that certain Social Office components may not be where you expect 
 them in @product-ver@. 

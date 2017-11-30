@@ -50,6 +50,7 @@
 		
 		<reference package-path="com.liferay.portlet.asset" entity="AssetEntry" />
 		<reference package-path="com.liferay.portlet.asset" entity="AssetLink" />
+		<reference entity="WorkflowInstanceLink" package-path="com.liferay.portal" />
 		
 
 	</entity>
@@ -65,6 +66,9 @@
 		<column name="userName" type="String" />
 		<column name="createDate" type="Date" />
 		<column name="modifiedDate" type="Date" />
+
+		<!-- Status fields -->
+
 		<column name="status" type="int" />
 		<column name="statusByUserId" type="long" />
 		<column name="statusByUserName" type="String" />
@@ -83,13 +87,16 @@
 		<finder name="Status" return-type="Collection">
 			<finder-column name="status" />
 		</finder>
-		<finder name="G_S" return-type="Collection">
+
+		<finder name="G_G_S" return-type="Collection">
 			<finder-column name="groupId" />
+			<finder-column name="guestbookId" />
 			<finder-column name="status" />
 		</finder>
 
 		<reference package-path="com.liferay.portlet.asset" entity="AssetEntry" />
 		<reference package-path="com.liferay.portlet.asset" entity="AssetLink" />
+		<reference entity="WorkflowInstanceLink" package-path="com.liferay.portal" />
 		
 
 	</entity>
