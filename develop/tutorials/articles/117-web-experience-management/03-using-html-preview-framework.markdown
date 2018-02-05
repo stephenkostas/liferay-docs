@@ -45,7 +45,7 @@ By default, the HTML Preview Generator directly renders the previewed content
 as HTML to be displayed in the browser. However, support could be added to 
 output a PDF or other format of the preview output. You will, of course, need 
 to provide the requisite code and libraries to generate your desired output. 
-Your new HTML preview processor should be an OSGI `@Compoenent` and implement 
+Your new HTML preview processor should be an OSGI `@Component` and implement 
 `HtmlPreviewProcessor.` Your class might look something like this:
 
     public interface HtmlPreviewProcessor {
