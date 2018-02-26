@@ -88,7 +88,7 @@ dependencies.
         }
 
     You can learn more about exposing the Content Targeting API in the
-    [Accessing the Content Targeting API](/develop/tutorials/-/knowledge_base/7-0/accessing-the-content-targeting-api)
+    [Accessing the Content Targeting API](/develop/tutorials/-/knowledge_base/7-1/accessing-the-content-targeting-api)
     tutorial. Once you've created your module and specified its dependencies,
     you'll need to define your metric's behavior. How your metric behaves is
     controlled by a Java class file that you create.
@@ -111,7 +111,7 @@ dependencies.
     [TrackingAction](@app-ref@/content-targeting/2.0.0/javadocs/com/liferay/content/targeting/api/model/TrackingAction.html)
     interface is implemented by extending the `BaseJSPTrackingAction` class. For
     more information on choosing a UI for your metric, see the
-    [Selecting a UI Technology](/develop/tutorial/-/knowledge_base/7-0/best-practices-for-metrics#selecting-a-ui-technology)
+    [Selecting a UI Technology](/develop/tutorial/-/knowledge_base/7-1/best-practices-for-metrics#selecting-a-ui-technology)
     section.
 
 4.  Directly above the class's declaration, insert the following annotation:
@@ -267,7 +267,7 @@ file is already created.
     your metric's information to a database. You should invoke your services'
     update logic within the `processTrackingAction` method. For more information
     on creating services, see the
-    [Service Builder](/develop/tutorials/-/knowledge_base/7-0/business-logic-and-data-access)
+    [Service Builder](/develop/tutorials/-/knowledge_base/7-1/business-logic-and-data-access)
     tutorials.
 
     $$$
@@ -497,8 +497,8 @@ to create your own.
 
 ## Related Topics [](id=related-topics)
 
-[Creating Modules with Blade CLI](/develop/tutorials/-/knowledge_base/7-0/creating-modules-with-blade-cli)
+[Creating Modules with Blade CLI](/develop/tutorials/-/knowledge_base/7-1/creating-modules-with-blade-cli)
 
-[Defining Metrics](/discover/portal/-/knowledge_base/7-0/managing-campaigns#defining-metrics)
+[Defining Metrics](/discover/portal/-/knowledge_base/7-1/managing-campaigns#defining-metrics)
 
-[Audience Targeting Metrics](/discover/portal/-/knowledge_base/7-0/audience-targeting-metrics)
+[Audience Targeting Metrics](/discover/portal/-/knowledge_base/7-1/audience-targeting-metrics)

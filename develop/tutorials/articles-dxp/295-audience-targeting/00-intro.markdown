@@ -17,7 +17,6 @@ hot-deployable plugins.
 These extension points include
 
 * Rule Types
-<!-- * Rules Engine -->
 * Report Types
 * Report Metrics
 

@@ -1,28 +1,26 @@
 # Accessing the Content Targeting API [](id=accessing-the-content-targeting-api)
 
 The [Audience Targeting](https://www.liferay.com/marketplace/-/mp/application/43707761)
-application can be used to show relevant content to users based on profiles. You
-might want to take the next step and use the Content Targeting API. For
-instance, you could list user segments in your own application or update a
+application shows relevant content to users. Out of the box, it only works with
+Liferay's apps. You can use the Content Targeting API with your own apps too. 
+For instance, you could list user segments in your own application or update a
 campaign when someone creates a calendar event. Using the Content Targeting API,
-you can unleash the power of Audience Targeting to the realms outside of
-Liferay's default applications.
+you can utilize Audience Targeting outside of Liferay's default applications.
 
-In this tutorial, you'll learn how to give your application access to the
-Content Targeting API. Then you can view some examples of how to use the Java
-and JSON APIs that are available. 
+Now you'll learn how to give your application access to the Content Targeting 
+API. Then you can view some examples of how to use the Java and JSON APIs that 
+are available. 
 
 ## Exposing the Content Targeting API [](id=exposing-the-content-targeting-api)
 
 Configuring your app to have access to the Content Targeting API requires only
-one line of code. This line of code is a dependency that should be added to your
-Gradle project. Follow the instructions below to add the Content Targeting API
-dependency.
+one line of code -- a dependency that in your Gradle project. Follow the 
+instructions below to add the Content Targeting API dependency.
 
 1. Open the `build.gradle` file in your app's project folder.
 
 2. Find the `dependencies` declaration and add the following line within that
-   declaration:
+    declaration:
 
         provided group: "com.liferay.content-targeting", name: "com.liferay.content.targeting.api", version: "4.0.0"
 
