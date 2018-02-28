@@ -41,10 +41,10 @@ begin creating one yourself!
 
 ## Related Topics [](id=related-topics)
 
-[Best Practices for Rules](/develop/tutorials/-/knowledge_base/7-0/best-practices-for-rules)
+[Best Practices for Rules](/develop/tutorials/-/knowledge_base/7-1/best-practices-for-rules)
 
-[Creating Modules with Blade CLI](/develop/tutorials/-/knowledge_base/7-0/creating-modules-with-blade-cli)
+[Creating Modules with Blade CLI](/develop/tutorials/-/knowledge_base/7-1/creating-modules-with-blade-cli)
 
-[Internationalization](/develop/tutorials/-/knowledge_base/7-0/internationalization)
+[Internationalization](/develop/tutorials/-/knowledge_base/7-1/internationalization)
 
-[Service Builder Persistence](/develop/tutorials/-/knowledge_base/7-0/service-builder-persistence)
+[Service Builder Persistence](/develop/tutorials/-/knowledge_base/7-1/service-builder-persistence)

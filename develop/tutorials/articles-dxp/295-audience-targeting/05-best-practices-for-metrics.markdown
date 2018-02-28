@@ -11,10 +11,10 @@ metric:
 - *Language Keys (optional)*
 
 You discuss metric behavior and its UI configuration in great detail in the
-[Tracking User Actions with Audience Targeting](/develop/tutorials/-/knowledge_base/7-0/tracking-user-actions-with-audience-targeting)
+[Tracking User Actions with Audience Targeting](/develop/tutorials/-/knowledge_base/7-1/tracking-user-actions-with-audience-targeting)
 tutorial. To learn more about language keys and how to create, use, and generate
 them, visit the
-[Internationalization](/develop/tutorials/-/knowledge_base/7-0/internationalization)
+[Internationalization](/develop/tutorials/-/knowledge_base/7-1/internationalization)
 tutorials.
 
 Audience Targeting gives you the option to choose whatever frontend technology

@@ -9,10 +9,10 @@ should understand the three components you can specify for a rule:
 - *Language Keys (optional)*
 
 You discuss rule behavior and its UI configuration in great detail in the
-[Creating New Audience Targeting Rule Types](/develop/tutorials/-/knowledge_base/7-0/creating-new-audience-targeting-rule-types)
+[Creating New Audience Targeting Rule Types](/develop/tutorials/-/knowledge_base/7-1/creating-new-audience-targeting-rule-types)
 tutorial. To learn more about language keys and how to create, use, and generate
 them, visit the
-[Internationalization](/develop/tutorials/-/knowledge_base/7-0/internationalization)
+[Internationalization](/develop/tutorials/-/knowledge_base/7-1/internationalization)
 tutorials.
 
 Audience Targeting gives you the option to choose whatever frontend technology
@@ -57,7 +57,7 @@ rules:
 - As an alternative to storing complex information in the `typeSettings` field,
 which is managed by the framework in the Rule Instance table, you may want to
 consider persisting to a database by using 
-[Service Builder](/develop/tutorials/-/knowledge_base/7-0/business-logic-and-data-access),
+[Service Builder](/develop/tutorials/-/knowledge_base/7-1/business-logic-and-data-access),
 which is supported for Rule plugins. 
 
 - If you deploy your rule into a production environment, you may want to

@@ -4,8 +4,8 @@ Adding a new metric to the Audience Targeting application is easy. First,
 you must create a module and ensure it has the necessary Content Targeting API 
 dependencies.
 
-1.  [Create a module](/develop/tutorials/-/knowledge_base/7-0/starting-module-development#creating-a-module) 
-    project for deploying a metric. A Blade CLI [content-targeting-tracking-action](/develop/reference/-/knowledge_base/7-0/content-targeting-tracking-action-template)
+1.  [Create a module](/develop/tutorials/-/knowledge_base/7-1/starting-module-development#creating-a-module) 
+    project for deploying a metric. A Blade CLI [content-targeting-tracking-action](/develop/reference/-/knowledge_base/7-1/content-targeting-tracking-action-template)
     template is available to help you get started quickly. It sets the default
     configuration for you, and it contains boilerplate code so you can skip the
     file creation steps and get started right away.
