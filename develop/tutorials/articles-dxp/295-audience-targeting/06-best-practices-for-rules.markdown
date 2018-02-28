@@ -1,6 +1,6 @@
 # Best Practices for Rules [](id=best-practices-for-rules)
 
-If you want to create Audience Targeting Rules, you must first understand best 
+To create Audience Targeting Rules, you must first understand best 
 practices for creating them. Before going through some best practices, you
 should understand the three components you can specify for a rule:
 
