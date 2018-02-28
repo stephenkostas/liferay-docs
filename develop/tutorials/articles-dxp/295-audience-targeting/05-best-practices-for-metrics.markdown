@@ -58,11 +58,3 @@ choose, and to return it as a string that is viewable from your metric's form.
 If you plan, therefore, on using an alternative to JSP or FreeMarker, you
 must override this method by creating and modifying it in your `-TrackingAction`
 class.
-
-## Related Topics [](id=related-topics)
-
-[Tracking User Actions with Audience Targeting](/develop/tutorials/-/knowledge_base/7-0/tracking-user-actions-with-audience-targeting)
-
-[Internationalization](/develop/tutorials/-/knowledge_base/7-0/internationalization)
-
-[Service Builder Persistence](/develop/tutorials/-/knowledge_base/7-0/service-builder-persistence)
