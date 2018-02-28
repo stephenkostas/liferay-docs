@@ -1,7 +1,7 @@
 # Best Practices for Rules [](id=best-practices-for-rules)
 
-In this tutorial, you'll learn about best practices to keep in mind when
-creating Audience Targeting Rules. Before going through some best practices, you
+If you want to create Audience Targeting Rules, you must first understand best 
+practices for creating them. Before going through some best practices, you
 should understand the three components you can specify for a rule:
 
 - *Rule Behavior*
@@ -21,12 +21,7 @@ for displaying content in Audience Targeting rules.
 
 ## Selecting a UI Technology [](id=selecting-a-ui-technology)
 
-Since @product-ver@, JSP is the preferred technology for Audience Targeting
-extension views. FreeMarker views, however, are still supported through their
-respective base classes (e.g., `BaseFreemarkerRule`). If you're interested in
-using a technology besides JSP or FreeMarker to implement your UI, you can add a
-method `getFormHTML` to your `-Rule` class. Here's an example of implementing
-the `getFormHTML` method:
+JSP is the preferred technology for Audience Targeting extension views. FreeMarker views, however, are still supported through their respective base classes (e.g., `BaseFreemarkerRule`). If you're interested in using a technology besides JSP or FreeMarker to implement your UI, you can add a method `getFormHTML` to your `-Rule` class. Here's an example of implementing the `getFormHTML` method:
 
     @Override
     public String getFormHTML(
