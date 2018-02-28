@@ -2,10 +2,11 @@
 
 The [Audience Targeting](https://www.liferay.com/marketplace/-/mp/application/43707761)
 application shows relevant content to users. Out of the box, it only works with
-Liferay's apps. You can use the Content Targeting API with your own apps too. 
-For instance, you could list user segments in your own application or update a
-campaign when someone creates a calendar event. Using the Content Targeting API,
-you can utilize Audience Targeting outside of Liferay's default applications.
+Liferay's apps, but you can use the Content Targeting API with your own apps 
+too. For instance, you could list user segments in your own application or 
+update a campaign when someone creates a calendar event. Using the Content 
+Targeting API, you can utilize Audience Targeting outside of Liferay's default 
+applications.
 
 Now you'll learn how to give your application access to the Content Targeting 
 API. Then you can view some examples of how to use the Java and JSON APIs that 
@@ -13,9 +14,9 @@ are available.
 
 ## Exposing the Content Targeting API [](id=exposing-the-content-targeting-api)
 
-Configuring your app to have access to the Content Targeting API requires only
-one line of code -- a dependency that in your Gradle project. Follow the 
-instructions below to add the Content Targeting API dependency.
+Configuring your app access the Content Targeting API requires adding a 
+dependency that in your Gradle project. Follow the instructions below to add 
+the Content Targeting API dependency.
 
 1. Open the `build.gradle` file in your app's project folder.
 
@@ -164,11 +165,3 @@ JSON API is just as easy as accessing the related Java API.
 
 You've learned how easy it is to expose the Content Targeting API and use it in
 your application to unleash its power!
-
-## Related Topics [](id=related-topics)
-
-[Creating New Audience Rule Types](/develop/tutorials/-/knowledge_base/7-0/creating-new-audience-targeting-rule-types)
-
-[Targeting Content to Your Audience](/discover/portal/-/knowledge_base/7-0/targeting-content-to-your-audience)
-
-[Running Service Builder and Understanding the Generated Code](/develop/tutorials/-/knowledge_base/7-0/running-service-builder-and-understanding-the-generated-code)
