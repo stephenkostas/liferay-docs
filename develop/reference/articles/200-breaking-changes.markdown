@@ -27,7 +27,7 @@ Here are some of the types of changes documented in this file:
 
 ### Standardized Data Attribute Names Passed into Selectors [](id=standardized-data-attribute-names-passed-into-selectors)
 - **Date:** 2016-Oct-26
-- **JIRA Ticket:** LPS-66646
+- **JIRA Ticket:** [LPS-66646](https://issues.liferay.com/browse/LPS-66646)
 
 #### What changed? [](id=what-changed)
 
@@ -75,7 +75,7 @@ methods to accept standardized event parameters.
 
 ### Removed URL Parameters p_p_col_id, p_p_col_pos, and p_p_col_count from Every Portlet URL. [](id=removed-url-parameters-ppcolid-ppcolpos-and-ppcolcount-from-every-portlet-u)
 - **Date:** 2016-Dec-12
-- **JIRA Ticket:** LPS-69482
+- **JIRA Ticket:** [LPS-69482](https://issues.liferay.com/browse/LPS-69482)
 
 #### What changed? [](id=what-changed-0)
 
@@ -108,7 +108,7 @@ portlet URLs without passing the request as a necessary parameter.
 
 ### Moved Users File Uploads Portlet Properties to OSGi Configuration [](id=moved-users-file-uploads-portlet-properties-to-osgi-configuration)
 - **Date:** 2017-Feb-06
-- **JIRA Ticket:** LPS-69211
+- **JIRA Ticket:** [LPS-69211](https://issues.liferay.com/browse/LPS-69211)
 
 #### What changed? [](id=what-changed-1)
 
@@ -146,7 +146,7 @@ configuration changes.
 
 ### Moved CAPTCHA Portal Properties to OSGi Configuration [](id=moved-captcha-portal-properties-to-osgi-configuration)
 - **Date:** 2017-Feb-13
-- **JIRA Ticket:** LPS-67830
+- **JIRA Ticket:** [LPS-67830](https://issues.liferay.com/browse/LPS-67830)
 
 #### What changed? [](id=what-changed-2)
 
@@ -196,8 +196,8 @@ configuration changes.
 ---------------------------------------
 
 ### Moved OpenOffice Properties to OSGi Configuration [](id=moved-openoffice-properties-to-osgi-configuration)
-- **Date:** 2017-March-24
-- **JIRA Ticket:** LPS-71382
+- **Date:** 2017-Mar-24
+- **JIRA Ticket:** [LPS-71382](https://issues.liferay.com/browse/LPS-71382)
 
 #### What changed? [](id=what-changed-3)
 
@@ -235,7 +235,7 @@ configuration changes.
 
 ### Removed Indexation of Fields ratings and viewCount [](id=removed-indexation-of-fields-ratings-and-viewcount)
 - **Date:** 2017-May-16
-- **JIRA Ticket:** LPS-70724
+- **JIRA Ticket:** [LPS-70724](https://issues.liferay.com/browse/LPS-70724)
 
 #### What changed? [](id=what-changed-4)
 
@@ -271,7 +271,7 @@ more information about this in the `portal.properties` file.
 
 ### Moved Upload Servlet Request Portal Properties to OSGi Configuration [](id=moved-upload-servlet-request-portal-properties-to-osgi-configuration)
 - **Date:** 2017-May-30
-- **JIRA Ticket:** LPS-69102
+- **JIRA Ticket:** [LPS-69102](https://issues.liferay.com/browse/LPS-69102)
 
 #### What changed? [](id=what-changed-5)
 
@@ -307,7 +307,7 @@ configuration changes.
 
 ### Moved Three DL File Properties to OSGi Configuration [](id=moved-three-dl-file-properties-to-osgi-configuration)
 - **Date:** 2017-Aug-01
-- **JIRA Ticket:** LPS-69208
+- **JIRA Ticket:** [LPS-69208](https://issues.liferay.com/browse/LPS-69208)
 
 #### What changed? [](id=what-changed-6a)
 
@@ -344,7 +344,7 @@ configuration changes.
 
 ### Removed the soyutils Module [](id=removed-the-soyutils-module)
 - **Date:** 2017-Aug-28
-- **JIRA Ticket:** LPS-69102
+- **JIRA Ticket:** [LPS-69102](https://issues.liferay.com/browse/LPS-69102)
 
 #### What changed? [](id=what-changed-6)
 
@@ -370,7 +370,7 @@ Closure Template library.
 
 ### Changed Default Value for Browser Cache Properties [](id=changed-default-value-for-browser-cache-properties)
 - **Date:** 2017-Sep-05
-- **JIRA Ticket:** LPS-74452
+- **JIRA Ticket:** [LPS-74452](https://issues.liferay.com/browse/LPS-74452)
 
 #### What changed? [](id=what-changed-8)
 
@@ -411,7 +411,7 @@ of `false` can be considered during performance tuning, if needed.
 
 ### Users Can Have Numeric Screen Names with No Limitations, and Sites Can No Longer Have Numeric Friendly URLs [](id=users-can-have-numeric-screen-names-with-no-limitations-and-sites-can-no-lo)
 - **Date:** 2017-Oct-10
-- **JIRA Ticket:** LPS-66460
+- **JIRA Ticket:** [LPS-66460](https://issues.liferay.com/browse/LPS-66460)
 
 #### What changed? [](id=what-changed-7)
 
@@ -472,7 +472,7 @@ one.
 
 ### Removed Support for Velocity in Themes [](id=removed-support-for-velocity-in-themes)
 - **Date:** 2017-Oct-19
-- **JIRA Ticket:** LPS-74379
+- **JIRA Ticket:** [LPS-74379](https://issues.liferay.com/browse/LPS-74379)
 
 #### What changed? [](id=what-changed-9)
 
@@ -502,3 +502,133 @@ migrate to FreeMarker. Also, Velocity has had no new releases for a long time.
 
 The removal of Velocity support for Liferay Portal 7.1 themes allows for an
 increased focus on existing and new template engines.
+
+---------------------------------------
+
+### Moved Organization Type Properties to OSGi Configuration [](id=moved-organization-type-properties-to-osgi-configuration)
+- **Date:** 2018-Jan-19
+- **JIRA Ticket:** [LPS-77183](https://issues.liferay.com/browse/LPS-77183)
+
+#### What changed? [](id=what-changed-10)
+
+The organization type properties have been moved from `portal.properties` to an
+OSGi configuration named `OrganizationsTypesConfiguration.java` in the
+`users-admin-api` module.
+
+#### Who is affected? [](id=who-is-affected-10)
+
+This affects anyone using the following portal properties:
+
+- `organizations.types`
+- `organizations.rootable`
+- `organizations.children.types`
+- `organizations.country.enabled`
+- `organizations.country.required`
+
+#### How should I update my code? [](id=how-should-i-update-my-code-10)
+
+Instead of overriding the `portal.properties` file, you can manage the
+properties from Portal's configuration administrator. This can be accessed by
+navigating to Liferay Portal's *Control Panel* &rarr; *Configuration* &rarr;
+*System Settings* &rarr; *Foundation* &rarr; *Organization Type* and editing
+the settings there.
+
+If you would like to include the new configuration in your application, follow
+the instructions for
+[making your applications configurable](/develop/tutorials/-/knowledge_base/7-1/making-your-applications-configurable).
+
+#### Why was this change made? [](id=why-was-this-change-made-10)
+
+This change was made as part of the modularization efforts to ease portal
+configuration changes.
+
+---------------------------------------
+
+### Updated jQuery and Lodash Bundled Versions [](id=updated-jquery-and-lodash-bundled-versions)
+- **Date:** 2018-Feb-07
+- **JIRA Ticket:** [LPS-66645](https://issues.liferay.com/browse/LPS-66645),
+[LPS-66646](https://issues.liferay.com/browse/LPS-66646)
+
+#### What changed? [](id=what-changed-11a)
+
+The bundled jQuery version has been updated from 2.1.4 to 3.3.1. The bundled
+Lodash version has been updated from 3.10.1 to 4.17.4.
+
+#### Who is affected? [](id=who-is-affected-11a)
+
+This affects anyone using the previous API versions in their code.
+
+#### How should I update my code? [](id=how-should-i-update-my-code-11a)
+
+Follow the changelogs on the [jQuery](http://jquery.com/upgrade-guide/3.0/) and
+[Lodash](https://github.com/lodash/lodash/wiki/Changelog#v400) sites to update
+any affected code.
+
+#### Why was this change made? [](id=why-was-this-change-made-11a)
+
+This change provides the latest jQuery and Lodash versions available.
+
+---------------------------------------
+
+### Removed JavaScript Minification Properties minifier.javascript.impl and yui.compressor.* from portal.properties [](id=removed-javascript-minification-properties-minifier-javascript-impl-and-yui)
+- **Date:** 2018-Feb-28
+- **JIRA Ticket:** [LPS-74375](https://issues.liferay.com/browse/LPS-74375)
+
+#### What changed? [](id=what-changed-11)
+
+The JavaScript minifiers have been extracted from `portal-kernel` and moved to
+their own OSGi module. Thus, they are not configured in `portal.properties` any
+more, but rather, through OSGi configuration.
+
+#### Who is affected? [](id=who-is-affected-11)
+
+This affects anyone who had the Yahoo JavaScript minifier active and configured
+to override its default settings.
+
+#### How should I update my code? [](id=how-should-i-update-my-code-11)
+
+If you are implementing your own JavaScript minifier, you should extract it to
+its own OSGi module. See module
+[frontend-js-minifier](https://github.com/liferay/liferay-portal/tree/master/modules/apps/foundation/frontend-js/frontend-js-minifier)
+for an example of how to do this.
+
+#### Why was this change made? [](id=why-was-this-change-made-11)
+
+The JavaScript minifiers were not easy to customize. For example, the Google
+minifier used an old version of the closure-compiler, which was difficult to
+upgrade because it required `portal-kernel` dependency changes. This could
+create conflicts.
+
+Having JavaScript minifiers in their own OSGi modules requires less dependency
+management and makes it easier to provide new implementations of JavaScript
+minifiers. Also, configuration can now be done using OSGi standards.
+
+---------------------------------------
+
+### Changed Behavior of liferay-ui:input-date Taglib's showDisableCheckbox Argument [](id=changed-behavior-of-liferay-uiinput-date-taglibs-showdisablecheckbox-argume)
+- **Date:** 2018-Mar-06
+- **JIRA Ticket:** [LPS-78475](https://issues.liferay.com/browse/LPS-78475)
+
+#### What changed? [](id=what-changed-12)
+
+Previously, when the `liferay-ui:input-date` taglib's `showDisableCheckbox`
+argument was set to `true`, the disable checkbox was hidden. Now, the value
+`true` displays it, and `false` hides it.
+
+#### Who is affected? [](id=who-is-affected-12)
+
+This affects anyone trying to hide the `liferay-ui:input-date` taglib's disable
+checkbox.
+
+#### How should I update my code? [](id=how-should-i-update-my-code-12)
+
+If you are setting the `showDisableCheckbox` argument to `true` to hide the
+`liferay-ui:input-date` taglib's disable checkbox, you should now set it to
+`false`, and vice versa.
+
+#### Why was this change made? [](id=why-was-this-change-made-12)
+
+The behavior did not match with the name of the argument and was
+counter-intuitive.
+
+---------------------------------------
