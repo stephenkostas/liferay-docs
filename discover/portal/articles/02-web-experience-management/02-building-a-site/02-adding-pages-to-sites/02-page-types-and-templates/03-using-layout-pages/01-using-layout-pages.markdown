@@ -1,6 +1,6 @@
-# Adding Applications to a Layout Page [](id=adding-applications-to-a-page)
+# Using Layout Pages [](id=adding-applications-to-a-page)
 
-Layout pages are composed of applications. To add an app to a page, go to the 
+Widget pages are composed of "widgets" which are small applications that you can use in a page. To add widget to a page, go to the 
 page and click the *Add* button  (![Add](../../../../images/icon-control-menu-add.png)) 
 from the  top menu and select the *Applications* tab. You can either browse
 through the categories of available apps until you find the one you want, or you
@@ -33,7 +33,7 @@ Next, you'll practice personalizing pages using page customizations.
 
 ## Personalizing Pages [](id=personalizing-pages)
 
-Administrators can designate pages or sections of pages to be customizable. When
+Administrators can designate pages or sections of Widget Pages to be customizable. When
 a user visits such a page, a notification appears stating that the user can
 customize the page. Users can make customizations only in the sections of pages
 designated by administrators. Customizations are based on the rows and columns
@@ -134,50 +134,3 @@ In addition to granting the ability to customize app configurations, the
 *Customize* permission allows users to customize the look and feel of apps
 and to import or export app settings. Next, you'll look at how to change page
 permissions.
-
-## Changing Page Permissions [](id=changing-page-permissions)
-
-By default, public pages are just that: public. They can be viewed by anybody,
-logged in or not logged in. And private pages are really only private from
-non-members of the site. If someone has joined your site or is a member of your
-organization, that person can see all the private pages. You can, however,
-modify the permissions on individual pages in either page group so only certain
-users can view them.
-
-Suppose you want to create a page only for administrators to see. You can do it
-this way:
-
-1.  Go to your site's Site Administration dropdown and select *Navigation*
-    &rarr; *Private Pages*. If you don't have the *Private Pages* option
-    available, select the *Options* button next to Public Pages and click *Add
-    Private Page*. Remember, these pages by default are viewable only by members
-    of the site.
-
-2.  Create a page called *Admin Tips*.
-
-3.  Click *Configure Page* from the Options button dropdown for the page in the
-    left menu.
-
-4.  Select *Permissions* from the *Options* icon
-    (![Options](../../../../images/icon-options.png)) in the top right corner of
-    the screen.
-
-4.  Uncheck the *View* and *Add Discussion* permissions next to the Site Member
-    role.
-
-5.  Click the *Save* button.
-
-![Figure 12: The Permissions offer a plethora of options for each role.](../../../../images/web-content-page-permissions.png)
-
-Congratulations! You've changed the permissions for this page so only site
-administrators can view it. Any users you add to this role can now see the page.
-Other users, even members of this site, won't have permission to see it.
-
-Pages are as flexible as pages you'd create manually without a Liferay instance.
-Using a point and click interface, you can define your site any way you want.
-You can create and remove pages, export and import them, set their layouts,
-define how they are indexed by search engines, and more.
-
-You now understand how to manage pages. It's time to move on to further
-customizing those pages for mobile devices and building standardized pages using
-custom templates.

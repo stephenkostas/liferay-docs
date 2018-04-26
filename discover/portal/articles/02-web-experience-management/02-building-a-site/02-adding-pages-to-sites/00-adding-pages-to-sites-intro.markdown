@@ -1,7 +1,7 @@
-# Creating and Managing Pages [](id=creating-and-managing-pages)
+# Adding Pages to Sites [](id=creating-and-managing-pages)
 
-You've successfully created a site for your Liferay instance, but you may need
-to add new pages or edit existing pages. From the Site Administration &rarr;
+After you create a site for your Liferay instance, you may need to add new 
+pages or edit existing pages. From the Site Administration &rarr;
 *Navigation* section of the Menu, you can configure site pages. If you're not
 currently on the site you want to edit, click the *Site Selector* button
 (![Compass](../../../../images/icon-compass.png)) next to your current site name

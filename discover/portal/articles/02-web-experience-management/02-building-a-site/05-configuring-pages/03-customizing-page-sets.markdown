@@ -1,4 +1,4 @@
-# Customizing Pages [](id=customizing-pages)
+# Customizing Page Sets
 
 When you decide to customize a single page, options that were not available when
 initially creating a page appear. You can customize a specific page by

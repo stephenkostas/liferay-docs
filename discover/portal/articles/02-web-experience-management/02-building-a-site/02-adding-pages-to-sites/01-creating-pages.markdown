@@ -17,6 +17,9 @@ of page you are creating:
 **Full Page Application:** creates a page that displays a single full page
 application.
 
+**Page Set** creates a container that you can create subpages under that is not 
+actually a page itself. 
+
 **Layout:** creates a page with a layout template that defines the number of
 rows and columns for adding applications to your page in a custom layout.
 
@@ -29,7 +32,10 @@ portlet takes up the entire page.
 administrator can set a URL from the page management interface and that page
 appears in the context and within the navigation of your Liferay instance.
 
-**Content:** created from a page template.
+**Link to URL** creates a link to any URL. This could be an external page, or
+a link across Sites in the same Liferay instance
+
+**Content:** creates a Content Page based on a Page Template or Fragments.
 
 ![Figure 1: You must select a page type when adding pages.](../../../../images/page-types-adding.png)
 
@@ -48,6 +54,4 @@ There are also configuration options that are only available for either
 individual pages or page groups only. You'll learn about options available for
 both instances.
 
-Next, you'll look at the options you have available for configuring your public
-or private pages as a whole, and the individual pages residing within those
-groups.
+Next, you'll look at the main page types you'll use in Liferay.
