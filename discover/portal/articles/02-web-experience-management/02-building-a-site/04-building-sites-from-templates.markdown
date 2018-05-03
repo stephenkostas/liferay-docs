@@ -94,57 +94,79 @@ that are only accessible to members of these respective departments. You could
 design each site separately but you can save yourself some work if you create a
 site template to use instead.
 
-To create a site template, navigate to the Control Panel and click *Sites*
-&rarr; *Site Templates*. Then click the *Add* icon
-(![Add Site Template](../../../images/icon-add.png)) and enter a name for your
-template: you'll use *Department* for this example. Leave the *Active* and
-*Allow site administrators to modify pages associated with this site
-template...\* boxes checked. The *Active* box must be checked for your template
-to be usable. If your template is still a work in progress, you can uncheck it
-to ensure that no one uses it until it's ready. Checking *Allow site
-administrators to modify pages associated with this site template...\* allows
-site administrators to modify or remove the pages and apps that the template
-introduces to their sites--if you want the templates to be completely static,
-you should uncheck this. Click *Save* to create your site template.
+1.  Navigate to the Control Panel and click *Sites* &rarr; *Site Templates*. 
+
+2.  Click the *Add* icon (![Add Site Template](../../../images/icon-add.png)) 
+    and enter the name "Department" for your template.
+
+3.  Leave the *Active* and *Allow site administrators to modify pages
+    associated with this site template...\* boxes checked. 
+
+4.  Click *Save* to create your site template.
+
+The *Active* box must be checked for your template to be usable. If your 
+template is still a work in progress, you would uncheck it to ensure that no 
+one uses it until it's ready. Checking *Allow site administrators to modify 
+pages associated with this site template...\* allows site administrators to 
+modify or remove the pages and apps that the template introduces to their 
+sites--if you want the templates to be completely static, you should uncheck 
+this. 
 
 From the left menu, notice that your site template is now selected from the Site
 Administration dropdown. You can now begin editing your site template. For this
-example, you want your site template to include four pages. First, create a
-*Home* page with the Activities, Announcements, and Calendar apps. Next, create
-a *Documents and Media* page with the Documents and Media app. Finally, create a
-*Wiki* page with the Wiki and Tag Cloud apps and a *Message Boards* page with
-the Message Boards and Tag Cloud apps. The changes you made to your site
-template above are completed in real time, so there's no need to navigate back
-to the Site Templates page of the Control Panel and select *Save*.
+example, you want your site template to include four pages.
+
+1.  Create a *Home* page with the Activities, Announcements, and Calendar apps.
+
+2.  Create a *Documents and Media* page with the Documents and Media app.
+
+3. Create a *Wiki* page with the Wiki and Tag Cloud apps and a *Message Boards* 
+    page with the Message Boards and Tag Cloud apps.
+
+The changes you made to your site template above are completed in real time, so 
+there's no need to navigate back to the Site Templates page of the Control 
+Panel and select *Save*.
 
 ![Figure 2: You can see the name of the site template you're currently editing.](../../../images/editing-site-template.png)
 
 Next, you'll use your site template to create the Engineering, Marketing and
-Legal sites. Go to the Control Panel and click on *Sites* &rarr; *Sites*. Then
-click the *Add* icon (![Add Site](../../../images/icon-add.png)) &rarr;
-*Department*. Enter *Engineering* for the site name and set the Membership Type
-to *Private*. Recall that private sites don't appear in the My Sites application
-so that regular users won't even know that the Engineering site exists. Also,
-the only way users can be added to a private site is via an invitation from a
-site administrator. Leave the *Active* selector enabled so that your site can be
-used immediately. Select the *Copy as Private Pages* option since the
-Engineering site is intended for internal use only. Leave the *Enable
-propagation of changes from the site template* box enabled so that the
-Engineering site receives updates if the Department site template is modified.
-Finally, click *Save* to create your Engineering site.
+Legal sites.
 
-Repeat these steps to create the Marketing and Legal sites. The new sites have
-all the pages and apps you created in the site template. To view the pages of
-the new sites, click on *Sites* &rarr; *Sites* in the Control Panel and then
-click on *Actions* &rarr; *Go to Private Pages* next to one of your new sites.
-Using site templates streamlines the site creation process for administrators,
-making it easy to create sites quickly. Now each department of the Lunar Resort
-has its own calendar, documents and media library, wiki, and message boards
-application. Although the pages and apps of each department's site are the
-same, each site will quickly be filled with department-specific information as
-users add and share content within the sites. Also, site administrators can add
-new pages, apps, and content to their sites, further differentiating each
-department's site from the others.
+1.  Go to the Control Panel and click on *Sites* &rarr; *Sites*.
+
+2.  Click the *Add* icon (![Add Site](../../../images/icon-add.png)) &rarr;
+    *Department*. Enter *Engineering* for the site name and set the Membership 
+    Type to *Private*.
+    
+    Recall that private sites don't appear in the My Sites 
+    application so that regular users won't even know that the Engineering site 
+    exists. Also, the only way users can be added to a private site is via an 
+    invitation from a site administrator.
+    
+3.  Leave the *Active* selector enabled so that your site can be used 
+    immediately.
+4.  Select the *Copy as Private Pages* option since the Engineering site is 
+    intended for internal use only.
+
+5.  Leave the *Enable propagation of changes from the site template* box 
+    enabled so that the Engineering site receives updates if the Department 
+    site template is modified.
+
+6.  Click *Save* to create your Engineering site.
+
+7.  Repeat these steps to create the Marketing and Legal sites.
+
+The new sites have all the pages and apps you created in the site template. To 
+view the pages of the new sites, click on *Sites* &rarr; *Sites* in the Control 
+Panel and then click on *Actions* &rarr; *Go to Private Pages* next to one of 
+your new sites. Using site templates streamlines the site creation process for 
+administrators, making it easy to create sites quickly. Now each department of 
+the Lunar Resort has its own calendar, documents and media library, wiki, and 
+message boards application. Although the pages and apps of each department's 
+site are the same, each site will quickly be filled with department-specific 
+information as users add and share content within the sites. Also, site 
+administrators can add new pages, apps, and content to their sites, further 
+differentiating each department's site from the others.
 
 ## Propagating Changes from Site Templates to Sites [](id=propagating-changes-from-site-templates-to-sites)
 
@@ -198,9 +220,6 @@ preferences are copied from the site template's apps, overriding any default app
 preferences. When merging site template and site changes (e.g., when resetting),
 app preferences are copied from site template apps to site apps. Only global app
 preferences or local app preferences which don't refer to IDs are overwritten.
-
-<!-- Need to review from here down. I need to figure how how to receive the
-merge fail error so I can take a screenshot for Figure 4. -Cody -->
 
 In some cases, merging site template and site changes fails. For example, if
 pages from a site template cannot be propagated because their friendly URLs are
@@ -276,5 +295,5 @@ To export a Site using a Site Template, use the following process:
 
 Now the site can be exported and imported normally to this new environment. For
 more information on exporting/importing content, visit the
-[Importing/Exporting Pages and Content](/discover/portal/-/knowledge_base/7-0/importing-exporting-pages-and-content)
+[Importing/Exporting Pages and Content](/discover/portal/-/knowledge_base/7-1/importing-exporting-pages-and-content)
 article.

@@ -14,8 +14,6 @@ the Control Panel, see the
 [Using the Control Panel](/discover/portal/-/knowledge_base/7-1/using-the-control-panel)
 sections, respectively.
 
-<!-- TODO: Replace links above, when available -Cody -->
-
 +$$$
 
 **Tip:** If you're signed in as an administrator, you can access all sites by
@@ -28,10 +26,16 @@ etc.) for that site are available.
 
 $$$
 
-To add a site for the Lunar Resort instance, navigate to the Control Panel and
-select *Sites* &rarr; *Sites*. Then click the Add icon
-(![Add Site](../../../images/icon-add.png)) at the bottom right of the page. If
-there is at least one site template available, a dropdown menu appears. Site
+Now, you'll add a site for the Lunar Resort.
+
+1.  Navigate to the Control Panel and select *Sites* &rarr; *Sites*.
+
+2. Click the Add icon (![Add Site](../../../images/icon-add.png)) at the bottom 
+    right of the page.
+    
+3. Select a *Blank Site*.
+
+If there is at least one site template available, a dropdown menu appears. Site
 templates provide a preconfigured set of pages, applications, and content that
 can be used as the basis of a site's public or private page set. To create a
 site from scratch, select *Blank Site*. Otherwise, select the name of the site
@@ -77,6 +81,13 @@ organization sites, by default, the *Users* section of *Sites* is unavailable.
 To activate the *Users* functionality for your organization site, you'll need to
 check *Allow Manual Membership Management* after creating the organization site
 by navigating to its *Site Settings* menu.
+
+1.  Name your site "The Lunar Resort"
+
+2.  Set the *Membership Type* as *Restricted*.
+
+3.  Leave the remain defaults and click *Save*.
+
 
 +$$$
 
@@ -131,4 +142,4 @@ permission to do so.
 Once the site has been created, you'll want to configure its settings to fit
 your needs. You can learn more about Site Settings here[link].
 
-Next you'll look at using Site Templates to create new sites.
+Next, you'll learn about creating pages.

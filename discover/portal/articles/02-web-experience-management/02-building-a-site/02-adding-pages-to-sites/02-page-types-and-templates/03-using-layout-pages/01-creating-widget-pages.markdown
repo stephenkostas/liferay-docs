@@ -1,7 +1,9 @@
-# Using Layout Pages [](id=adding-applications-to-a-page)
+# Creating Widget Pages
 
-Widget pages are composed of "widgets" which are small applications that you can use in a page. To add widget to a page, go to the 
-page and click the *Add* button  (![Add](../../../../images/icon-control-menu-add.png)) 
+
+
+To add widget to a page, go to the page and click the *Add* button  
+(![Add](../../../../images/icon-control-menu-add.png)) 
 from the  top menu and select the *Applications* tab. You can either browse
 through the categories of available apps until you find the one you want, or you
 can search for apps by name. Once you've found an app, click the *Add* button to
