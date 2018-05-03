@@ -24,7 +24,7 @@ Collaboration apps to the Lunar Resort site.
 See how easy it is to add applications to your pages? You've added the Wiki
 app and Blogs Aggregator app to a page. 
 
-![Figure 7: Your page layout options are virtually limitless with a slew of application and layout combinations.](../../../../images/app-layout-design.png)
+![Figure 1: Your page layout options are virtually limitless with a slew of application and layout combinations.](../../../../images/app-layout-design.png)
 
 If the default layout options provided aren't enough, you can even develop your
 own. For more information about developing custom layout templates, see the
@@ -48,7 +48,7 @@ from the *Options* button next to the Page you'd like to let site members
 modify. Then select the *Advanced* tab at the top of the page, expand the
 *Customization Settings* area, and click on the *Customizable* selector button. 
 
-![Figure 8: To enable page customizations, click on the *Configure Page* button next to the page, expand the *Customization Settings* area, and click on the *Customizable* button.](../../../../images/page-customizations.png)
+![Figure 2: To enable page customizations, click on the *Configure Page* button next to the page, expand the *Customization Settings* area, and click on the *Customizable* button.](../../../../images/page-customizations.png)
 
 Once you've enabled the *Customizable* selector, select the sections of
 the page you'd like to enable customization for, depending on the layout
@@ -62,7 +62,7 @@ toggle whether to view or hide the customizable regions. If you toggle the
 selector to view customizable regions, the regions on the page are color-coded
 to help distinguish customizable vs. non-customizable sections of the page.
 
-![Figure 9: Customizable regions are colored green and non-customizable regions are colored red.](../../../../images/color-coded-customizable-regions.png)
+![Figure 3: Customizable regions are colored green and non-customizable regions are colored red.](../../../../images/color-coded-customizable-regions.png)
 
 Site members can also choose between viewing their customized page and viewing
 the default page by selecting the *Options* button
@@ -93,7 +93,7 @@ Users can make two kinds of customizations to customizable regions. First, they
 can configure applications within the customizable regions. Second, they can add
 apps to or remove apps from the customizable regions.
 
-![Figure 10: Customizable areas are highlighted green when organizing apps on the page.](../../../../images/customizable-regions.png)
+![Figure 4: Customizable areas are highlighted green when organizing apps on the page.](../../../../images/customizable-regions.png)
 
 Users can't change a non-instanceable app's configuration inside a customizable
 region since those kinds of apps are tied to the site where they've been added.
@@ -121,7 +121,7 @@ select their language in the Language Selector app to view a translation of your
 site into their native language. After closing the Configuration dialog box of
 the Language Selector app, the customized Welcome page looks like this:
 
-![Figure 11: In this example, the user added the Language app, and changed the display style from icons to a select box.](../../../../images/customized-portal-homepage.png)
+![Figure 5: In this example, the user added the Language app, and changed the display style from icons to a select box.](../../../../images/customized-portal-homepage.png)
 
 To allow users to customize a page, administrators must grant users permission
 to *Customize* pages under the Site section. This can be achieved by assigning
@@ -136,3 +136,52 @@ In addition to granting the ability to customize app configurations, the
 *Customize* permission allows users to customize the look and feel of apps
 and to import or export app settings. Next, you'll look at how to change page
 permissions.
+<<<<<<< HEAD:discover/portal/articles/02-web-experience-management/02-building-a-site/02-adding-pages-to-sites/02-page-types-and-templates/03-using-layout-pages/01-creating-widget-pages.markdown
+=======
+
+## Changing Page Permissions [](id=changing-page-permissions)
+
+By default, public pages are just that: public. They can be viewed by anybody,
+logged in or not logged in. And private pages are really only private from
+non-members of the site. If someone has joined your site or is a member of your
+organization, that person can see all the private pages. You can, however,
+modify the permissions on individual pages in either page group so only certain
+users can view them.
+
+Suppose you want to create a page only for administrators to see. You can do it
+this way:
+
+1.  Go to your site's Site Administration dropdown and select *Navigation*
+    &rarr; *Private Pages*. If you don't have the *Private Pages* option
+    available, select the *Options* button next to Public Pages and click *Add
+    Private Page*. Remember, these pages by default are viewable only by members
+    of the site.
+
+2.  Create a page called *Admin Tips*.
+
+3.  Click *Configure Page* from the Options button dropdown for the page in the
+    left menu.
+
+4.  Select *Permissions* from the *Options* icon
+    (![Options](../../../../images/icon-options.png)) in the top right corner of
+    the screen.
+
+4.  Uncheck the *View* and *Add Discussion* permissions next to the Site Member
+    role.
+
+5.  Click the *Save* button.
+
+![Figure 6: The Permissions offer a plethora of options for each role.](../../../../images/web-content-page-permissions.png)
+
+Congratulations! You've changed the permissions for this page so only site
+administrators can view it. Any users you add to this role can now see the page.
+Other users, even members of this site, won't have permission to see it.
+
+Pages are as flexible as pages you'd create manually without a Liferay instance.
+Using a point and click interface, you can define your site any way you want.
+You can create and remove pages, export and import them, set their layouts,
+define how they are indexed by search engines, and more.
+
+You now understand how to manage pages. It's time to move on to further
+customizing those pages for mobile devices and building standardized pages using
+custom templates.
