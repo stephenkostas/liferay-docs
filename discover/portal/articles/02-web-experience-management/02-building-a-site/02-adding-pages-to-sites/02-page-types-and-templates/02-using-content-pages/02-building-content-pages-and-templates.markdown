@@ -43,7 +43,7 @@ If the template contains editable text, you can click on the editable text area 
 
 If the template contains an editable image, you can click on the image and 
 replace it by either uploading your own image, or selecting one from Documents 
-and Media
+and Media.
 
 ![Figure X: Editing an image inline.](../../../../../../images/edit-image-inline.png)
 

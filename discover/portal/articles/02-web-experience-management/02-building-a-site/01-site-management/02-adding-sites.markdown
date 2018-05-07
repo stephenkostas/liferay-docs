@@ -30,22 +30,24 @@ Now, you'll add a site for the Lunar Resort.
 
 1.  Navigate to the Control Panel and select *Sites* &rarr; *Sites*.
 
-2. Click the Add icon (![Add Site](../../../images/icon-add.png)) at the bottom 
-    right of the page.
+2.  Click the Add icon (![Add Site](../../../images/icon-add.png)) at the 
+    top right of the page.
     
-3. Select a *Blank Site*.
+3.  Select a *Blank Site*.
 
-If there is at least one site template available, a dropdown menu appears. Site
+Any available site templates will display here for you to select. Site
 templates provide a preconfigured set of pages, applications, and content that
 can be used as the basis of a site's public or private page set. To create a
 site from scratch, select *Blank Site*. Otherwise, select the name of the site
 template you'd like to use. If you opt to create a site from a site template,
 you have to choose whether to copy the site template's pages as your new site's
 public or private page set. If other site templates are created, they will
-appear in the Add menu as they become available. The following figure shows the
-form that needs to be filled when creating a *Blank Site*.
+appear in the Add menu as they become available. 
 
-![Figure 3: The New Site window aids in your new site development.](../../../images/add-site-screen.png)
+1.  Name your site "The Lunar Resort"
+    
+After you enter the name, you will be prompted to enter additional information 
+about the site and configure certain site settings.
 
 **Name:** names the site you wish to create. You also have the option to
 translate the name for many different languages. This can be done by selecting
@@ -82,13 +84,6 @@ To activate the *Users* functionality for your organization site, you'll need to
 check *Allow Manual Membership Management* after creating the organization site
 by navigating to its *Site Settings* menu.
 
-1.  Name your site "The Lunar Resort"
-
-2.  Set the *Membership Type* as *Restricted*.
-
-3.  Leave the remain defaults and click *Save*.
-
-
 +$$$
 
 **Note:** It's possible for site memberships to be handled automatically by a
@@ -112,6 +107,10 @@ appears: *Limit membership to members of the parent site*. If this option is
 enabled, the site's membership policy performs a check so that you can only
 assign members to the current site if they're already members of the parent
 site.
+
+2.  Set the *Membership Type* as *Restricted*.
+
+3.  Leave the remain defaults and click *Save*.
 
 When creating a blank site or organization site, the site is not immediately
 viewable. This is because sites without a
