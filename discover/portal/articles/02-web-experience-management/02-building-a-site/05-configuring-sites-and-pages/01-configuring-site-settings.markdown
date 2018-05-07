@@ -11,13 +11,13 @@ available, which are available from the *General*, *Social*, *Languages*, and
 *Advanced* tabs, and simulate configuring those settings for your sample Lunar
 Resort site.
 
-### Organizing Site Content [](id=organizing-site-content)
+## Organizing Site Content [](id=organizing-site-content)
 
 Organizing your site's content drastically improves the usability of your site
 for users. The Site Settings menu offers some configuration options that aid in
 your organizational goals.
 
-#### Categorization [](id=categorization)
+### Categorization [](id=categorization)
 
 You can explore ways to tag and categorize your site by clicking the
 *Categorization* tab under General. These tools help administrators organize the
@@ -28,7 +28,7 @@ and categories, visit the
 [Organizing Content with Tags and Categories](/discover/portal/-/knowledge_base/7-0/organizing-content-with-tags-and-categories)
 section.
 
-#### Site Template [](id=site-template)
+### Site Template [](id=site-template)
 
 The last tab listed under the Basic Information category is *Site Template*. If
 you created your Lunar Resort site as a Blank Site, this option is not available
@@ -40,7 +40,7 @@ administrators. To learn more about site templates and how to create your own,
 see the [Building Sites from Templates](/discover/portal/-/knowledge_base/7-0/building-sites-from-templates)
 section.
 
-#### Content Sharing [](id=content-sharing)
+### Content Sharing [](id=content-sharing)
 
 If you select the *Content Sharing* tab from the Advanced tab, you can
 configure whether sub-sites can display content from this site. Administrators
@@ -50,7 +50,7 @@ initially allowed content sharing between the parent site and its sub-sites,
 you're able to disable this option and immediately revoke content sharing from
 all sub-sites.
 
-#### Recycle Bin [](id=recycle-bin)
+### Recycle Bin [](id=recycle-bin)
 
 The *Recycle Bin* option under the Advanced tab provides the option to
 enable/disable the Recycle Bin for your site. You can also regulate the age (in
@@ -59,7 +59,7 @@ permanently deleted. For a full explanation of the Recycle Bin, see the
 [Restoring Deleted Assets](/discover/portal/-/knowledge_base/7-0/restoring-deleted-assets)
 section.
 
-#### Custom Fields [](id=custom-fields)
+### Custom Fields [](id=custom-fields)
 
 *Custom Fields* lets you edit the custom fields you already have configured
 for the Site resource. If you don't have any custom fields configured for the
@@ -72,7 +72,7 @@ section.
 
 <!-- TODO: replace link above. -Cody -->
 
-#### Documents and Media [](id=documents-and-media)
+### Documents and Media [](id=documents-and-media)
 
 The last option that relates to organizing your site's content is *Documents and
 Media*, which is found under General. This lets you enable/disable Directory
@@ -90,7 +90,7 @@ An always important job for site administrators is managing site users. There
 are configuration options in Site Settings that allow for easier user
 management.
 
-#### Details [](id=details)
+### Details [](id=details)
 
 *Details* is the leading option under the General tab, which provides
 the same menu you filled out when first creating your Lunar Resort site. This
@@ -108,7 +108,7 @@ select the parent site for the site you're currently on. After selecting a
 parent site, you have a checkbox option to limit membership to members of the
 parent site.
 
-#### Default User Associations [](id=default-user-associations)
+### Default User Associations [](id=default-user-associations)
 
 Once you have the basic details of your site saved, you can begin assigning your
 users to roles and teams. *Default User Associations*, the leading option when
@@ -120,7 +120,7 @@ and
 [Creating Teams for Advanced Site Membership Management](/discover/portal/-/knowledge_base/7-0/creating-teams-for-advanced-site-membership-management)
 sections, respectively.
 
-#### Ratings [](id=ratings)
+### Ratings [](id=ratings)
 
 To allow your site's users to rate content in your site, you can use the
 *Ratings* option to select what ratings type to use for applications like
@@ -130,7 +130,7 @@ Likes, and Thumbs. This is the leading option when opening the Social tab.
 <!-- TODO Is there a link we can point to for this? Coordinate with Jim. -Cody
 -->
 
-#### Mentions [](id=mentions)
+### Mentions [](id=mentions)
 
 The last configuration option in Site Settings related to managing users is
 *Mentions*. *Mentions* is found under the Social tab. This option allows you to

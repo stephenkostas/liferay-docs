@@ -11,7 +11,7 @@ added to the menu. You can create subpages and build the page hierarchy out any
 way you like. Go to *Navigation* &rarr; *Site Pages* to view the existing pages
 or create new pages.
 
-The site hierarchy as displayed on the *Pages* page is the main reference for 
-the organization of pages on that site. While Navigation menus can customize
-what appears and what doesn't appear, this menu is always the "true" reference
-for the pages on your site.
+The site hierarchy as displayed on the *Site Pages* page is the main reference 
+for the organization of pages on that site. While Navigation menus can customize
+their organization and what appears and what doesn't appear, this menu is 
+always the primary reference for the pages on your site.

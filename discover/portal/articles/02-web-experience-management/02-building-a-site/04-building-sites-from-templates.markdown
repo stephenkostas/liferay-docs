@@ -11,6 +11,8 @@ pages can be modified by site administrators. Using site templates can save site
 administrators a lot of work even if each site that was created from a given
 site template ends up being very different.
 
+## Managing Site Templates
+
 To get started, click on *Site Templates* in the Sites section of the Control
 Panel. Here, you can add, manage, or delete site templates. You can also
 configure the permissions of site templates. As long as a site is linked to the
@@ -86,7 +88,7 @@ By default, the following site templates are provided:
 Now that you know the basics for creating and managing your site templates,
 you'll put your knowledge to the test by completing an example next.
 
-## Site Templates Example [](id=site-templates-example)
+## Creating a Site Template
 
 Suppose you need to create the following three sites for the Lunar Resort's
 internal use: Engineering, Marketing, and Legal. These should be private sites

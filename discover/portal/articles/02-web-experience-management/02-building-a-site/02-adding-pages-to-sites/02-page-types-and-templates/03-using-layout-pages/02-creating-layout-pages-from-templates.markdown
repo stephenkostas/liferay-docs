@@ -1,12 +1,9 @@
-# Creating Pages from Templates [](id=creating-pages-from-templates)
+# Creating Widget Pages from Templates [](id=creating-pages-from-templates)
 
-Page templates page template provides a pre-configured page to reuse. Page 
-Templates can take a couple different forms in @product-ver@. There are Layout 
-Page templates, which consist of a portlet layout and configuration and Content 
-Page templates, which are constructed from Fragments.
+Page templates provides a pre-configured page to reuse. Page Templates can take a couple different forms in @product-ver@. There are Layout Page templates, which consist of a portlet layout and configuration and Content 
+Page templates, which are constructed from Fragments. You can read about Content Page Templates in this tutorial.
 
-Content Page Templates are created inside of a site and organized with 
-Collections. Layout Page Templates are created at the Global level in the 
+Layout Page Templates are created at the Global level in the 
 Control Panel. Three sample layout page templates are bundled with Liferay:
 
 - **Search:** contains a search bar and configuration to display various facets.
@@ -82,7 +79,6 @@ To export a page using a page template, use the following process:
 
 The page template can now be imported normally to your new environment. For more
 information on exporting/importing content, visit the
-[Importing/Exporting Pages and Content](/discover/portal/-/knowledge_base/7-0/importing-exporting-pages-and-content)
+[Importing/Exporting Pages and Content](/discover/portal/-/knowledge_base/7-1/importing-exporting-pages-and-content)
 article.
 
-Next, you'll examine the tools @product@ provides for exporting/importing content.
