@@ -14,15 +14,7 @@ easily as they would manage static content. All of this makes Liferay WCM an
 appropriate choice both for sites with only a few pages and for sites with
 gigabytes of content. 
 
-Nearly all Liferay users use @product@'s Web Content Management system. After
-all, every web site has content that needs to be managed. @product@'s WCM
-empowers you to manage all the content on your site quickly and easily within
-your browser. Beyond managing existing content, @product@'s WCM lets users
-easily create and manage everything from simple articles containing text and
-images to fully functional web sites. Web publishing works alongside @product@'s
-larger collection of applications, which means you can add shopping cart
-functionality, visitor polls, web forms, site collaboration tools, and more.
-Everything is done with our collection of easy-to-use tools with familiar
+@product@'s WCM empowers you to manage all the content on your site quickly and easily within your browser. Beyond managing existing content, @product@'s WCM lets users easily create and manage everything from simple articles containing text and images to fully functional web sites. Web publishing works alongside @product@'s larger collection of applications, which means you can add shopping cart functionality, visitor polls, web forms, site collaboration tools, and more. Everything is done with our collection of easy-to-use tools with familiar
 rich-text editors and an intuitive interface.
 
 @product@'s WCM offers a host of features that makes managing the content of your
