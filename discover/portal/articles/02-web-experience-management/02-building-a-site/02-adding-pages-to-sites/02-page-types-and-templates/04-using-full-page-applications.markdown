@@ -42,11 +42,16 @@ need to configure the page for it to function.
     page.
 
 Now the page is configured to display the Wiki and only the Wiki. No other 
-widgets can be added to the page, and the Wiki app cannot be removed. Note that 
-all of the applications that can be added to the page are "noninstanceable" and 
-the content of whichever application you select will be based on the instance 
-for that site. So if you already had data in your Wiki it will display on this 
-page.
+widgets can be added to the page, and the Wiki app cannot be removed.
+
+![Figure X: The Wiki displayed as a Full Page Application.](../../../../../images/single-page-app-wiki.png)
+
+Note that all of the applications that can be added to the page are 
+"noninstanceable" and the content of whichever application you select will be 
+based on the instance for that site. So if you already had data in your Wiki it 
+will display on this page.
+
+
 
 If you want to configure the application to be scoped to this specific page, 
 you can configure that through the application on the page.
