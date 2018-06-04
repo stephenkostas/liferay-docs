@@ -11,11 +11,13 @@ for the user.
 When you first start @product@ you get a widget page for free as your front 
 page. To create a new widget page, do the following:
 
-1.  Go to *Site Administration* &rarr;& *Build* &rarr& *Site Pages*.
+1.  Go to *Site Administration* &rarr; *Build* &rarr; *Pages*.
 
 2.  Click the `+` button in the top right to add a new page.
 
-3.  Click *Widget* in the list of page types.
+3.  Click on *Global Templates* in the list of Collections.
+
+4.  Select *Blog* from the list of templates.
 
 4.  Name the page "Community" and leave the box checked to *Add this Page to the
     following Menus: Default*.
@@ -36,13 +38,13 @@ Your new page is now added to the navigation.
 
 Currently the page is empty. Next you'll add some widgets to give it functionality.
 
-![Figure X: Your page has been added to the navigation automatically.](../../../../images/community-page-created.png)
+![Figure X: Your page has been added to the navigation automatically.](../../../../../../images/community-page-created.png)
 
 
 ## Adding Widgets to a Page
 
 To add widget to a page, go to the page and click the *Add* button  
-(![Add](../../../../images/icon-control-menu-add.png)) 
+(![Add](../../../../../../images/icon-control-menu-add.png)) 
 from the  top menu and select the *Applications* tab. You can either browse
 through the categories of available apps until you find the one you want, or you
 can search for apps by name. Once you've found an app, click the *Add* button to
@@ -63,11 +65,11 @@ Collaboration apps to the Lunar Resort site.
 See how easy it is to add applications to your pages? You've added the Wiki
 app and Blogs Aggregator app to a page. 
 
-![Figure 1: Your page layout options are virtually limitless with a slew of application and layout combinations.](../../../../images/app-layout-design.png)
+![Figure 1: Your page layout options are virtually limitless with a slew of application and layout combinations.](../../../../../../images/app-layout-design.png)
 
 If the default layout options provided aren't enough, you can even develop your
 own. For more information about developing custom layout templates, see the
 tutorial 
-[Layout Templates with the Liferay Theme Generator](/develop/tutorials/-/knowledge_base/7-0/creating-layout-templates-with-the-themes-generator-0). 
+[Layout Templates with the Liferay Theme Generator](/develop/tutorials/-/knowledge_base/7-1/creating-layout-templates-with-the-themes-generator-0). 
 
 Next, you'll look at creating reusable templates for widget pages.

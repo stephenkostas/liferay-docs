@@ -3,16 +3,22 @@
 The primary goal of Content Management isn't to show off the flashiest new 
 features or follow all the latest trends in design, but to provide you with the
 tools you need to create digital content that communicates your message clearly 
-and effectively. With this in mind, Liferay offers two core tools to help you 
-accelerate and simplify creating and organizing content - Structured Web 
-Content and Inline Content.
+and effectively. With this in mind, Liferay offers two core approaches to help you accelerate and simplify creating and organizing content - Structured Web Content and Inline Content.
 
 ## Structured Web Content
 
-Structured Content is content that is created within a predefined content 
-structure and then added to pages as needed. It uses a structure and template to
-define it's styles and exists in the site where it is created independent of 
-any page.
+If you've entered content into a CMS before, you're probably familiar with a basic format where you fill content into various fields like this:
+
+-  Title
+
+-  Abstract
+
+-  Text Body
+
+This is an example of Structured Content. Structured Content is created within 
+a predefined content structure and then added to pages as needed. The structure 
+defines the fields and then a template defines it's styles. The content then 
+exists on the site where it is saved to be added to a page later.
 
 The structure defines what kind of content you are creating and provides 
 different types of fields that can be used. A developer could create a format
@@ -31,9 +37,11 @@ Display Pages.
 
 ## Inline Content
 
-Inline Content is content that is created directly within a page. Content Pages 
-start with a design which is then created with Fragments. Inside of the 
-Fragments, a developer can define where text and images can be placed or 
+Inline Content is content that is created directly within a page. Rather than 
+filling in fields to create content which will be added to a page later, you 
+have a completed page design where you edit the text and image content.  
+Content Pages start with a design which is then created with Fragments. Inside 
+of the Fragments, a developer can define where text and images can be placed or 
 edited. Marketers and content writers are then free to write or add images 
 within the page, and publish it.
 

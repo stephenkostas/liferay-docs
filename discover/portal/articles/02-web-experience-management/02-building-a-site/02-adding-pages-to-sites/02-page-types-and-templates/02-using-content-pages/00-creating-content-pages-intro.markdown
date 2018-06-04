@@ -8,7 +8,7 @@ directly within the page without any abstraction between the page and the
 content.
 
 The process starts with a design. After the design is completed a developer 
-creates Fragments from HTML, CSS, and JavaScript based on those designs, along 
+creates carefully crafts Fragments based on those designs, along 
 with the ability to embed Liferay Widgets into the Fragment. Those Fragments 
 can then be converted into Page Templates - and here's where the magic happens. 
 Developers can define areas of Fragments to have editable text or images, which 

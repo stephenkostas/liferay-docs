@@ -1,15 +1,12 @@
 # Building Content Pages from Fragments [](id=building-content-pages-from-fragments)
 
-After you create Fragments, your next step is to add them to a Page Template. 
-The Page Template will be composed of some number of Fragments - it could be 
-one or it could be fifty.
+After you have some Fragments, your next step is to add them to a Page Template.  The Page Template will be composed of some number of Fragments - it could be one or it could be fifty.
 
 ## Creating a Page Template [](id=creating-a-page-template)
 
 You create Page Templates in the *Site Pages* page in Site Administration.
 
-1.  From Site Administation for your site, go to *Navigation* &rarr; *Site 
-    Pages*.
+1.  From Site Administation for your site, go to *Build* &rarr; *Pages*.
 
 2.  Select the Page Templates tab.
 
@@ -24,7 +21,8 @@ pages. Next you want to create a Page Template.
 
 3.  Click on the new Collection.
 
-4.  Click the `+` icon from inside of the Collection to *Add Page Template*.
+4.  Click the *Add* icon (![Add Page Template](../../../../../../images/icon-add.png)) from inside of the 
+    Collection to *Add Page Template*.
 
 5.  Set the *Name* and click *Submit*.
 
@@ -45,7 +43,7 @@ If the template contains an editable image, you can click on the image and
 replace it by either uploading your own image, or selecting one from Documents 
 and Media.
 
-![Figure X: Editing an image inline.](../../../../../../images/edit-image-inline.png)
+![Figure X: When you mouse over an editable image a blue outline will appear. You can replace it by clicking on it.](../../../../../../images/edit-image-inline.png)
 
 +$$$
 
@@ -60,9 +58,7 @@ Click on the back arrow at the top to stop editing the template.
 After you are done creating a Page Template you can use that template to create 
 a Content Page. A Content Page is basically a page created from Fragments. Any 
 aspects of the page that were defined by the developer as editable can be 
-edited during the creation of the page or page template. Unlike Liferay Layout 
-pages that can be edited directly from the page itself, Content Pages can only 
-be edited through Site Administration.
+edited during the creation of the page or page template.
 
 1.  Go back to the main *Navigation* &rarr; *Site Pages* page.
 
