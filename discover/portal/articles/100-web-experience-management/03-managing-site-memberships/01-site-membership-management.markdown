@@ -1,0 +1,60 @@
+# Managing Site Users [](id=managing-site-users)
+
+An always important job for site administrators is managing site users. There
+are configuration options in Site Settings that allow for easier user
+management.
+
+## Details [](id=details)
+
+*Details* is the leading option under the General tab, which provides
+the same menu you filled out when first creating your Lunar Resort site. This
+allows an administrator to change the description and membership type of a site.
+The membership type can be set as open, restricted, or private based on the
+privacy needs of the site. Users can join and leave an open site at will. To
+join a restricted site, a user has to be added by the site administrator. A user
+can also request to be added through the Sites section of the Control Panel. A
+private site is like a restricted site but doesn't appear in the Sites section
+of the Control Panel for users who aren't members.
+
+You also have the ability to organize sites into hierarchies. At the bottom of
+the Details sub-section is the Parent Site section. This feature allows you to
+select the parent site for the site you're currently on. After selecting a
+parent site, you have a checkbox option to limit membership to members of the
+parent site.
+
+## Default User Associations [](id=default-user-associations)
+
+Once you have the basic details of your site saved, you can begin assigning your
+users to roles and teams. *Default User Associations*, the leading option when
+opening the Advanced tab, lets you configure site roles and teams that newly
+assigned site members will have by default. If you'd like to learn more about
+creating roles and/or teams, visit the
+[Roles and Permissions](/discover/portal/-/knowledge_base/6-2/roles-and-permissions)
+and
+[Creating Teams for Advanced Site Membership Management](/discover/portal/-/knowledge_base/7-0/creating-teams-for-advanced-site-membership-management)
+sections, respectively.
+
+## Ratings [](id=ratings)
+
+To allow your site's users to rate content in your site, you can use the
+*Ratings* option to select what ratings type to use for applications like
+Documents and Media, Web Content, Comments, etc. Ratings types include Stars,
+Likes, and Thumbs. This is the leading option when opening the Social tab.
+
+<!-- TODO Is there a link we can point to for this? Coordinate with Jim. -Cody
+-->
+
+## Mentions [](id=mentions)
+
+The last configuration option in Site Settings related to managing users is
+*Mentions*. *Mentions* is found under the Social tab. This option allows you to
+enable/disable the Mentioning functionality, which is used to *mention* (notify
+and/or draw attention to) friends and colleagues by entering the "@" character
+followed by their user name. You can learn more about the mentioning feature by
+visiting the
+[Mentioning Users](/discover/portal/-/knowledge_base/7-0/mentioning-users)
+article.
+
+Now that you're aware of your Site Settings abilities to improve User and
+Content management, you'll learn how to improve your site's overall intelligence
+using Site Settings.
