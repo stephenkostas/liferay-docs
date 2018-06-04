@@ -22,7 +22,7 @@ You can view all the available open and restricted sites by adding the My Sites
 application to a page and accessing the *Available Sites* tab. You can request
 access to any of the sites you're not already a member of by
 selecting the site's *Options* button
-(![Options](../../../images/icon-actions.png)) and clicking *Join*.
+(![Options](../../../../images/icon-actions.png)) and clicking *Join*.
 
 ## Site Scope
 
@@ -37,7 +37,7 @@ in the Sites menu. From this menu, you can select the specific site to work on.
 The Site Administration panel is available for your site, which includes Pages,
 Content, Members, Configuration, and Publishing.
 
-![Figure 1: Your site's content resides in the Site Administration menu.](../../../images/web-content-site-content.png)
+![Figure 1: Your site's content resides in the Site Administration menu.](../../../../images/web-content-site-content.png)
 
 For details about @product@'s social collaboration suite, see the
 [Social Collaboration](/discover/portal/-/knowledge_base/7-1/collaboration-suite)
@@ -85,13 +85,12 @@ If you wanted a user to have administrative access to all sites in a
 site/subsite hierarchy, you must create a role based on the Site Administrator
 role that has the permission *Manage Subsites*. 
 
-The Site Map application is another configurable app that's intended to help
-users navigate among pages within a site. When configuring this app, a site
-administrator can select a root page and a display depth. Just as sites can be
-organized hierarchically, so can the pages within a site. The display depth of
+The Site Map application is an app helps users navigate a site. A site 
+administrator can configure a root page and a display depth. Just as sites can 
+have hierarchies, so can the pages within a site. The display depth of
 the Site Map application determines how many levels of nested pages to display.
 
-![Figure 2: The Sites Directory application lets users navigate between sites organized hierarchically. The Site Map application lets users navigate among pages of a site organized hierarchically.](../../../images/site-directory-site-map.png)
+![Figure 2: The Site Map application lets users navigate among pages of a site organized hierarchically.](../../../../images/site-directory-site-map.png)
 
 ## Site Members
 
@@ -100,10 +99,6 @@ enables administrators to survey all the users, organizations, and user groups
 that reside in the site. Similarly, Liferay provides the Portal Directory
 application, which functions the same as the Site Members app, but globally
 scoped for all sites in the instance.
-
-<!-- TODO: Portal Directoy app still has "portal" name, although most other
-entities in Liferay have changes to "instance". Check back with this name before
-release of @product-ver@. -Cody -->
 
 ## Page Sets
 

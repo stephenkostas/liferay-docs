@@ -14,7 +14,7 @@ Start in Site Administration. You can find Fragments in the Content section.
 
 3.  In the *Build* section, select *Fragments*.
 
-![Figure 1: The Fragments page with no Fragments or Collections created.](../../../images/empty-fragments-page.png)
+![Figure 1: The Fragments page with no Fragments or Collections created.](../../../../../../images/empty-fragments-page.png)
 
 The main Fragments page will display any Collections that are available for the 
 current site, provide the option to Import and Export through the menu in the 
@@ -46,7 +46,7 @@ different function:
 *  The bottom left pane is for entering JavaScript.
 *  The bottom right pane provides a live preview as you work in the other panes.
 
-![Figure 2: The Fragments editor.](../../../images/fragments-editor.png)
+![Figure 2: The Fragments editor.](../../../../../../images/fragments-editor.png)
 
 In addition to standard HTML, CSS, and JavaScript, developers can also embed
 widgets and provide fields with editable text and images. The text and images

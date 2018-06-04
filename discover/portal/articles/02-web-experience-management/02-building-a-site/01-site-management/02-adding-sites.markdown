@@ -19,7 +19,7 @@ sections, respectively.
 **Tip:** If you're signed in as an administrator, you can access all sites by
 navigating to the Site Administration menu from the Control Panel. To manage a
 single site, navigate to the site by going to the Menu and clicking the *Site
-Selector* button (![Compass](../../../images/icon-compass.png)) from the sites
+Selector* button (![Compass](../../../../images/icon-compass.png)) from the sites
 dropdown menu and selecting the appropriate site name you'd like to manage. Once
 finished, the site administration options (i.e., Navigation, Content, Members,
 etc.) for that site are available.
@@ -30,7 +30,7 @@ Now, you'll add a site for the Lunar Resort.
 
 1.  Navigate to the Control Panel and select *Sites* &rarr; *Sites*.
 
-2.  Click the Add icon (![Add Site](../../../images/icon-add.png)) at the 
+2.  Click the Add icon (![Add Site](../../../../images/icon-add.png)) at the 
     top right of the page.
     
 3.  Select a *Blank Site*.
