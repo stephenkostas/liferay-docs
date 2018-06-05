@@ -76,8 +76,6 @@ After you add the `lfr-editable` tag with the type `img` to a Fragment, when
 you add that Fragment to a page, you can then click on the editable image and 
 select a replacement.
 
-<!--Figure X: You can replace images in the Page Template editor.../../../images/editing-fragment-image.png -->
-
 ## Including Widgets Within A Fragment [](id=including-widgets-within-a-fragment)
 
 You can add more dynamic behavior to a Fragment by including a widget. 
