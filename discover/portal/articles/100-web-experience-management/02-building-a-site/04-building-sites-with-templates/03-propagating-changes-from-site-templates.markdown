@@ -31,8 +31,8 @@ template administrators cannot add, remove, or reorder custom site pages.
 
 If a site administrator changes a page that was imported from a site template
 and refreshes the page, the following Information icon
-(![Information](../../../../images/icon-control-menu-information.png)) appears in
-the Control Menu with the following message:
+(![Information](../../../../images/icon-control-menu-information.png)) appears 
+in the Control Menu with the following message:
 
     This page has been changed since the last update from the site template. No
     further updates from the site template will be applied.
