@@ -82,8 +82,6 @@ sublevels.
     
 ## Using Navigation Menus
 
-There are a variety of customizations and configurations available for 
-navigation menus that you can implement for your site. These are all the tools
-you need to create the best experience possible for your users.
+Now you can see how there are a variety of customizations and configurations available for navigation menus that you can implement for your site.
 
 ![Figure X: Demonstrating multiple Navigation Menus with different menus and configurations.](../../../../images/navigation-menu-examples.png)
