@@ -25,7 +25,7 @@ site and allows for users to easily find your site and its content through
 search and navigation. To take full advantage of tags and categories, you'll
 need to add pages with content to your site. For more information on using tags
 and categories, visit the
-[Organizing Content with Tags and Categories](/discover/portal/-/knowledge_base/7-0/organizing-content-with-tags-and-categories)
+[Organizing Content with Tags and Categories](/discover/portal/-/knowledge_base/7-1/organizing-content-with-tags-and-categories)
 section.
 
 ### Site Template [](id=site-template)
@@ -37,7 +37,7 @@ this section displays information about the link between the site template and
 the site. Specifically, you can see which site template was used and whether or
 not it allows modifications to the pages inherited from it by site
 administrators. To learn more about site templates and how to create your own,
-see the [Building Sites from Templates](/discover/portal/-/knowledge_base/7-0/building-sites-from-templates)
+see the [Building Sites from Templates](/discover/portal/-/knowledge_base/7-1/building-sites-from-templates)
 section.
 
 ### Content Sharing [](id=content-sharing)
@@ -56,7 +56,7 @@ The *Recycle Bin* option under the Advanced tab provides the option to
 enable/disable the Recycle Bin for your site. You can also regulate the age (in
 minutes) for which content is able to be stored in the Recycle Bin until it is
 permanently deleted. For a full explanation of the Recycle Bin, see the
-[Restoring Deleted Assets](/discover/portal/-/knowledge_base/7-0/restoring-deleted-assets)
+[Restoring Deleted Assets](/discover/portal/-/knowledge_base/7-1/restoring-deleted-assets)
 section.
 
 ### Custom Fields [](id=custom-fields)
@@ -67,10 +67,8 @@ Site resource, you can navigate to the Control Panel &rarr; *Custom Fields*
 located under the *Configuration* tab. The Custom Fields tab does not display in
 Site Settings unless you have existing custom fields. For more information on
 Custom Fields, see the
-[Custom Fields](https://dev.liferay.com/discover/portal/-/knowledge_base/6-2/custom-fields)
+[Custom Fields](https://dev.liferay.com/discover/portal/-/knowledge_base/7-1/custom-fields)
 section.
-
-<!-- TODO: replace link above. -Cody -->
 
 ### Documents and Media [](id=documents-and-media)
 
@@ -126,9 +124,6 @@ To allow your site's users to rate content in your site, you can use the
 *Ratings* option to select what ratings type to use for applications like
 Documents and Media, Web Content, Comments, etc. Ratings types include Stars,
 Likes, and Thumbs. This is the leading option when opening the Social tab.
-
-<!-- TODO Is there a link we can point to for this? Coordinate with Jim. -Cody
--->
 
 ### Mentions [](id=mentions)
 

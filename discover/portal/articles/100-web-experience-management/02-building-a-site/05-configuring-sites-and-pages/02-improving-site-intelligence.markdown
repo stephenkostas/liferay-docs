@@ -109,11 +109,6 @@ instance when displaying geolocalized assets. Geolocalized assets can be
 displayed for documents, web content articles, DDL records, etc. Maps is
 available under the Advanced tab.
 
-<!-- TODO: Provide link to where Maps feature is documented once it's available.
-
-This is Jim's area. Good blog on this:
-https://www.liferay.com/web/juan.fernandez/blog/-/blogs/adding-geolocation-support-to-liferay-7-0
--Cody -->
 
 ## Languages [](id=languages)
 
