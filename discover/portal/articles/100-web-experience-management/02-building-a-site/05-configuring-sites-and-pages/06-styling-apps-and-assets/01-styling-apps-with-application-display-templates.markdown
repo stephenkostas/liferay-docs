@@ -1,11 +1,12 @@
 # Styling Widgets with Application Display Templates [](id=styling-widgets-with-application-display-templates)
 
-Suppose you're customizing the Lunar Resort site and want to allow users to use 
-Facebook or Twitter to communicate with other interested travelers. You can add 
-this functionality to an existing widget using ADTs --- launch a template 
-editor, create a custom template, and configure your app host that template. 
-Custom templates let you re-skin your application and give you ultimate control 
-over its appearance and functionality in your Liferay instance.
+ADTs are all about customization. Suppose you're customizing the Lunar Resort
+site and want to allow users to use Facebook or Twitter to communicate with
+other interested travelers. You can add this functionality to an existing
+widget using ADTs --- launch a template editor, create a custom template, and
+configure your app host that template. Custom templates let you re-skin your
+application and give you ultimate control over its appearance and
+functionality in your Liferay instance.
 
 ## Creating an ADT
 
