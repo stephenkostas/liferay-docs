@@ -1,8 +1,13 @@
-# Managing Site Users [](id=managing-site-users)
+# Managing Site Settings for Users
 
-An always important job for site administrators is managing site users. There
-are configuration options in Site Settings that allow for easier user
-management.
+An always important job for site administrators is managing site users. To start
+managing site users:
+
+1.  Open the *Product Menu* and use the site selector to choose the site you 
+    want to configure.
+
+2.  In Site Administration, go to *Configuration* &rarr; *Site Settings*.
+
 
 ## Details [](id=details)
 
@@ -25,26 +30,17 @@ parent site.
 ## Default User Associations [](id=default-user-associations)
 
 Once you have the basic details of your site saved, you can begin assigning your
-users to roles and teams. *Default User Associations*, the leading option when
+users to roles and teams. Still inside of *Site Settings*, go to the 
+*Advanced* section. *Default User Associations*, the leading option when
 opening the Advanced tab, lets you configure site roles and teams that newly
 assigned site members will have by default. If you'd like to learn more about
-creating roles and/or teams, visit the
-[Roles and Permissions](/discover/portal/-/knowledge_base/6-2/roles-and-permissions)
-and
-[Creating Teams for Advanced Site Membership Management](/discover/portal/-/knowledge_base/7-0/creating-teams-for-advanced-site-membership-management)
-sections, respectively.
+creating roles, visit the
+[Roles and Permissions](/discover/portal/-/knowledge_base/7-1/roles-and-permissions)
+section.
 
-## Ratings [](id=ratings)
+## Ratings and Mentions [](id=ratings)
 
-To allow your site's users to rate content in your site, you can use the
-*Ratings* option to select what ratings type to use for applications like
-Documents and Media, Web Content, Comments, etc. Ratings types include Stars,
-Likes, and Thumbs. This is the leading option when opening the Social tab.
-
-<!-- TODO Is there a link we can point to for this? Coordinate with Jim. -Cody
--->
-
-## Mentions [](id=mentions)
+Next, open the *Social* section of *Site Administration*. To allow your site's users to rate content in your site, you can use the *Ratings* option to select what ratings type to use for applications like Documents and Media, Web Content, Comments, etc. Ratings types include Stars, Likes, and Thumbs.
 
 The last configuration option in Site Settings related to managing users is
 *Mentions*. *Mentions* is found under the Social tab. This option allows you to
@@ -56,5 +52,4 @@ visiting the
 article.
 
 Now that you're aware of your Site Settings abilities to improve User and
-Content management, you'll learn how to improve your site's overall intelligence
-using Site Settings.
+Content management, you'll learn about Teams in the next section.

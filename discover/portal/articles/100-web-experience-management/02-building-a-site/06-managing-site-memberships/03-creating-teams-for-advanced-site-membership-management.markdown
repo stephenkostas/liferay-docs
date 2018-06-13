@@ -17,36 +17,41 @@ abusive/offensive posters. To do this, you could create a Site Team named
 *Lunar Resort Message Board Moderators*, define the team's permissions in the
 Message Boards application, and assign the desired site members to the team. 
 
-The permissions assigned to a Site Team only apply to that site. Knowing that
-a team's permissions don't impact other sites, site administrators can
-concentrate on defining and applying permissions to their sites' teams. 
+The permissions assigned to a Site Team only apply to that site. The two key 
+features of Teams are that they are limited to a specific site and that they 
+empower Site Administrators to manage permissions for their site since Site 
+Administrators cannot create new roles.
 
 +$$$
 
 **Note:** To create and apply permissions for a group of users to use across
 multiple sites or organizations in your Liferay instance, consider aggregating
-the users into a [User Group](/discover/portal/-/knowledge_base/7-0/user-groups)
+the users into a [User Group](/discover/portal/-/knowledge_base/7-1/user-groups)
 and assigning the User Group permissions via
-[Roles](/discover/portal/-/knowledge_base/7-0/roles-and-permissions).
-
-<!-- Verify link above to 7.0, when available. -Cody -->
+[Roles](/discover/portal/-/knowledge_base/7-1/roles-and-permissions).
 
 $$$
 
-To create a team within a site, first navigate to the Site Administration page
-of your site and select *Members* &rarr; *Site Teams*. It's important to note that
-configuring other site membership groupings, such as *Users*, *Organizations*,
-and *User Groups* can be done in the *Site Memberships* app, which is also
-located in the Members tab. You can visit the 
-[User Management](/discover/portal/-/knowledge_base/7-0/user-management)
-chapter for more information on how these site memberships work. Finally, click
-the *Add Team* icon (![Add Team](../../../images/icon-add.png)).
+To create a team within a site:
+
+1.  Go to the Site Administration page of your site.
+
+2.  Select *Members* &rarr; *Site Teams*.
+
+    It's important to note that configuring other site membership groupings, 
+    such as *Users*, *Organizations*, and *User Groups* can be done in the 
+    *Site Memberships* app, which is also located in the Members tab. You can 
+    visit the [User Management](/discover/portal/-/knowledge_base/7-1/user-management)chapter 
+    for more information on how these site memberships work.
+
+3.  Finally, click the *Add Team* icon (![Add Team](../../../images/icon-add.png)).
 
 ![Figure 1: Creating teams within your site can foster teamwork and collaboration, as team permissions enable team members to access the same resources and perform the same types of tasks.](../../../images/creating-a-team.png)
 
-After you've clicked the *Add Team* button and entered a name and a description,
-click *Save*. Your new team shows in the list. To add members, click on the
-team name link and then select *Add Team Members*.
+4.  Enter a name and a description and click *Save*. Your new team shows in the list.
+
+5.  To add members, click on the team name link and then select *Add Team 
+    Members*.
 
 To manage a team's permissions, click on the *Actions* icon
 (![Actions](../../../images/icon-actions.png)) and select *Permissions* for that
@@ -55,11 +60,15 @@ permissions. Only administrators with the ability to edit/manage the team have
 the ability to manage team permissions.
 
 If you created a team whose task is to moderate the Message Boards, for example,
-you'd want to give the team all the permissions they'd need. To do this, 
-navigate to *Site Administration* &rarr; *Content* &rarr; *Message Boards*
-and select *Permissions* from the *Options* icon
-(![Options](../../../images/icon-options.png)) in the top right of the screen. Find
-the team in the Role column, and select the appropriate permissions.
+you'd want to give the team all the permissions they'd need.
+
+1.  Go to *Site Administration* &rarr; *Content* &rarr; *Message Boards*
+
+2.  Select *Home Category Permissions* from the *Options* icon
+    (![Options](../../../images/icon-options.png)) in the top right of the 
+    screen.
+
+3.  Find the team in the Role column, and select the appropriate permissions.
 
 ![Figure 2: The Lunar Resort Message Board Moderators Site Team has unlimited permissions on the Message Boards application.](../../../images/site-team-permissions-message-boards.png)
 
