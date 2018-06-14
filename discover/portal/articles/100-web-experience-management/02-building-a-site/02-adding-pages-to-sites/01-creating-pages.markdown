@@ -71,6 +71,12 @@ To the left, under Collections, you can also select between viewing the basic pa
 
 ![Figure X: You must select a page type when adding pages.](../../../../images/page-types-adding.png)
 
+After you've added a page, it may be difficult to track what kind of page 
+you're currently viewing. The page type will display at the top of the page to 
+help you determine what type of administration options you have available and where you need to go to configure the page.
+
+![Figure X: Here are three different page with three different types as they as displayed in the heading.](../../../../images/page-type-guide.png)
+
 Now that you know the basics of adding pages, you can start working on the
 Lunar Resort site. If you're not currently on the right site, navigate to Site
 Administration in the Menu, select the compass icon next to the current site
