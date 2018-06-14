@@ -20,13 +20,13 @@ Group associations. You can learn more about those in the [Users and Organizatio
 you see a list of all of the current users of the site and you can add or 
 remove user memberships from the site.
 
-![Figure X: The current members of the site as displayed on the *Site Memberships* page. ](../../../images/orgs-add-organization-site.png)
+![Figure X: The current members of the site as displayed on the *Site Memberships* page. ](../../../../images/orgs-add-organization-site.png)
 
 ### Adding Users to a Site
 
 Follow these steps to make an existing user a member of the site:
 
-1.  Click the *New* (![Add User](../../../images/icon-add.png)) 
+1.  Click the *New* (![Add User](../../../../images/icon-add.png)) 
     button in the top right of the screen.
 
 2.  Use *Filter and Order* or the *Search* function to locate the user you want
@@ -39,21 +39,21 @@ be added to the site will appear. Users who are currently deactivated will not
 appear. Users who are already members of the side will appear, but with a 
 greyed-out checkbox which cannot be used.
 
-![Figure X: The list of users available to add to the current site. Note that the current members are visible but cannot be added or removed here. ](../../../images/assign-users.png)
+![Figure X: The list of users available to add to the current site. Note that the current members are visible but cannot be added or removed here. ](../../../../images/assign-users.png)
 
 ### Removing Users from a Site
 
 There are two ways to remove a user from a site. You can remove an individual 
 user like this:
 
-1.  Click the *Actions* (![Actions](../../../images/icon-actions.png)) icon
+1.  Click the *Actions* (![Actions](../../../../images/icon-actions.png)) icon
     for the user that you want to remove.
     
 2.  Select *Remove Membership*.
 
 3.  In the popup that appears, confirm the removal.
 
-![Figure X: Selecting to remove a user. ](../../../images/remove-user.png)
+![Figure X: Selecting to remove a user. ](../../../../images/remove-user.png)
 
 Alternatively, if you need to remove several users at once, you can do this:
 
@@ -77,7 +77,7 @@ you will be taken to the *Assign Site Roles* screen. From here:
 
 2.  Click *Done*.
 
-![Figure X: Assigning Site Roles. ](../../../images/assigning-site-roles.png)
+![Figure X: Assigning Site Roles. ](../../../../images/assigning-site-roles.png)
 
 Site roles are created at a Global level, but when they're assigned they are 
 only provide privileges for the specific site where they were assigned. Since 

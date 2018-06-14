@@ -44,9 +44,9 @@ To create a team within a site:
     visit the [User Management](/discover/portal/-/knowledge_base/7-1/user-management)chapter 
     for more information on how these site memberships work.
 
-3.  Finally, click the *Add Team* icon (![Add Team](../../../images/icon-add.png)).
+3.  Finally, click the *Add Team* icon (![Add Team](../../../../images/icon-add.png)).
 
-![Figure 1: Creating teams within your site can foster teamwork and collaboration, as team permissions enable team members to access the same resources and perform the same types of tasks.](../../../images/creating-a-team.png)
+![Figure 1: Creating teams within your site can foster teamwork and collaboration, as team permissions enable team members to access the same resources and perform the same types of tasks.](../../../../images/creating-a-team.png)
 
 4.  Enter a name and a description and click *Save*. Your new team shows in the list.
 
@@ -54,7 +54,7 @@ To create a team within a site:
     Members*.
 
 To manage a team's permissions, click on the *Actions* icon
-(![Actions](../../../images/icon-actions.png)) and select *Permissions* for that
+(![Actions](../../../../images/icon-actions.png)) and select *Permissions* for that
 team. Setting permissions for the team assigns all of the team's members those
 permissions. Only administrators with the ability to edit/manage the team have
 the ability to manage team permissions.
@@ -65,12 +65,12 @@ you'd want to give the team all the permissions they'd need.
 1.  Go to *Site Administration* &rarr; *Content* &rarr; *Message Boards*
 
 2.  Select *Home Category Permissions* from the *Options* icon
-    (![Options](../../../images/icon-options.png)) in the top right of the 
+    (![Options](../../../../images/icon-options.png)) in the top right of the 
     screen.
 
 3.  Find the team in the Role column, and select the appropriate permissions.
 
-![Figure 2: The Lunar Resort Message Board Moderators Site Team has unlimited permissions on the Message Boards application.](../../../images/site-team-permissions-message-boards.png)
+![Figure 2: The Lunar Resort Message Board Moderators Site Team has unlimited permissions on the Message Boards application.](../../../../images/site-team-permissions-message-boards.png)
 
 That's it! It's easy to give groups of site users appropriate permissions to
 perform their tasks. This chapter has provided an introduction to @product@ site
