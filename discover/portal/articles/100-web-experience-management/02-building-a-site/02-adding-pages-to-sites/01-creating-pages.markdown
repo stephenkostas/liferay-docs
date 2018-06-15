@@ -85,7 +85,7 @@ name, and select the site you wish to edit.
 If you ever need to modify the page you've created for your site, select
 *Configure* from the Options menu for the page from *Site Pages*. When
 configuring a specific page, you're given more options than when you were
-creating a new page. You can also read our [Site and Page Configuration tutoria](/discover/portal/-/knowledge_base/7-1/site-and-page-configuration).
+creating a new page. You can also read our [Configuring Sites and Pages](/discover/portal/-/knowledge_base/7-1/configuring-sites-and-pages).
 
 There are also configuration options that are only available for either
 individual pages or page groups only. You'll learn about options available for

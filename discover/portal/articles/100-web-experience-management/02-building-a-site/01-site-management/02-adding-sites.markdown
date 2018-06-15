@@ -134,6 +134,6 @@ to any Site based on it. A checkbox appears for unlinking the Site template if
 the User has permission to do so.
 
 Once the Site has been created, you should configure its settings to fit your
-needs. You can learn more about Site Settings here[link].
+needs. You can learn more about Site Settings in [Configuring Sites and Pages](/discover/portal/-/knowledge_base/7-1/configuring-sites-and-pages).
 
 Next, you'll learn about creating pages.
