@@ -56,8 +56,21 @@ There are also two options available to display
 
 Because modern mobile browsers are built on the same technology as desktop 
 browsers, you can be sure that the behavior you see in the simulator will match 
-the experience of users on mobile devices. In addition to making sure the basic layout looks good and that all functionality remains, it's also important to make sure that automatic features---like how columns are combined at lower resolutions---doesn't have any unintended effects.
+the experience of users on mobile devices. In addition to making sure the basic 
+layout looks good and that all functionality remains, it's also important to 
+make sure that automatic features---like how columns are combined at lower 
+resolutions---doesn't have any unintended effects.
 
 ## Designing Mobile Friendly Pages
 
-@product@ provides the tools you need, but building pages that provide a good experience across all kinds of devices still means working across all levels of web development and publishing. Theme developers need to create themes which use Liferay's frameworks to scale content well across all kinds of displays. Designers need to have multiple screen sizes in mind when designing pages. And before anything it published it must be thoroughly reviewed to make sure that it will provide the best experience to all of your users.
+@product@ provides the tools you need, but building pages that provide a good 
+experience across all kinds of devices still means working across all levels of 
+web development and publishing. Theme developers need to create themes which 
+use Liferay's frameworks to scale content well across all kinds of displays. 
+Designers need to have multiple screen sizes in mind when designing pages. And 
+before anything it published it must be thoroughly reviewed to make sure that 
+it will provide the best experience to all of your users.
+
+Now that you've learned about Liferay's tools for making your website mobile 
+friendly, let's look at options for adapting to different types of mobile 
+devices.
