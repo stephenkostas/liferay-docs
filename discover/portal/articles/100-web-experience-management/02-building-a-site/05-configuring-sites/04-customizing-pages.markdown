@@ -70,7 +70,7 @@ site, this option doesn't appear. In this case, navigate to the Control
 Panel &rarr; *Custom Fields* located under the *Configuration* tab. These are
 metadata about the page and can be anything you like, such as author or creation
 date. For more information on Custom Fields, see the 
-[Custom Fields](/discover/portal/-/knowledge_base/7-1/custom5-fields) section.
+[Custom Fields](/discover/portal/-/knowledge_base/7-1/custom-fields) section.
 
 ### Mobile Device Rules [](id=mobile-device-rules)
 

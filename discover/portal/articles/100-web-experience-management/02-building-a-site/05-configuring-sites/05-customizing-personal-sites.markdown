@@ -47,9 +47,9 @@ properties you can use to customize the automatically created pages. You can
 customize the names of the default pages, the applications that appear on the pages,
 the themes and layout templates of the default pages, and more. Please refer to
 the
-[Default User Public Layouts](https://docs.liferay.com/portal/7.0/propertiesdoc/portal.properties.html#Default%20User%20Public%20Layouts)
+[Default User Public Layouts](https://docs.liferay.com/portal/7.1/propertiesdoc/portal.properties.html#Default%20User%20Public%20Layouts)
 and
-[Default User Private Layouts](https://docs.liferay.com/portal/7.0/propertiesdoc/portal.properties.html#Default%20User%20Private%20Layouts)
+[Default User Private Layouts](https://docs.liferay.com/portal/7.1/propertiesdoc/portal.properties.html#Default%20User%20Private%20Layouts)
 sections of the `portal.properties` file for details.
 
 +$$$

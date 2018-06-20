@@ -1,8 +1,8 @@
 # Improving Site Intelligence [](id=improving-site-intelligence)
 
 Site Settings offers several miscellaneous configuration options that improve
-your site's usability, overall display, and data tracking. To make your Lunar
-Resort site smarter, explore and configure the options below.
+your site's usability, overall display, and data tracking. To make your site 
+smarter, explore and configure the options below.
 
 ## Site URL [](id=site-url)
 
@@ -81,7 +81,7 @@ Analytics site here:
 To enable Google Analytics support, navigate to the *Analytics* tab in Site
 Settings, which loads a very simple form, pictured below.
 
-![Figure 5: Setting up Google Analytics for your site is very easy: sign up for Google Analytics, receive an ID, and then enter it into the Google Analytics ID field.](../../../images/maintaining-google-analytics.png)
+![Figure 5: Setting up Google Analytics for your site is very easy: sign up for Google Analytics, receive an ID, and then enter it into the Google Analytics ID field.](../../../../images/maintaining-google-analytics.png)
 
 Enter your Google Analytics ID (which should have been provided to you when you
 signed up for the service) in the field and click *Save*. All the pages in the
@@ -107,13 +107,8 @@ and from where. The *Analytics* option is listed under the Advanced tab.
 The *Maps* options lets you configure the maps API provider used by your Liferay
 instance when displaying geolocalized assets. Geolocalized assets can be
 displayed for documents, web content articles, DDL records, etc. Maps is
-available under the Advanced tab.
+available under the Advanced tab. You can read more about Geolocation in [Geolocating Assets](/discover/portal/-/knowledge_base/7-1/geolocating-assets).
 
-<!-- TODO: Provide link to where Maps feature is documented once it's available.
-
-This is Jim's area. Good blog on this:
-https://www.liferay.com/web/juan.fernandez/blog/-/blogs/adding-geolocation-support-to-liferay-7-0
--Cody -->
 
 ## Languages [](id=languages)
 
