@@ -1,10 +1,10 @@
 # Building Content Pages from Fragments [](id=building-content-pages-from-fragments)
 
-After you have some Fragments, your next step is to add them to a Page Template.  The Page Template will be composed of some number of Fragments - it could be one or it could be fifty.
+After the Page Fragment collections that you need are published, you are reay to create Page Templates.  The Page Template will be composed of some number of Fragments - it could be one or it could be fifty.
 
 ## Creating a Page Template [](id=creating-a-page-template)
 
-You create Page Templates in the *Site Pages* page in Site Administration.
+You create Page Templates in the *Pages* page in Site Administration.
 
 1.  From Site Administation for your site, go to *Build* &rarr; *Pages*.
 
@@ -84,6 +84,5 @@ Alternatively, you can select the page type first, and then the template. After 
 4.  Click *Add Page*
     
 By default, your new page will be added to the Navigation Menu and users can 
-access the page you created. If you didn't know that there was anything other 
-than the default Navigation Menu, head over to our [link]Navigation Menu 
-tutorial.
+access the page you created. Next you'll learn how to import and export 
+Page Fragments.

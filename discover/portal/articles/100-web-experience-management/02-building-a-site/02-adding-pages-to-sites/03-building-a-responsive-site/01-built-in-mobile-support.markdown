@@ -7,24 +7,24 @@ desktop:
 -  Liferay Widgets and custom widgets which use Liferay's UI frameworks will
     automatically scale to fit the screen size.
 
-![Figure X: A demonstration of how a widget adjusts its size.](../../../../images/widget-adjustment.png)
+![Figure X: A demonstration of how a widget adjusts its size.](../../../../../images/widget-adjustment.png)
 
 -  UI elements like the navigation and Product Menu will automatically adjust to
     remain usable on smaller screens.
 
-![Figure X: A demonstration of how the main navigation adjusts its size.](../../../../images/navigation-adjustment.png)
+![Figure X: A demonstration of how the main navigation adjusts its size.](../../../../../images/navigation-adjustment.png)
 
--  When the screen with is low, Liferay will combine columns so that all 
+-  When the screen width is low, Liferay will combine columns so that all 
     content remains legible.
 
-![Figure X: A demonstration of how columns combine.](../../../../images/columns-adjustment.png)    
+![Figure X: A demonstration of how columns combine.](../../../../../images/columns-adjustment.png)    
     
 -  For web developers, Liferay's theme tools provide a number of tools to help
     ensure optimum mobile performance.
 
 For most business users, this means that all you need to do to display pages on 
 Mobile device is to create a page. However, you also have tools available to 
-verify that everything is going to display as intended. The Device Simulator (![Simulation](../../../../images/icon-simulation.png)) in 
+verify that everything is going to display as intended. The Device Simulator (![Simulation](../../../../../images/icon-simulation.png)) in 
 particular is a powerful tool that shows you how pages will look on different 
 devices. 
 
@@ -44,7 +44,7 @@ options:
 -  **Mobile** puts your page in an even smaller box to demonstrate how the page 
     will look to your average smartphone user.
 
-![Figure X: The Simulation panel.](../../../../images/device-simulation.png)    
+![Figure X: The Simulation panel.](../../../../../images/device-simulation.png)    
 
 There are also two options available to display 
 
@@ -72,5 +72,5 @@ before anything it published it must be thoroughly reviewed to make sure that
 it will provide the best experience to all of your users.
 
 Now that you've learned about Liferay's tools for making your website mobile 
-friendly, let's look at options for adapting to different types of mobile 
+friendly, let's look at your options for adapting to different types of mobile 
 devices.

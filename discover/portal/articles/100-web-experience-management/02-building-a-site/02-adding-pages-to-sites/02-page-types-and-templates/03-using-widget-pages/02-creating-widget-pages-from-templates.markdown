@@ -1,4 +1,4 @@
-# Creating Widget Pages from Templates [](id=creating-pages-from-templates)
+# Creating Widget Pages from Templates
 
 Page templates provides a pre-configured page to reuse. Page Templates can take a couple different forms in @product-ver@. There are Widget Page templates, which consist of a portlet layout and configuration and Content 
 Page templates, which are constructed from Fragments. You can read about [Content Page Templates in this tutorial](/develop/tutorials/-/knowledge_base/7-1/building-content-page-templates).
@@ -84,5 +84,29 @@ the page is published to live. For this reason, the automatic propagation of
 page template changes to the staged page cannot be turned off and the *Inherit
 Changes* selector does not appear.
 
-You'll learn about staging later in the User's Guide. For now you'll look at
-importing and exporting templates.
+You can read more about staging in the[Staging Content for Publication tutorial](/discover/portal/-/knowledge_base/7-1/staging-content-for-publication).
+
+## Sharing Layout Page Templates
+
+If you want to export a page that uses a page template to a different 
+environment (through a LAR file or remote publication), the template must be 
+exported and imported manually in advance or the import will fail.
+
+To export a page using a page template, use the following process:
+
+1.  Go to Control Panel → Sites → Page Templates.
+
+2.  Next to the page template you would like to export, click Actions → Export. 
+    This produces a LAR file you can import later.
+
+3.  On the target environment, go to Control Panel → Sites → Page Templates and 
+    create a new page template.
+
+4.  Next to the new template, click Actions () → Import.
+
+5.  Upload the LAR file containing the exported page template from step 3.
+
+The page template can now be imported normally to your new environment. For 
+more information on exporting/importing content, visit the Importing/Exporting 
+Pages and Content article
+

@@ -24,6 +24,9 @@ page. To create a new widget page, do the following:
     
 5.  Click *Submit*.
 
+![Figure X: Creating a page with Page Templates.](../../../../../../images/creating-community-page.png)
+
+
 Creating a page, by default, also adds it to any Navigation Menus that are 
 configured to have new pages added to them. If you don't want a new page added 
 to a specific Navigation Menu that is listed during page creation, uncheck the 

@@ -51,8 +51,6 @@ Note that all of the applications that can be added to the page are
 based on the instance for that site. So if you already had data in your Wiki it 
 will display on this page.
 
-
-
 If you want to configure the application to be scoped to this specific page, 
 you can configure that through the application on the page.
 
