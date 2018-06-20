@@ -9,10 +9,16 @@ features.
 
 ## Creating a Navigation Menu [](id=creating-a-navigation-menu)
 
-Go to *Site Administration* &rarr; *Build* &rarr; *Navigation Menus* to 
-get started with Navigation Menus. Click on the `+` button to add a new menu.
-Give your menu a name and click *Submit*. On the next page, you're presented
-with a number of elements that you can add to a menu.
+To get started with Navigation Menus:
+
+1.  Go to *Site Administration* &rarr; *Build* &rarr; *Navigation Menus*.
+
+2.  Click on the `+` button to add a new menu.
+
+3.  Give your menu a name and click *Submit*.
+
+On the next page, you're presented with a number of elements that you can add 
+to a menu.
 
 **Page**: Select an existing page from the current site to add to the navigation
 menu.

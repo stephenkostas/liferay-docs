@@ -1,12 +1,12 @@
 # Creating and Managing Site Navigation Menus [](id=creating-and-managing-site-navigation-menus)
 
-With @product_ver@ you can create and rearrange the way  pages, content, and 
+With @product_ver@ you can create and rearrange the way pages, content, and 
 applications are displayed using customizable Navigation Menus. Navigation 
 Menus equip marketers with the flexibility to easily create and manage multiple 
 navigation menus, like a main menu, secondary menus, footer menus, and custom 
 menus for anything that you can dream up.
 
-On a large complex site you can create an Navigation Menu which displays a 
+On a large complex site you can create a Navigation Menu which displays a 
 simple list of frequently visited pages and move the rest of the pages to a 
 secondary navigation. You can also create specific menus for different landing 
 pages to direct users to content that is relevant to them.
