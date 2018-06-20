@@ -1,59 +1,9 @@
-# Improving Site Intelligence [](id=improving-site-intelligence)
+# Site Social Settings [](id=improving-site-intelligence)
 
 Site Settings offers several miscellaneous configuration options that improve
 your site's usability, overall display, and data tracking. To make your site 
 smarter, explore and configure the options below.
 
-## Site URL [](id=site-url)
-
-Long obscure site URLs are a hassle for users, and negatively affect your 
-site's probability of being featured by search engines. Having a  
-human-readable friendly URL assists indexing bots and is critical to good 
-search engine optimization. Select the *Site URL* tab to set a friendly URL 
-and/or a virtual host. The *Friendly URL* option lets you manage the path to 
-your site in the instance's URL. Friendly URLs are used for both public and 
-private pages. For public pages, the friendly URL is appended to 
-http://localhost:8080/web. For private pages, it is appended  to 
-http://localhost:8080/group. Each friendly URL needs to be unique.
-
-For example, if you set the friendly URL of your instance's default site to 
-/lunar-resort, the URL of your default site's public home page would change to 
-http://localhost:8080/web/lunar-resort/home. If your instance's default site had
-private pages, the URL of the default private home page would change to
-http://localhost:8080/group/lunar-resort/home.
-
-Note that if you're adding a friendly URL for your instance's home page, you
-should update your instance's Home URL field so that page requests to
-http://localhost:8080 redirect properly. To do this:
-
-1.  Go to *Configuration* &rarr; *Instance Settings* in the Control Panel.
-
-2.  Under *Navigation*, in the Home URL field enter your home URL (i.e. */web/lunar-resort/home*).
-
-    Once you've entered this setting, page requests to localhost:8080 will 
-    redirect to the friendly URL of your Liferay instance's new homepage.
-
-The other setting you can configure under the Site URL tab is *Virtual Hosts* 
-which connects a domain name to a site. You can use this to define a domain 
-name (i.e., www.lunar-resort.com) for your site. This can be a full domain or a 
-subdomain. You can use this to host a number of web sites as separate sites on 
-one Liferay server.
-
-For instance, if you set this up for the Lunar Resort's development network,
-users in that site would access *developers.lunar-resort.com*,
-provided that the Lunar Resort instance's network administrators created the
-domain name and pointed it to the Liferay server.
-
-To set this up:
-
-1.  With your provider, set the DNS name *developers.lunar-resort.com* to point 
-    to your Liferay instance's IP address.
-
-2.  In the Virtual Host tab for the Developers site, set the URL to
-    *http://developers.lunar-resort.com*
-
-This helps users quickly access their site without having to recall an extended 
-URL. The *Site URL* option is listed under the General tab.
 
 ## Analytics [](id=analytics)
 
