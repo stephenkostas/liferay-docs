@@ -32,7 +32,7 @@ Under Pages you can view the Public Pages or Private Pates of your site, if any
 exist. If they don't exist, you are provided with a *Site Templates* selector 
 that you can use to quickly build out pages with a Site Template.
 
-![Figure X: Setting up Google Analytics for your site is very easy: sign up for Google Analytics, receive an ID, and then enter it into the Google Analytics ID field.](../../../../images/selecting-site-template.png)
+![Figure X: Selecting a Site Template.](../../../../images/selecting-site-template.png)
 
 ## Categorization [](id=categorization)
 
@@ -88,21 +88,27 @@ To set this up:
 This helps users quickly access their site without having to recall an extended 
 URL. The *Site URL* option is listed under the General tab.
 
+## Documents and Media [](id=documents-and-media)
 
-### Site Template [](id=site-template)
+The last option that relates to organizing your site's content is *Documents and
+Media*, which is found under General. This lets you enable/disable Directory
+Indexing, which allows site administrators to browse your site's documents and
+media files and folders. For example, a site administrator of a site called
+*Lunar Resort* can browse documents at
+http://localhost:8080/documents/lunar-resort if this option is enabled.
 
-The last tab listed under the Basic Information category is *Site Template*. If
-you created your Lunar Resort site as a Blank Site, this option is not available
-in Site Settings. If you did, however, create your site using a site template,
-this section displays information about the link between the site template and
-the site. Specifically, you can see which site template was used and whether or
-not it allows modifications to the pages inherited from it by site
-administrators. To learn more about site templates and how to create your own,
-see the [Building Sites from Templates](/discover/portal/-/knowledge_base/7-1/building-sites-from-templates)
+
+## Site Template [](id=site-template)
+
+If you created your site using a Site Template, this section will appear and 
+display information about the link between the site template and the site. 
+Specifically, you can see which site template was used and whether or not it 
+allows modifications to the pages inherited from it by site administrators. To 
+learn more about site templates and how to create your own, see the [Building Sites from Templates](/discover/portal/-/knowledge_base/7-1/building-sites-from-templates)
 section.
 
 
-### Custom Fields [](id=custom-fields)
+## Custom Fields [](id=custom-fields)
 
 *Custom Fields* lets you edit the custom fields you already have configured
 for the Site resource. If you don't have any custom fields configured for the
@@ -112,13 +118,3 @@ Site Settings unless you have existing custom fields. For more information on
 Custom Fields, see the
 [Custom Fields](https://dev.liferay.com/discover/portal/-/knowledge_base/7-1/custom-fields)
 section.
-
-### Documents and Media [](id=documents-and-media)
-
-The last option that relates to organizing your site's content is *Documents and
-Media*, which is found under General. This lets you enable/disable Directory
-Indexing, which allows site administrators to browse your site's documents and
-media files and folders. For example, a site administrator of a site called
-*Lunar Resort* can browse documents at
-http://localhost:8080/documents/lunar-resort if this option is enabled.
-

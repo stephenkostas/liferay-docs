@@ -1,15 +1,16 @@
 # Customizing Personal Sites [](id=customizing-personal-sites)
 
-By default, newly created users are each granted a personal site. Each user 
-functions as the site administrator of his or her personal site. Personal sites 
-are fully customizable but cannot have more than one member. The public pages 
-of personal sites provide a space for users to add content and applications 
-that they'd like to make accessible to anyone, including guests. User blogs are 
-often placed on public personal site pages. Content and applications that users 
-would like to reserve for personal use are often placed on the private pages of 
-personal sites. For example, each user can add a Documents and Media 
-application to his or her private pages and use it as an online private file 
-repository.
+By default, newly created users are each granted a personal site.
+
+-  Each user functions as the site administrator of his or her personal site.
+
+-  Personal sites are fully customizable but cannot have more than one member. 
+
+-  Users can have publicly available content on the Public Pages of their Site.
+    This is often used for a user blog.
+   
+-  Users can also have Private Pages where they can keep personal information
+    or use Documents and Media to have their own private file repository.
 
 You can disable personal sites for your Liferay instance by adding the
 following properties to your `portal-ext.properties` file:
@@ -60,5 +61,3 @@ $$$
 
 Personal sites are a dynamic feature of @product@. They allow users to manage
 and customize their own pages and content on your Liferay instance.
-
-Next, we'll cover configuration options for Pages.
