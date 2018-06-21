@@ -3,12 +3,12 @@
 Page configuration starts with the *Look and Feel* tab. Here you have an 
 interface for choosing a theme for the current site.
 
+![Figure 1: The Look and Feel page set tab.](../../../../../images/page-set-look-and-feel.png)
+
 ## Themes
 
 Themes can transform the entire look of the portal. They are created by 
-developers and are easily installed using the Liferay Marketplace. Since you 
-don't have any themes beyond the default one installed yet, you'll use the 
-default theme for your pages.
+developers and are easily installed using the Liferay Marketplace.
 
 ![Figure 1: The Look and Feel interface allows you to choose a theme for the current site.](../../../../../images/look-and-feel-pages.png)
 

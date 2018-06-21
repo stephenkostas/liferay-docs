@@ -1,15 +1,35 @@
-# Customizing Individual Pages
+# Individual Page Settings
 
-When you decide to customize a single page, options that were not available when
-initially creating a page appear. You can customize a specific page by
-navigating to *Site Pages* in the Navigation menu and selecting the *Options*
-icon next to the page you want to edit from the navigation tree. From the
-Options selector, select *Configure*. The options are described next. 
+On the Configure page, you have four tabs: General, SEO, Look and Feel, and 
+Advanced. Each contains options for the configuration of the specific page you
+are configuring. Options selected here will have no effect on the rest of the 
+site. Many of these options are the same as the ones that you have for configuring the complete page set, so you can view more details in the [Configuring Page Sets](/discover/portal/-/knowledge_base/7-1/configuring-page-sets)
+section.
+
+Note that many of the options are localizable. This means that you can 
+configure different text for things like page titles and friendly URLs based on 
+the user's locale.
 
 ## General [](id=general)
 
-The *General* tab changes the basic design of the page. You can change the *Page
-Title*, *Friendly URL*, and *Page Layout*. 
+The *General* tab changes the basic design of the page. You can change the 
+*Name*, *Friendly URL*, and *Page Layout*. 
+
+### Name and Friendly URL
+
+The *Name* is the title that will appear at the top of the page and how the 
+page will be identified in the navigation. The *Friendly URL* is the URL where
+the page can be viewed. It is a best practice to have the URL match the name of 
+the Page, so these two should generally be updated together.
+
+### Page Layout
+
+For Widget Pages, you can select a Layout Template which defines where you can 
+add widgets to the page. Layout templates define a number of sections with 
+columns and rows. Widgets added to a section will expand (or contract) 
+horizontally to fill the space, and can be stacked vertically. 
+
+![Figure X: Setting a layout template for your page.](../../../../../images/page-select-layout.png)
 
 ## Categorization and SEO [](id=categorization-and-seo)
 
@@ -44,11 +64,13 @@ page.
 
 ## Look and Feel [](id=look-and-feel)
 
-The *Look and Feel* option lets you set a page-specific theme. You can inherit
+The *Look and Feel* tab lets you set a page-specific theme. You can inherit
 what you already have configured for your page sets' theme, or you can define
 them per page. You can see the Page Set's
 [Customizing the Look and Feel of Site Pages](/discover/portal/-/knowledge_base/7-1/creating-and-managing-pages#customizing-the-look-and-feel-of-site-pages)
 section for more details.
+
+![Figure X: Viewing the Look and Feel page configuration. .](../../../../../images/page-look-and-feel.png)
 
 ## Advanced Settings [](id=advanced-settings)
 
@@ -78,15 +100,15 @@ Apply rules for how this page should render for various mobile devices here.
 Create them by navigating to Site Administration menu and selecting
 *Configuration* &rarr; *Mobile Device Families*.
 
-### Embedded Portlets [](id=embedded-portlets)
+### Embedded Widgets [](id=embedded-portlets)
 
-This option only appears if you have embedded one or more portlets on
+This option only appears if you have embedded one or more widgets on
 the page. 
 
-Applications can be embedded on a page via web content template or fragment. To
+Widgets can be embedded on a page via web content template or fragment. To
 learn more about this, see the 
 [Adding Templates](/discover/portal/-/knowledge_base/7-1/designing-uniform-content#adding-templates)
-section. Also, you can embed a portlet on a page layout or theme
+section. Also, you can embed a widget on a page layout or theme
 programmatically. If you're interested in learning more about this, visit the
 [Embedding Portlets in Themes and Layout Templates](/develop/tutorials/-/knowledge_base/7-1/embedding-portlets-in-themes-and-layout-templates)
 tutorial.
