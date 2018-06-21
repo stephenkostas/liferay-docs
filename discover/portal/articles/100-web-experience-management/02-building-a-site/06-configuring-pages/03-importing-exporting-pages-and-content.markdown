@@ -1,13 +1,8 @@
 # Importing/Exporting Pages and Content [](id=importing-exporting-pages-and-content)
 
-@product@'s Export/Import feature gives you the power to backup and restore your
-site and app data. The export feature grants users the flexibility of
-exporting site or app-specific content they've created as a LAR (Liferay
-Archive) file to other Liferay instances, or to save it for a later use. The
-import feature can be used to ingest the LAR file you exported from Liferay,
-which restores the work you previously exported.
+Export/Import lets you backup and restore your site and app data. Export  grants users the flexibility of exporting site or app-specific content they've created as a LAR (Liferay Archive). The import feature can be used to ingest the LAR file you exported from Liferay, which restores the work you previously exported.
 
-For example, suppose you're managing a site that celebrates the Thanksgiving
+For example, you're managing a site that celebrates the Thanksgiving
 holiday every year by creating a *Thanksgiving* themed page during the month of
 November. Every November, you'd like to publish the holiday themed page, but
 want it removed after Thanksgiving ends. Instead of manually creating the page
@@ -19,7 +14,7 @@ make some minor tweaks, and publish it with little effort.
 
 There are two primary places Export/Import is used: sites and apps. You can
 learn more about exporting/importing app data in the
-[Exporting/Importing App Content](/discover/portal/-/knowledge_base/7-0/exporting-importing-app-data)
+[Exporting/Importing App Content](/discover/portal/-/knowledge_base/7-1/exporting-importing-app-data)
 section. In this section, you'll learn how to export and import content for
 sites.
 

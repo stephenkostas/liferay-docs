@@ -18,7 +18,7 @@ You can create a page only for administrators to see like this:
     left menu.
 
 4.  Select *Permissions* from the *Options* icon
-    (![Options](../../../../images/icon-options.png)) in the top right corner of
+    (![Options](../../../../../images/icon-options.png)) in the top right corner of
     the screen.
 
 4.  Uncheck the *View* and *Add Discussion* permissions next to the Site Member
@@ -26,7 +26,7 @@ You can create a page only for administrators to see like this:
 
 5.  Click the *Save* button.
 
-![Figure 12: The Permissions offer a plethora of options for each role.](../../../../images/web-content-page-permissions.png)
+![Figure X: The Permissions offer a plethora of options for each role.](../../../../../images/web-content-page-permissions.png)
 
 Congratulations! You've changed the permissions for this page so only site
 administrators can view it. Any users you add to this role can now see the page.
@@ -36,7 +36,3 @@ Pages are as flexible as pages you'd create manually without a Liferay instance.
 Using a point and click interface, you can define your site any way you want.
 You can create and remove pages, export and import them, set their layouts,
 define how they are indexed by search engines, and more.
-
-You now understand how to manage pages. It's time to move on to further
-customizing those pages for mobile devices and building standardized pages using
-custom templates.

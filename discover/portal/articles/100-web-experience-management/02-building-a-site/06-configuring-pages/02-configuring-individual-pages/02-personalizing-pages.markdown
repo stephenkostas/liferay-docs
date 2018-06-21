@@ -20,7 +20,7 @@ To enable page customizations as an administrator:
 
 3.  Click on the *Customizable* selector button to activate customizations.
 
-![Figure 2: To enable page customizations, click on the *Configure Page* button next to the page, expand the *Customization Settings* area, and click on the *Customizable* button.](../../../../../images/page-customizations.png)
+![Figure X: To enable page customizations, click on the *Configure Page* button next to the page, expand the *Customization Settings* area, and click on the *Customizable* button.](../../../../../images/page-customizations.png)
 
 4.  Select the sections of the page you'd like to enable customization for, 
     depending on the layout template of your page.
@@ -35,7 +35,7 @@ toggle whether to view or hide the customizable regions. If you toggle the
 selector to view customizable regions, the regions on the page are color-coded
 to help distinguish customizable vs. non-customizable sections of the page.
 
-![Figure 3: Customizable regions are colored green and non-customizable regions are colored red.](../../../../../images/color-coded-customizable-regions.png)
+![Figure X: Customizable regions are colored green and non-customizable regions are colored red.](../../../../../images/color-coded-customizable-regions.png)
 
 ## Customization Permissions
 
@@ -50,28 +50,27 @@ assigned to the role *Site Member*.
 
 In addition to granting the ability to customize app configurations, the
 *Customize* permission allows users to customize the look and feel of apps
-and to import or export app settings. Next, you'll look at how to change page
-permissions.
+and to import or export app settings.
 
 ## Customizing Pages
 
-Non-administrator site members can access the Add menu from the top
-right side of the screen when viewing their customizable page even if they don't
-ordinarily have permission to view this menu. This allows them to add apps to
-the sections of the page that they're allowed to customize. If they click *View
-Page without my customizations*, the Add menu disappears from the menu since
-they're not allowed to modify the default page.
+With Customization active, site members can access the Add menu from the top
+right side of the screen when viewing their customizable page. This allows them 
+to add apps to the customizable sections of the page. If they click *View
+Page without my customizations*, the Add menu disappears.
 
-Users can make two kinds of customizations to customizable regions. First, they
-can configure applications within the customizable regions. Second, they can add
-apps to or remove apps from the customizable regions.
+Users can make two kinds of customizations to customizable regions:
+
+1.  They can configure applications within the customizable regions.
+
+2.  They can add apps to or remove apps from the customizable regions.
 
 There's also a *Reset My Customizations* option available from the *Options*
 button that restores a user's customized page to match the default page. This
 allows users to discard one set of customizations and start a new set without
 having to undo each customization that they'd previously made manually. 
 
-![Figure 4: Customizable areas are highlighted green when organizing apps on the page.](../../../../../images/customizable-regions.png)
+![Figure X: Customizable areas are highlighted green when organizing apps on the page.](../../../../../images/customizable-regions.png)
 
 Users can't change a non-instanceable app's configuration inside a customizable
 region since those kinds of apps are tied to the site where they've been added.
@@ -98,15 +97,21 @@ however, do *not* overwrite users' customizations.
 
 ## Customization Example
 
-Suppose that you, as an administrator, selected the right column of the Welcome 
-page of the Lunar Resort site to be customizable. As a regular user of the  
-take the following steps to make a personal customization of the Welcome page:
+As an administrator:
+
+1.  Go to *Page Configuration* for the *Welcome* page.
+
+2.  Go to the *Advanced* tab, and activate Customizations.
+
+3.  Set the main column of the Welcome page of the Lunar Resort site to be customizable.
+
+As a regular user of the take the following steps:
 
 1.  Navigate to the *Welcome* homepage.
 
 2.  Click *Add* &rarr; *Applications*.
 
-3.  Locate the  *Language Selector* widget and and add it to the page.
+3.  Locate the *Language Selector* widget and and add it to the page.
 
 The Language Selector application is useful to have on your home page if you
 expect users who speak different languages to access your instance. Users can
@@ -114,4 +119,4 @@ select their language in the Language Selector app to view a translation of your
 site into their native language. After closing the Configuration dialog box of
 the Language Selector app, the customized Welcome page looks like this:
 
-![Figure 5: In this example, the user added the Language app, and changed the display style from icons to a select box.](../../../../../images/customized-portal-homepage.png)
+![Figure X: In this example, the user added the Language app, and changed the display style from icons to a select box.](../../../../../images/customized-portal-homepage.png)
