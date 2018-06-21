@@ -12,8 +12,8 @@ the user's locale.
 
 ## General [](id=general)
 
-The *General* tab changes the basic design of the page. You can change the 
-*Name*, *Friendly URL*, and *Page Layout*. 
+The *General* tab lets you configure the basic information and design for the 
+page. You can change the *Name*, *Friendly URL*, and *Page Layout*. 
 
 ### Name and Friendly URL
 
@@ -74,8 +74,10 @@ section for more details.
 
 ## Advanced Settings [](id=advanced-settings)
 
-There are many options for page configuration found under the *Advanced 
-Settings* tab. 
+Under the *Advanced Settings* tab you'll find options that may be useful for
+specific cases. Some of these are the same as the options available at the Site 
+or Page Set level, but *Custom Fields*, *Embedded Widgets*, and *Customization 
+Settings* are unique to the individual page configuration.
 
 ### Query String [](id=query-string)
 

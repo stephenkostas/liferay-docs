@@ -15,4 +15,4 @@ configuration for the page set that it belongs to.
 When configuring pages, it's important to be aware of the specific context 
 you're in, so that you don't configure an option that you intended for the 
 whole site just on one page --- or change the whole site's configuration, when 
-you meant to change it for only the particular page set.
+you meant to change it for only a specific page.
