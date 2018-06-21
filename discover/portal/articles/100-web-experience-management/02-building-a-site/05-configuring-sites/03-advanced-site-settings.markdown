@@ -15,38 +15,34 @@ sections, respectively.
 
 ## Analytics [](id=analytics)
 
-Analyzing site traffic is another huge advantage for site administrators that
-want to monitor what content is most popular. @product@ includes built-in
-support for Google Analytics, allowing administrators to make use of Google's
-tool set for analyzing site traffic data. When you sign up for Google Analytics,
-a snippet of code is provided which needs to be added to your web pages to allow
-Google's system to register the page hit. It can be a tedious process to add
-this code to every page on a site, especially if it's a large site and there is
-a lot of user-generated content.
+@product@ includes built-in support to use Google Analytics for analyzing 
+traffic on your site. Google Analytics provides a snippet of code is provided 
+which you add to your pages enable tracking. Adding this code to every page on 
+a site would be tedious, especially if it's a large site with a lot of 
+user-generated content.
 
-This problem can be solved in Liferay by putting Google's code into a custom
-theme written specifically for the web site on which Liferay is running. Doing
-this, however, requires a theme developer to make specific changes to the theme
-and it prevents users from using the many themes that are freely available for
-@product@ "out of the box."
+There are two ways to mitigate this problem:
 
-Because of this, support for Google Analytics has been built into @product@, and
-can be turned on through a simple user interface. This allows Liferay
-administrators to make use of Google Analytics on a site by site basis and turn
-it on and off when needed. You can sign up for Google Analytics at the Google
-Analytics site here:
+1.  A web developer can hardcode the tracking code into a theme, and every page 
+    that uses the theme will have it embedded.
 
-[http://www.google.com/analytics](http://www.google.com/analytics)
+2.  An administrator can enter the tracking code in site settings.
 
-To enable Google Analytics support, navigate to the *Analytics* tab in Site
-Settings, which loads a very simple form, pictured below.
+To use options #2:
 
-![Figure 5: Setting up Google Analytics for your site is very easy: sign up for Google Analytics, receive an ID, and then enter it into the Google Analytics ID field.](../../../../images/maintaining-google-analytics.png)
+1.  Go to *Site Settings* &rarr; *Advanced*.
 
-Enter your Google Analytics ID (which should have been provided to you when you
-signed up for the service) in the field and click *Save*. All the pages in the
-site you selected will now have the Google Analytics code in them and will be
-tracked. 
+2.  Expand the *Analytics* section.
+
+3.  Enter your Google Analytics ID.
+
+4.  Click *Save*.
+
+    All the pages in the site you selected will now have the Google Analytics 
+    code in them and will be tracked. 
+
+![Figure X: To set up Google Analytics: sign up, receive an ID, and then enter it into the Google Analytics ID field.](../../../../images/maintaining-google-analytics.png)
+
 
 To enable a different analytics service:
 
@@ -82,7 +78,7 @@ The *Recycle Bin* option under the Advanced tab provides the option to
 enable/disable the Recycle Bin for your site. You can also regulate the age (in
 minutes) for which content is able to be stored in the Recycle Bin until it is
 permanently deleted. For a full explanation of the Recycle Bin, see the
-[Restoring Deleted Assets](/discover/portal/-/knowledge_base/7-0/restoring-deleted-assets)
+[Restoring Deleted Assets](/discover/portal/-/knowledge_base/7-1/restoring-deleted-assets)
 section.
 
 ### Content Sharing [](id=content-sharing)

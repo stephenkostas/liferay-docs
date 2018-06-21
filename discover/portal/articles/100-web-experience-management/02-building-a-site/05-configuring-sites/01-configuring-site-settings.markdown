@@ -1,15 +1,6 @@
-# Configuring Site Settings [](id=configuring-site-settings)
+# General Settings
 
-You can access Site Settings by navigating to the Site Administation dropdown
-menu and selecting *Configuration* &rarr; *Site Settings*.
-
-![Figure 4: The Site Settings window offers a plethora of options for your site.](../../../../images/site-settings-overview.png)
-
-You'll find options to organize site content, manage site users, and improve
-your site's overall intelligence. You'll explore the Site Settings categories
-available, which are available from the *General*, *Social*, *Languages*, and
-*Advanced* tabs, and simulate configuring those settings for your sample Lunar
-Resort site.
+General settings provides a number of basic settings for your Site. These range from core configuration, like your Site's Membership Type, to finer details like Documents and Media indexing options.
 
 ## Details [](id=details)
 
@@ -35,18 +26,68 @@ parent site, you have a checkbox option to limit membership to members of the
 parent site.
 
 
-## Organizing Site Content [](id=organizing-site-content)
+## Pages
 
-Organizing your site's content drastically improves the usability of your site
-for users. The Site Settings menu offers some configuration options that aid in
-your organizational goals.
+Under Pages you can view the Public Pages or Private Pates of your site, if any 
+exist. If they don't exist, you are provided with a *Site Templates* selector 
+that you can use to quickly build out pages with a Site Template.
 
-### Categorization [](id=categorization)
+![Figure X: Setting up Google Analytics for your site is very easy: sign up for Google Analytics, receive an ID, and then enter it into the Google Analytics ID field.](../../../../images/selecting-site-template.png)
+
+## Categorization [](id=categorization)
 
 *Categorization* helps administrators organize the site and allows for users to 
 easily find your site and its content through search and navigation. For more 
 information on using tags and categories, visit the
 [Organizing Content with Tags and Categories](/discover/portal/-/knowledge_base/7-1/organizing-content-with-tags-and-categories) section.
+
+## Site URL [](id=site-url)
+
+The *Friendly URL* option lets you manage the path to your site in the 
+instance's URL. Friendly URLs are used for both public and private pages. For 
+public pages, the friendly URL is appended to http://localhost:8080/web. For 
+private pages, it is appended  to http://localhost:8080/group. Each friendly 
+URL needs to be unique.
+
+For example, if you set the friendly URL of your instance's default site to 
+/lunar-resort, the URL of your default site's public home page would change to 
+http://localhost:8080/web/lunar-resort/home. If your instance's default site had
+private pages, the URL of the default private home page would change to
+http://localhost:8080/group/lunar-resort/home.
+
+Note that if you're adding a friendly URL for your instance's home page, you
+should update your instance's Home URL field so that page requests to
+http://localhost:8080 redirect properly. To do this:
+
+1.  Go to *Configuration* &rarr; *Instance Settings* in the Control Panel.
+
+2.  Under *Navigation*, in the Home URL field enter your home URL (i.e. */web/lunar-resort/home*).
+
+    Once you've entered this setting, page requests to localhost:8080 will 
+    redirect to the friendly URL of your Liferay instance's new homepage.
+
+The other setting you can configure under the Site URL tab is *Virtual Hosts* 
+which connects a domain name to a site. You can use this to define a domain 
+name (i.e., www.lunar-resort.com) for your site. This can be a full domain or a 
+subdomain. You can use this to host a number of web sites as separate sites on 
+one Liferay server.
+
+For instance, if you set this up for the Lunar Resort's development network,
+users in that site would access *developers.lunar-resort.com*,
+provided that the Lunar Resort instance's network administrators created the
+domain name and pointed it to the Liferay server.
+
+To set this up:
+
+1.  With your provider, set the DNS name *developers.lunar-resort.com* to point 
+    to your Liferay instance's IP address.
+
+2.  In the Virtual Host tab for the Developers site, set the URL to
+    *http://developers.lunar-resort.com*
+
+This helps users quickly access their site without having to recall an extended 
+URL. The *Site URL* option is listed under the General tab.
+
 
 ### Site Template [](id=site-template)
 
@@ -60,24 +101,6 @@ administrators. To learn more about site templates and how to create your own,
 see the [Building Sites from Templates](/discover/portal/-/knowledge_base/7-1/building-sites-from-templates)
 section.
 
-### Content Sharing [](id=content-sharing)
-
-If you select the *Content Sharing* tab from the Advanced tab, you can
-configure whether sub-sites can display content from this site. Administrators
-of this site's sub-sites can use all structures, templates, categories,
-application display templates, etc. from this parent site. Even if you
-initially allowed content sharing between the parent site and its sub-sites,
-you're able to disable this option and immediately revoke content sharing from
-all sub-sites.
-
-### Recycle Bin [](id=recycle-bin)
-
-The *Recycle Bin* option under the Advanced tab provides the option to
-enable/disable the Recycle Bin for your site. You can also regulate the age (in
-minutes) for which content is able to be stored in the Recycle Bin until it is
-permanently deleted. For a full explanation of the Recycle Bin, see the
-[Restoring Deleted Assets](/discover/portal/-/knowledge_base/7-0/restoring-deleted-assets)
-section.
 
 ### Custom Fields [](id=custom-fields)
 
@@ -99,37 +122,3 @@ media files and folders. For example, a site administrator of a site called
 *Lunar Resort* can browse documents at
 http://localhost:8080/documents/lunar-resort if this option is enabled.
 
-### Default User Associations [](id=default-user-associations)
-
-Once you have the basic details of your site saved, you can begin assigning your
-users to roles and teams. *Default User Associations*, the leading option when
-opening the Advanced tab, lets you configure site roles and teams that newly
-assigned site members will have by default. If you'd like to learn more about
-creating roles and/or teams, visit the
-[Roles and Permissions](/discover/portal/-/knowledge_base/7-1/roles-and-permissions)
-and
-[Creating Teams for Advanced Site Membership Management](/discover/portal/-/knowledge_base/7-1/creating-teams-for-advanced-site-membership-management)
-sections, respectively.
-
-### Ratings [](id=ratings)
-
-To allow your site's users to rate content in your site, you can use the
-*Ratings* option to select what ratings type to use for applications like
-Documents and Media, Web Content, Comments, etc. Ratings types include Stars,
-Likes, and Thumbs. This is the leading option when opening the Social tab.
-
-
-### Mentions [](id=mentions)
-
-The last configuration option in Site Settings related to managing users is
-*Mentions*. *Mentions* is found under the Social tab. This option allows you to
-enable/disable the Mentioning functionality, which is used to *mention* (notify
-and/or draw attention to) friends and colleagues by entering the "@" character
-followed by their user name. You can learn more about the mentioning feature by
-visiting the
-[Mentioning Users](/discover/portal/-/knowledge_base/7-1/mentioning-users)
-article.
-
-Now that you're aware of your Site Settings abilities to improve User and
-Content management, you'll learn how to improve your site's overall intelligence
-using Site Settings.
