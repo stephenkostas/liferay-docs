@@ -1,4 +1,4 @@
-# Creating Teams for Advanced Site Membership Management [](id=creating-teams-for-advanced-site-membership-management)
+# Creating Teams to Empower Site Members [](id=creating-teams-for-advanced-site-membership-management)
 
 If you have an ad hoc group of users who perform the same set of tasks in a
 site, you can organize them into Site Teams. Site administrators can assign
@@ -11,8 +11,8 @@ functions to assign a Site Team include:
 - Writing blogs
 - Editing a specific page in the site
 
-For instance, if your site has Message Boards, you might want to enable a subset
-of the site's members to moderate the categories and threads, and perhaps to ban
+If your site has Message Boards, you might want to enable a subset of the 
+site's members to moderate the categories and threads, and perhaps to ban
 abusive/offensive posters. To do this, you could create a Site Team named
 *Lunar Resort Message Board Moderators*, define the team's permissions in the
 Message Boards application, and assign the desired site members to the team. 

@@ -1,7 +1,6 @@
-# Managing Site Settings for Users
+# Managing Site Settings for Members
 
-An always important job for site administrators is managing site users. To start
-managing site users:
+You've already covered the basics of managing Site Memberships and Roles, now you'll look at some key configuration options for managing members of your Site.
 
 1.  Open the *Product Menu* and use the site selector to choose the site you 
     want to configure.
@@ -40,7 +39,7 @@ section.
 
 ## Ratings and Mentions [](id=ratings)
 
-Next, open the *Social* section of *Site Administration*. To allow your site's users to rate content in your site, you can use the *Ratings* option to select what ratings type to use for applications like Documents and Media, Web Content, Comments, etc. Ratings types include Stars, Likes, and Thumbs.
+Next, open the *Social* section of *Site Administration*. From the *Ratings* section you can enable ratings for applications like Documents and Media, Web Content, Comments, etc. You can also select ratings types like Stars, Likes, and Thumbs.
 
 The last configuration option in Site Settings related to managing users is
 *Mentions*. *Mentions* is found under the Social tab. This option allows you to
@@ -48,7 +47,7 @@ enable/disable the Mentioning functionality, which is used to *mention* (notify
 and/or draw attention to) friends and colleagues by entering the "@" character
 followed by their user name. You can learn more about the mentioning feature by
 visiting the
-[Mentioning Users](/discover/portal/-/knowledge_base/7-0/mentioning-users)
+[Mentioning Users](/discover/portal/-/knowledge_base/7-1/mentioning-users)
 article.
 
 Now that you're aware of your Site Settings abilities to improve User and

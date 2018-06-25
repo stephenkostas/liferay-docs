@@ -1,4 +1,4 @@
-# Managing Users in Your Site
+# Managing Members in Your Site
 
 Users and Sites are two of the most important concepts in @product@. Sites are
 were all of your content and pages are stored, and users are the ones who are 
