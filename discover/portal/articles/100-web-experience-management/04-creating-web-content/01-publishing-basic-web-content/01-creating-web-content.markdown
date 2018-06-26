@@ -1,72 +1,46 @@
 # Creating Web Content [](id=creating-web-content)
 
-Content is the reason web sites exist. @product@ has made it easier than ever to
-get content published to your site. Because @product@ is so flexible, you can use
-basic authoring tools right away or take advantage of the more advanced
-features. It's adaptable to your needs.
+To start you'll create some simple content using the WYSIWYG editor, and 
+publish it to the home page of the Lunar Resort's web site. 
 
-You'll begin by creating some simple content using Liferay's WYSIWYG editor.
-Then you'll publish it to the home page of the Lunar Resort's web site. This is
-a fast and straightforward process that demonstrates how easy it is to create
-and publish content on your Liferay instance. You'll learn about the Web Content
-section in Site Administration so you can create and publish your first pieces
-of content.
-
-When you manage web content from the Site Administration menu, you can select
-the location where the content resides. When selecting the Site Administration
-dropdown from the Menu, you are presented with two scopes: site scope and page
-scope. The site scope can be managed by clicking the *Site Selector* button
-(![Compass](../../../images/icon-compass.png)) located on the Site
-Administration dropdown menu, which is characterized by the name of the site.
-From there you can select the site for which you want your content scoped. For
-instance, you can add content that's available to a specific site or globally
-across your Liferay instance. By default, the page scope must be configured
-before you can access it. For instance, if you add a Web Content Display app to
-a site page called *Lunar Rover*, you can navigate to the app's *Options* icon
-(![Options](../../../images/icon-app-options.png)) and select *Configuration*
-&rarr; *Scope*. From the scope dropdown, you can select the current page you're
-on, which will be characterized as *New* in parenthesis. Click *Save* and return
-to the Site Administration &rarr; *Content* menu. You'll now observe the
-*Default Scope* option. Select the *Default Scope* icon
-(![Gear](../../../images/icon-control-menu-gear.png)) and choose the page you
-configured. Now the content created in this app is scoped to the *Lunar Rover*
-page only. For more information on scoping content in an application, visit the
-[Application Scope](/discover/portal/-/knowledge_base/7-0/application-scope)
-section.
+1.  Go to *Site Administration* and click the the *Site Selector* button
+    (![Compass](../../../images/icon-compass.png)).
+    
+    Whichever Site is selected is where the content will be created, so always
+    make sure that you're working on the right Site. Content can also be created as Global so that any Site can access it.
 
 ![Figure 1: You can choose where to create content by navigating to the Site Administration menu and selecting your site and page scope.](../../../images/site-page-scopes.png)
+    
+2.  Select the *Lunar Resort* site---where you'll be working.
 
-Once you have the Lunar Resort site selected, click on the *Web Content* link
-under Content. You'll see a folder structure containing all of the web content
-articles that exist in the currently selected scope (the Lunar Resort site). You
-can click the *Add* icon (![Add Web Content](../../../images/icon-add.png)) &rarr;
-*Folder* to create a new folder. For sites with lots of content and web content
-articles, it can be very useful to use folders to group certain kinds of web
-content articles together. Click *Add* &rarr; *Basic Web Content* to create a
-new web content article.
+3.  Open the *Content* section and click on *Web Content*
+
+    From here you can create web content, or create folders to store content 
+    in. For sites with lots of content and web content articles, it can be very 
+    useful to use folders to group certain kinds of web content articles 
+    together. 
+
+4.  Click *Add* (![Add Web Content](../../../images/icon-add.png)) &rarr; 
+    *Basic Web Content* to create a new web content article.
+
+    By default, *Basic Web Content* is the only article type available. You can
+    create new article types with [Web Content Structures and Templates](/discover/portal/-/knowledge_base/7-1/designing-uniform-content).
 
 ![Figure 2: Click *Add* &rarr; *Basic Web Content* to create a new simple web content article. To create a new web content article based on an existing web content structure, click *Add* and then click on the name of the structure you'd like to use.](../../../images/web-content-add-menu.png)
 
-Existing web content structures also appear in the *Add* menu. This provides
-users with shortcuts for creating specific kinds of web content articles. For
-example, if a web content structure called *FAQ* has been created for Frequently
-Asked Questions articles in your currently selected scope, you can create a new
-FAQ article by clicking *Add* &rarr; *FAQ*.
+5.  Type "Welcome to the Lunar Resort" in the *Title* field.
 
-+$$$
+6.  In the*Summary* field, give a short description of the Lunar Resort's facilities (be creative).
 
-**Note:** In previous versions of Liferay, you could specify web content types
-via `portal.properties`. In @product@ 7.0, web content types are no longer used
-and have been replaced by vocabularies. Vocabularies allow users to filter their
-web content articles by category instead, which lets you filter your content
-using the Asset Publisher and faceted search. To learn more about vocabularies
-and how to use them with web content articles, see the 
-[Defining Categories for Content](/discover/portal/-/knowledge_base/7-0/organizing-content-with-tags-and-categories#defining-categories-for-content)
-section.
+7.  In the *Content* field, add the body of your web content article, which
+    you'll dive into next.
 
-$$$
+8.  Lastly, leave the *Searchable* switch enabled and click *Publish* 
 
-You have the ability to provide a structure and template to your web content
-articles. You'll learn more about the power of web content structures and
-templates later. For now, you'll cover the basics of creating a piece of web
-content by first exploring the editor.
+    If you disable the searchability of your article, it only prevents end users
+    from finding the article via search. Administrators still have the ability 
+    to search for the article from the Web Content section in the Menu.
+
+That's all it takes to create Web Content, but there's a lot more under the 
+hood of the web content editor, and a lot more options available that you'll
+learn about next.
