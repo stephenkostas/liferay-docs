@@ -1,4 +1,4 @@
-# Designing Uniform Content [](id=designing-uniform-content)
+# Designing Structured Content [](id=designing-uniform-content)
 
 If you've ever launched a web site, you know that as it grows, you can
 experience growing pains. This is the case especially if you've given lots of
@@ -17,10 +17,10 @@ Thankfully, Liferay WCM helps you handle all of those situations. You can use
 *Structures* to define which fields are available to users when they create
 content. These can be coupled with *Templates* that define how to display that
 content. Content won't get stale, because you can take advantage of the
-[Scheduling](/discover/portal/-/knowledge_base/7-0/scheduling-web-content-publication)
+[Scheduling](/discover/portal/-/knowledge_base/7-1/scheduling-web-content-publication)
 feature to determine when content is displayed and when it's
 removed. Additionally, you can configure @product@'s built-in
-[Workflow](/discover/portal/-/knowledge_base/7-0/using-workflow) system to set
+[Workflow](/discover/portal/-/knowledge_base/7-1/using-workflow) system to set
 up a review and publishing process so only what you want winds up on the live
 site. @product@ gives you the management tools you need to run everything from a
 simple, one-page web site to an enormous, content-rich site.
