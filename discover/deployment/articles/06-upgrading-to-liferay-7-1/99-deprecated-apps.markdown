@@ -78,5 +78,10 @@ they're still available.
 | WYSIWYG | [Nexus](https://repository.liferay.com/nexus/content/repositories/liferay-public-releases/com/liferay/com.liferay.wysiwyg.web/) &rarr; Will be removed. |  Final version released for 7.0. |
 
 ## Web Experience
+| App | &nbsp;Availability | &nbsp;Notes |
+| --- | ------------------ | ----------- |
+| User Group Pages (Copy Mode) | Release (bundle) |  |
+| Web Proxy Portlet | Nexus |  |
+| Web Content Search Portlet | Nexus | The new Search widget can be configured to replace all the unique functionality of the Web Content Search |
 
 ## Forms and Workflow
