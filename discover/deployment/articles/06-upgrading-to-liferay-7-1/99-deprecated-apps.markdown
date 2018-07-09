@@ -1,4 +1,4 @@
-# Deprecated Apps in 7.1: What to Do
+# Deprecated Apps in 7.1: What to Do [](id=deprecated-apps-in-7-1-what-to-do)
 
 During the development of any software product, it's sometimes necessary to stop 
 development on or remove outdated or unpopular features. @product-ver@ is no 
@@ -33,7 +33,7 @@ There are 3 types of deprecated apps:
 This article lists the apps deprecated in @product-ver@, and tells you if 
 they're still available. 
 
-## Collaboration
+## Collaboration [](id=collaboration)
 
 | App | &nbsp;Availability | &nbsp;Notes |
 | --- | ------------------ | ----------- | 
@@ -59,7 +59,7 @@ they're still available.
 | Twitter | Removed |  |
 | User Statistics | Nexus |  |
 
-## Foundation
+## Foundation [](id=foundation)
 
 | App | &nbsp;Availability | &nbsp;Notes |
 | --- | ------------------ | ----------- |
@@ -77,7 +77,8 @@ they're still available.
 | WSRP | Removed | |
 | WYSIWYG | [Nexus](https://repository.liferay.com/nexus/content/repositories/liferay-public-releases/com/liferay/com.liferay.wysiwyg.web/) &rarr; Will be removed. |  Final version released for 7.0. |
 
-## Web Experience
+## Web Experience [](id=web-experience)
+
 | App | &nbsp;Availability | &nbsp;Notes |
 | --- | ------------------ | ----------- |
 | User Group Pages (Copy Mode) | Release (bundle) |  |
@@ -85,4 +86,10 @@ they're still available.
 | Web Content Search Portlet | Nexus | The new Search widget can be configured to replace all the unique functionality of the Web Content Search |
 | Web Content List | Removed | The Asset Publisher can be configured to replace all the unique functionality of the Web Content List |
 
-## Forms and Workflow
+
+## Forms and Workflow [](id=forms-and-workflow)
+
+| App | &nbsp;Availability | &nbsp;Notes |
+| --- | ------------------ | ----------- |
+| Dynamic Data List Form | Removed |  |
+| Web Form | Nexus &rarr; Will be removed. | Final version released for 7.0. |
