@@ -83,5 +83,6 @@ they're still available.
 | User Group Pages (Copy Mode) | Release (bundle) |  |
 | Web Proxy Portlet | Nexus |  |
 | Web Content Search Portlet | Nexus | The new Search widget can be configured to replace all the unique functionality of the Web Content Search |
+| Web Content List | Removed | The Asset Publisher can be configured to replace all the unique functionality of the Web Content List |
 
 ## Forms and Workflow
