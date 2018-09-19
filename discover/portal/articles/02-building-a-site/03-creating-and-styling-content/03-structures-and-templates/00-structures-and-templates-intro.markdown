@@ -23,4 +23,4 @@ templates to create something a little more intricate.
 
 ![Figure x: Content using a template.](../../../../images/001-content-template-example.png)
 
-<a class="go-link btn btn-primary" href="/discover/portal/-/knowledge_base/7-0/creating-structures">Let's Go!<span class="icon-circle-arrow-right"></span></a>
+<a class="go-link btn btn-primary" href="/discover/portal/-/knowledge_base/7-1/creating-structures">Let's Go!<span class="icon-circle-arrow-right"></span></a>

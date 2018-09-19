@@ -12,4 +12,4 @@ your new content on your site.
 
 ![Figure x: Application Display Template.](../../../images/001-adt-content.png)
 
-<a class="go-link btn btn-primary" href="/discover/portal/-/knowledge_base/7-0/creating-more-content">Let's Go!<span class="icon-circle-arrow-right"></span></a>
+<a class="go-link btn btn-primary" href="/discover/portal/-/knowledge_base/7-1/creating-more-content">Let's Go!<span class="icon-circle-arrow-right"></span></a>

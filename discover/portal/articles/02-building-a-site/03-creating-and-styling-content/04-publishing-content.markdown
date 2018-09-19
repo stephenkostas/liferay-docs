@@ -5,7 +5,7 @@
 </div>
 
 So far, you've manually published most of your site's content. Now you'll use 
-[content display pages](/discover/portal/-/knowledge_base/7-0/publishing-assets#content-display-pages) 
+[content display pages](/discover/portal/-/knowledge_base/7-1/publishing-assets#content-display-pages) 
 to publish content automatically. @product@'s Asset Publisher app makes this 
 possible. You can configure the Asset Publisher to automatically publish any 
 type of asset (e.g., images, blogs, web content). A content display page is 
