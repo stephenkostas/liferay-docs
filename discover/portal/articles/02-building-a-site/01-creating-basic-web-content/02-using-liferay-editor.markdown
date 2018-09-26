@@ -19,7 +19,6 @@ It's time to get started:
 
 2.  Under the site (*The Lunar Resort*), select *Content* &rarr; *Web Content*.
 
-<!-- Russ QA: We shouldn't assume the Lunar Resort site exists. -->
 
 ![Figure X: The Web Content page.](../../../images/001-web-content-page.png)
 
@@ -59,15 +58,11 @@ Now you'll use it to create your first piece of web content:
 
 4.  De-select the text and make a new line.
 
-5.  Click the plus button and select the image icon.
-
-    ![Figure X: To begin adding an image, select the image icon.](../../../images/001-image-icon.png)
+5.  Click add ![Add](../../../images/icon-add-app.png) and select image ![Add Image](../../../images/icon-add-image.png).
 
 6.  Using drag and drop or the *Select File* button, upload the provided
     `moon-image1.jpg`. This also adds it to the Document Library so that you can
     re-use it later.
-
-    <!--Provided where? Not in liferay-docs/discover/portal/images/.-->
 
 7.  Click *Add* to add the image to the content. 
 
