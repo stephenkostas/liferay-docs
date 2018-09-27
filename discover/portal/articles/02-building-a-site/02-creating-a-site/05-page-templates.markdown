@@ -57,8 +57,7 @@ Follow these steps to edit the page template you just created:
     *Applications* &rarr; *Collaboration* category. Add a Blogs widget to the
     page template's right column. 
  
-2.  Close the page template's edit tab/window. @product@ automatically saves 
-    your changes. 
+2.  Leave the page, and @product@ automatically saves your changes. 
 
 Next, you'll create a page with this template. 
 
