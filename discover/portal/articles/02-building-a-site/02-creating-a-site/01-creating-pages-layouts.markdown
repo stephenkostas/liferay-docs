@@ -27,14 +27,18 @@ right. Follow these steps to create this page:
 
 1.  Open the main menu and expand the *Build* menu for *The Lunar Resort*. 
 
-2.  In the Build menu, click the *Pages* button 
-    (![Options](../../../images/icon-options.png)) for *Public Pages* and select 
-    *Add Public Page*.
+2.  In the Build menu, click the *Pages* button. 
 
-    You are now on the page creation form. You can set the page name, choose a 
-    template or layout, and set several other options.
+3.  Click the *New* (![New Page](../../../images/icon-add.png)) button, then
+    *Public Page* to add a new page.
 
-3.  Enter *Activities* for the *Name*.
+4.  Select *Widget Page*
+
+5.  Enter *Activities* for the *Name*, leave the box labeled "Add this Page to 
+    the following Menus: Default" checked, and click *Save*.
+
+    On the next page, you can set the page name, choose your layout, and set 
+    several other options.
 
 4.  For the layout, select *2 Columns (30/70)*. This sets the page to the two
     column layout. The smaller left column takes up 30% of the page, and the
@@ -42,35 +46,36 @@ right. Follow these steps to create this page:
 
     ![Figure x: Activities page creation.](../../../images/001-add-activities-page.png)
 
-5.  Leave the other options on their default settings and click *Add Page*. 
+5.  Leave the other options on their default settings and click *Save*. 
 
-The Lunar Resort site now contains the Activities page. This page appears in the 
-navigation, and you can add applications and content to it just as you would any 
-other page. 
+The Lunar Resort site now contains the Activities page. This page appears in 
+the navigation, and you can add applications and content to it just as you 
+would any other page. 
 
 ## Creating the About Us Page [](id=creating-the-about-us-page)
 
 Now you'll create the *About Us* page. Note in the above screenshot that this
 page has three columns. Follow these steps to create this page:
 
-1.  In the main menu, expand the *Navigation* menu for *The Lunar Resort*. 
+1.  From the *Pages* page, click the *New*
+    (![New Page](../../../images/icon-add.png)) button, then *Public Page*.
 
-2.  In the Navigation menu, click the *Options* button 
-    (![Options](../../../images/icon-options.png)) for *Public Pages* and select 
-    *Add Public Page*. 
+4.  Select *Widget Page*
 
-3.  Enter *About Us* for the Name. 
+5.  Enter *About Us* for the *Name*, leave the box labeled "Add this Page to 
+    the following Menus: Default" checked, and click *Save*.
 
-4.  For the layout, select *3 Columns*. 
+    On the next page, you can set the page name, choose your layout, and set 
+    several other options.
 
-5.  Leave the other options on their default settings and click *Add Page*. 
+4.  For the layout, select *3 Columns*. This sets the page to the two
+    column layout. The smaller left column takes up 30% of the page, and the
+    larger right column takes up 70% of the page. 
+
+5.  Leave the other options on their default settings and click *Save*. 
 
 The navigation bar now contains the two new pages that you just created. Next,
 you'll create a couple more pages and then arrange their order in the
 navigation bar. 
 
 ![Figure x: The navigation bar lists your site's pages.](../../../images/001-page-navigation.png)
-<!-- 
-Replace with a screenshot that shows more of the page. In the current screenshot 
-it's impossible to tell where the nav bar is located on the page.
--->

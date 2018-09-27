@@ -18,40 +18,34 @@ and not just copied over from the earlier instructions.
 
 ## Creating the Lunar Guides Page [](id=creating-the-lunar-guides-page)
 
-1.  Open the main menu and expand the *Navigation* menu for *The Lunar Resort*. 
+1.  Open the *Build* &rarr; *Pages* page for *The Lunar Resort*. 
 
-2.  In the Navigation menu, click the *Options* button 
-    (![Options](../../../images/icon-options.png)) for *Public Pages* and select 
-    *Add Public Page*. 
+2.  Click *Add* 
+    (![New Page](../../../images/icon-add.png)) then *Public Pages*.
 
+3.  On the next page, select *Widget Page*.
 
-3.  Enter *Lunar Guides* for the Name.
+4.  Enter *Lunar Guides* for the *Name*, leave the box labeled "Add this Page 
+    to the following Menus: Default" checked, and click *Save*.
 
-4.  For the layout, select *3 Columns*. 
+5.  On the next page select the *3 Columns* layout. 
 
-5.  Leave the other options on their default settings and click *Add Page*. 
+6.  Leave the other options on their default settings and click *Save*. 
 
 ## Creating the Book a Trip Page [](id=creating-the-book-a-trip-page)
 
-1.  Open the main menu and expand the *Navigation* menu for *The Lunar Resort*. 
+1.  From the *Pages* page.
 
-2.  In the Navigation menu, click the *Options* button 
-    (![Options](../../../images/icon-options.png)) for Public Pages and select 
-    *Add Public Page*. 
+2.  Click *Add*  
+    (![New Page](../../../images/icon-add.png)) then *Public Pages*. 
+    
+3.  On the next page, select *Widget Page*.
 
-3.  Enter *Book a Trip* for the Name.
+4.  Enter *Lunar Guides* for the *Name*, leave the box labeled "Add this Page 
+    to the following Menus: Default" checked, and click *Save*.
 
-4.  For the layout, select *1 Column*. 
+5.  On the next page select the *1 Columns* layout. 
 
-5.  Leave the other options on their default settings and click *Add Page*. 
+6.  Leave the other options on their default settings and click *Save*. 
 
-## Arranging Pages [](id=arranging-pages)
-
-The new pages now appear in the navigation bar with the other pages. If these
-pages are out of your preferred order, you can rearrange them via drag and drop.
-Rearrange the pages to match this order: 
-
-![Figure x: Reorder the pages in the navigation bar.](../../../images/001-final-menu.png)
-
-Great! Now that you have your site's pages, you'll add some applications to 
-them. 
+Next, you'll use Navigation Menus to rearrange the pages.

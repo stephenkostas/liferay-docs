@@ -1,4 +1,4 @@
-# Nesting Pages [](id=nesting-pages)
+# Nesting Pages with Navigation Menus [](id=nesting-pages)
 
 <div class="learn-path-step">
     <p>Creating A Site<br>Step 5 of 6</p>
