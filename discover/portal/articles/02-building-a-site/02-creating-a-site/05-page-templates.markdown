@@ -1,4 +1,4 @@
-# Page Templates [](id=page-templates)
+# Widget Page Templates [](id=page-templates)
 
 <div class="learn-path-step">
     <p>Creating A Site<br>Step 4 of 6</p>
@@ -14,11 +14,12 @@ template, then you'll use it to create several pages. Later, you'll make changes
 to the template and see @product@ propagate those changes to the pages you
 created from the template. 
 
-## Creating a Page Template [](id=creating-a-page-template)
+## Creating a Widget Page Template [](id=creating-a-page-template)
 
 Use these steps to create a page template:
 
-1.  Open the Main Menu and go to *The Lunar Resort* &rarr; *Pages*.
+1.  Open the Main Menu and go to *The Lunar Resort* &rarr; *Build* &rarr; 
+    *Pages*.
 
 2.  Select the *Page Templates* tab.
     
@@ -65,26 +66,27 @@ Next, you'll create a page with this template.
 
 Follow these steps to use the template to create a page: 
 
-1.  Open the Main Menu and select *The Lunar Resort* &rarr; *Navigation*.
+1.  Go back to *Pages* for *The Lunar Resort*.
 
-2.  In the Navigation menu, click the *Options* button 
-    (![Options](../../../images/icon-options.png)) for *Public Pages* and select 
-    *Add Public Page*. 
+2.  Click *Add* (![Add](../../../images/icon-add-app.png)) &rarr; *Public Page*.
 
-3.  Name the page *Cody* (Cody is one of our lunar guides).
+3.  Select the *Lunar Guide Page* template.
 
-4.  Under *Type*, select *Lunar Guide Page*. This selects your page template as 
-    the source for the page. 
+4.  Enter *Cody* for the name.
 
-5.  Leave *Inherit Changes* set to *Yes*. This lets you edit this page in the 
-    future by editing the template, but removes the ability to edit the page 
-    directly.
+5.  Uncheck the box to *Add this Page to the following Menus: Default*.
+
+6.  Click *Save*.
+
+7.  Confirm the page information and leave *Inherit Changes* set to *Yes*. This 
+    lets you edit this page in the future by editing the template, but removes 
+    the ability to edit the page directly.
  
-6.  Click *Add Page*.
+![Figure x: Creating the Cody page from a template.](../../../images/001-page-templates-cody.png) 
+ 
+8.  Click *Add Page*.
 
-@product@ then creates the new page from your template. Next, you'll create more 
-of these pages, one for each lunar guide (Cody is awesome, but he can't do 
-everything by himself). Note, however, that Cody's page is in the navigation bar 
-next to all the other pages. To get his page and those of the other lunar guides 
-under the Lunar Guides page, you must nest the pages. You'll learn how to do 
-this next. 
+9.  Cody is awesome, but he can't do everything by himself: repeat these steps
+    to create pages for *Jim*, *Steve*, and *Russ*.
+
+@product@ then creates the new page from your template. Note that none of these pages are not currently in the navigation menu. Next, you'll create a new Navigation Menu to handle just that.

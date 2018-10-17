@@ -16,11 +16,12 @@ To rearrange your pages,
 3.  Click and drag the *About Us* page to the bottom of the list.
 
     Menus are updated as you make the changes, so you can leave the page after
-    the changes are done.
+    you make your changes.
   
 ![Figure x: Reorder the pages in the Navigation Menu.](../../../images/001-final-menu.png)
 
-You can create additional menus, but for now
+You can create additional menus, but for now you'll move on to creating content
+for the pages we already have.
 
 Great! Now that you have your site's pages created and organized, you'll add 
 some applications to them. 

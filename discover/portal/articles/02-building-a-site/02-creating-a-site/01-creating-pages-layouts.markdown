@@ -1,4 +1,4 @@
-# Creating Pages with Layouts [](id=creating-pages-with-layouts)
+# Creating Widget Pages with Layouts [](id=creating-pages-with-layouts)
 
 <div class="learn-path-step">
     <p>Creating A Site<br>Step 1 of 6</p>
@@ -6,13 +6,14 @@
 
 Up to this point everything on the Welcome page stretches the width of the
 entire page. You can control this with *page layouts*. For example, the Welcome
-page has the simplest possible layout: one column. Any items in that column take
-up its full width. You can place anything above or below but not to the side
-of any existing item on the page. @product@ contains other layouts that arrange
-items into different numbers of columns and rows. This gives you a great deal of
-control over how applications and content appear in your site. 
+page is simplest possible page: a widget page, with one column, and one widget. 
+The single widget takes up the full width of the column. You can place anything 
+above or below but not to the side of any existing item on the page. @product@ 
+contains other layouts that arrange items into different numbers of columns and 
+rows. This gives you a great deal of control over how applications and content 
+appear in your site. 
 
-You'll next use layouts to create the Activities and About Us pages for the
+Next you'll use layouts to create the Activities and About Us pages for the
 Lunar Resort. 
 
 ![Figure x: The final Activities page.](../../../images/001-final-activities.png)
@@ -74,7 +75,23 @@ page has three columns. Follow these steps to create this page:
 
 5.  Leave the other options on their default settings and click *Save*. 
 
-The navigation bar now contains the two new pages that you just created. Next,
+## Creating the Lunar Guides Page [](id=creating-the-lunar-guides-page)
+
+1.  Open the *Build* &rarr; *Pages* page for *The Lunar Resort*. 
+
+2.  Click *Add* 
+    (![New Page](../../../images/icon-add.png)) then *Public Pages*.
+
+3.  On the next page, select *Widget Page*.
+
+4.  Enter *Lunar Guides* for the *Name*, leave the box labeled "Add this Page 
+    to the following Menus: Default" checked, and click *Save*.
+
+5.  On the next page select the *3 Columns* layout. 
+
+6.  Leave the other options on their default settings and click *Save*. 
+
+The navigation bar now contains the three new pages that you just created. Next,
 you'll create a couple more pages and then arrange their order in the
 navigation bar. 
 
