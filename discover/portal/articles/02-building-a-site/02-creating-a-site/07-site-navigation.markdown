@@ -1,33 +1,9 @@
-# Site Navigation [](id=site-navigation)
+# Other Navigation Tools [](id=site-navigation)
 
 <div class="learn-path-step">
     <p>Creating A Site<br>Step 6 of 6</p>
 </div>
 
-You could have the greatest site in the multi-verse, but if users can't navigate
-it, it's all for naught. Fortunately @product@ provides extensive support for
-customizing your site's navigation. There are two main ways to define and
-customize site navigation: 
-
-1.  In the site's theme. This is the primary and most powerful way to manage
-    site navigation. Themes in @product@ can customize any aspect of a site,
-    including its navigation. Defining site navigation in the theme provides
-    a uniform look and feel across the site. 
-
-2.  With apps. Navigation apps can define navigation on a page-by-page basis.
-    For example, the Navigation Menu app displays a navigable page hierarchy of
-    the site. You can select which page in the hierarchy to use as the root.
-    There's also the Breadcrumb app, which displays the trail of pages in the
-    hierarchy that lead to the current page. Like a trail of breadcrumbs in the
-    woods, this app lets users retrace their steps so they don't get lost. 
-
-These two ways of defining site navigation can be used together. Like page 
-templates, themes can define which apps appear in a site. You've already seen an 
-example of this in action without being aware of it. The Lunar Resort uses the
-@product@'s default theme, Classic. This theme embeds the Navigation Menu app as
-the site navigation bar. Therefore, the Lunar Resort's navigation bar is nothing
-more than a Navigation Menu app configured to display the entire site's page
-hierarchy. 
 
 You won't change the theme the Lunar Resort uses, but you'll fine-tune the 
 site's navigation by adding another Navigation Menu app and a Breadcrumb app. 

@@ -4,12 +4,19 @@
     <p>Creating A Site<br>Step 5 of 6</p>
 </div>
 
-When creating sites, you'll likely encounter situations where you want to have 
-multiple levels of navigation in different configurations. You can do this by 
-"nesting" pages in a Navigation Menu or by creating a additional menu. In the 
-default theme, nested pages will display when you mouseover the root page in 
-the navigation menus, while Navigation Menus will display in a Navigation 
-portlet as you configure it. For your site, you want the Lunar Guides pages to 
+You could have the greatest site in the multi-verse, but if users can't navigate
+it, it's all for naught. Fortunately @product@ provides extensive support for
+customizing your site's navigation. By default, pages are created in a flat 
+hierarchy, and then pages can be arranged with Navigation Menus. Those menus can
+be displayed on pages using the Navigation Menu portlet, or embedded into a 
+theme to customize their appearance.
+
+When creating sites, you may encounter situations where you want to have 
+multiple levels of navigation displayed in different configurations. You can do 
+this by "nesting" pages in a Navigation Menu or by creating a additional menu. 
+In the default theme, nested pages will display when you mouseover the root 
+page in the navigation menus. If you use Navigation Menus you can each one 
+separately in a the widget. For your site, you want the Lunar Guides pages to 
 be accesible on the *Lunar Guides* page but not from the top level nav, so 
 Navigation Menus will work best.
 

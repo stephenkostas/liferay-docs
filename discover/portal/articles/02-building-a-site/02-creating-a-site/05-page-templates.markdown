@@ -74,7 +74,8 @@ Follow these steps to use the template to create a page:
 
 4.  Enter *Cody* for the name.
 
-5.  Uncheck the box to *Add this Page to the following Menus: Default*.
+5.  Uncheck the box to *Add this Page to the following Menus: Default* so that
+    the page will not appear in the navigation menu.
 
 6.  Click *Save*.
 

@@ -1,4 +1,4 @@
-# Advanced Templates [](id=advanced-templates)
+# Dynamic Templates [](id=advanced-templates)
 
 <div class="learn-path-step">
     <p>Creating Content<br>Step 3D of 3D</p>
