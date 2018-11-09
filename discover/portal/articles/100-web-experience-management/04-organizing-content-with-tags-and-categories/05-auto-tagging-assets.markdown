@@ -4,8 +4,8 @@
 is a great way to organize content. Typically, the content creator applies tags 
 while creating the content. It's also possible, however, to *automatically* tag 
 content. For example, @product@ can scan an image on upload and automatically 
-apply tags that fit the image's content. This lets you leverage tags without 
-requiring content creators to manually apply them. 
+apply tags that describe the image's content. This lets you leverage tags 
+without requiring content creators to manually apply them. 
 
 +$$$
 
