@@ -1,11 +1,11 @@
 # Auto-tagging Assets [](id=auto-tagging-assets)
 
 [Tagging assets](/discover/portal/-/knowledge_base/7-2/tagging-content) 
-is a great way to organize content. Typically, tags are applied by the content 
-creator during content creation. However, it's also possible to *automatically* 
-tag content. For example, you can upload an image and let @product@ scan it and 
-automatically apply a tag that fits the image's content. This lets you leverage 
-tags without requiring content creators to manually apply them. 
+is a great way to organize content. Typically, the content creator applies tags 
+while creating the content. It's also possible, however, to *automatically* tag 
+content. For example, @product@ can scan an image on upload and automatically 
+apply tags that fit the image's content. This lets you leverage tags without 
+requiring content creators to manually apply them. 
 
 +$$$
 
@@ -13,11 +13,11 @@ tags without requiring content creators to manually apply them.
 
 $$$
 
-This article shows you how to configure auto-tagging in general. For 
-instructions on using it to auto-tag specific asset types, see the documentation 
-for the asset type. For example, see the 
-[Documents and Media documentation](/discover/portal/-/knowledge_base/7-1/managing-documents-and-media) 
-for instructions on using auto-tagging for images. 
+This article shows you how to configure asset auto-tagging in general. 
+Configuring auto-tagging for specific asset types is documented separately. For 
+example, see the article 
+[Auto-tagging Images](/discover/portal/-/knowledge_base/7-1/auto-tagging-images) 
+for instructions on configuring image auto-tagging. 
 
 ## Configuring Auto-tagging [](id=configuring-auto-tagging)
 
@@ -27,12 +27,12 @@ Auto-tagging is disabled by default. You can configure it at three levels:
     globally. You can then disable it for individual instances and sites if you 
     wish. 
 
--   **Instance:** With auto-tagging enabled globally, it's also enabled by 
-    default for each instance. You can disable it for specific instances. 
+-   **Instance:** When enabled globally, auto-tagging is also enabled by default 
+    for each instance. You can disable it for specific instances. 
 
--   **Site:** With auto-tagging enabled globally and for an instance, it's also 
-    enabled by default for all that instance's sites. You can disable it for 
-    specific sites.
+-   **Site:** When enabled for an instance, auto-tagging is also enabled by 
+    default for all that instance's sites. You can disable it for specific 
+    sites. 
 
 ### Global Configuration [](id=global-configuration)
 
@@ -46,9 +46,9 @@ Follow these steps to configure auto-tagging globally:
 3.  The following settings are available:
 
     -   **Enabled:** Whether auto-tagging of assets is enabled.
-    -   **Maximum number of tags:** The maximum number of tags that can be 
+    -   **Maximum Number of Tags:** The maximum number of tags that can be 
         automatically applied to each asset. A value of `0` means that there is 
-        no such limit.
+        no limit.
 
 4.  Click *Save* to save your changes. 
 
@@ -56,29 +56,28 @@ Follow these steps to configure auto-tagging globally:
 
 ### Instance-level Configuration [](id=instance-level-configuration)
 
-When auto-tagging is enabled globally, it's also enabled by default for all 
-instances. You can, however, disable or configure it for each instance. 
+When enabled globally, auto-tagging is also enabled by default for each 
+instance. You can, however, disable or configure it for each instance. 
 
 Follow these steps to configure auto-tagging on the instance level: 
 
 1.  Go to *Control Panel* &rarr; *Configuration* &rarr; *Instance Settings*, 
     then select the *Asset Auto Tagging* tab. 
 
-2.  The same settings are available as in the global configuration. The settings 
-    here, however, apply to the instance. Also note that there may be different 
-    auto-tagging providers that you can configure here. For example, the 
-    provider for auto-tagging images appears under 
+2.  The settings here are identical to those in the global configuration, but 
+    apply only to the instance. Also note that there may be different 
+    auto-tagging providers here that you can configure for specific asset types. 
+    For example, the provider for image auto-tagging is 
     *TensorFlow Image Auto Tagging*. Such providers are documented elsewhere. 
 
 3.  Click *Save* to save your changes. 
 
-![Figure 2: You can configure auto-tagging on the instance level as well.](../../../images/auto-tagging-instance.png)
+![Figure 2: You can also configure auto-tagging on the instance level.](../../../images/auto-tagging-instance.png)
 
 ### Site-level Configuration [](id=site-level-configuration)
 
-When auto-tagging is enabled for an instance, it's also enabled by default for 
-all that instance's sites. You can, however, disable or configure it for each 
-site. 
+When enabled for an instance, auto-tagging is also enabled by default for all 
+that instance's sites. You can, however, disable or configure it for each site. 
 
 Follow these steps to configure auto-tagging for a site: 
 
