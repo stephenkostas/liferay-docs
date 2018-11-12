@@ -77,7 +77,7 @@ Follow these steps to configure auto-tagging on the instance level:
 ### Site-level Configuration [](id=site-level-configuration)
 
 When enabled for an instance, auto-tagging is also enabled by default for all 
-that instance's sites. You can, however, disable or configure it for each site. 
+that instance's sites. You can, however, enable or disable it for each site. 
 
 Follow these steps to configure auto-tagging for a site: 
 
