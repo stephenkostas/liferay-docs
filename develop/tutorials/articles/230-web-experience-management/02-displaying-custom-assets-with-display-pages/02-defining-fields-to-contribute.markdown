@@ -1,9 +1,11 @@
 # Asset Display Contributor Fields 
 
-The primary point of integration between an application and Asset Display Pages 
-is making the asset's fields available for display as part of an Asset 
-Display Page. To do this, you must implement the 
-`AssetDisplayContributorFields` interface, and reference `AssetDisplayContributorField.class` in your service declaration.
+Once you have created the Asset Display Contributor, the next step is to create 
+the `AssetDisplayContributorField`. To do this, you must implement the 
+`AssetDisplayContributorFields` interface, and reference 
+`AssetDisplayContributorField.class` in your service declaration. Each field 
+will require its own class. You could do this for one of your assets field
+or all of them.
 
 ## AssetDisplayContributorFields
 

@@ -8,66 +8,100 @@ the Blogs application. Remember the two main steps:
 2.  Create the Asset Display Contributor Field classes for the fields you want 
     to be available for Asset Display Pages.
     
+In this example, you'll create the Asset Display Contributor, and then create 
+one Asset Display Contributor Field for the Blogs Entry Title.
+    
 
 ## Creating the Blogs Contributor
 
-First we would have to create our contributor:
+First you have to create the contributor.
 
-    @Component(immediate = true, service = AssetDisplayContributor.class)
-    public class BlogsEntryAssetDisplayContributor
-      extends BaseAssetDisplayContributor<BlogsEntry> {
+1.  Inside of the the `blogs-web` module, create a package named 
+    `com.liferay.blogs.web.internal.asset.display.contributor`.
 
-      @Override
-      public String getClassName() {
-         return BlogsEntry.class.getName();
-      }
+2.  Inside of that package, create a file named 
+    `BlogEntryAssetDisplayContributor.java`.
+    
+3.  Enter the following contents into the class:
 
-      @Override
-      protected Map<String, Object> getClassTypeValues(
-         BlogsEntry assetEntryObject, Locale locale) {
+        @Component(immediate = true, service = AssetDisplayContributor.class)
+        public class BlogsEntryAssetDisplayContributor
+          extends BaseAssetDisplayContributor<BlogsEntry> {
 
-         return null;
-      }
-    }
+          @Override
+          public String getClassName() {
+             return BlogsEntry.class.getName();
+          }
 
-With this, we have already access to all of the generic Asset Display Contributor Fields for Asset Entries that are registered in the system. You can check the result by going to Control Panel > Build > Pages > Display Pages and selecting the asset type to map.
+          @Override
+          protected Map<String, Object> getClassTypeValues(
+             BlogsEntry assetEntryObject, Locale locale) {
+
+             return null;
+          }
+        }
+
+4.  Save your file and redeploy the module.
+
+This will add Blogs Entries to the list of asset types eligible for use with Asset Display Pages.
+
+1.  Open Liferay.
+
+2.  Go to *Site Administration* &rarr; *Build* &rarr; *Pages*.
+
+3.  Select the *Display Pages* tab.
+
+4.  Add icon (![Add Display Page](../../../../images/icon-add.png)) to create a new Display Page.
+
+5.  In the Display Page editor, click *Mapping* from the menu on the right side.
+
+6.  Select the Blogs Asset Type.
 
 ![Figure 1: You can now select the Blogs Asset Type.](../../../images/select-asset-type.png)
 
+This isn't complete yet because while you can select the asset type, you don't 
+have any fields that can be mapped.
+
 ## Creating the Blogs Entry Title Field Contributor
 
-Still, we are missing the fields for blogs entry to display since we haven't defined them. Now, we want to be able to select the subtitle of the blog so it can be displayed. For that we create a display contributor field for it.
+Now, create a display contributor field for the Blogs Entry Title so that you can map it to the page.
 
+1.  Inside of the `com.liferay.blogs.web.internal.asset.display.contributor` 
+    package, create a file named `BlogEntryAssetDisplayContributor.java`.
+    
+2.  Enter the following contents into the class:
 
-    @Component(
-      property = "model.class.name=com.liferay.blogs.model.BlogsEntry",
-      service = AssetDisplayContributorField.class
-    )
-    public class BlogsEntryTitleAssetDisplayContributorField
-      implements AssetDisplayContributorField<BlogsEntry> {
+        @Component(
+          property = "model.class.name=com.liferay.blogs.model.BlogsEntry",
+          service = AssetDisplayContributorField.class
+        )
+        public class BlogsEntryTitleAssetDisplayContributorField
+          implements AssetDisplayContributorField<BlogsEntry> {
 
-      @Override
-      public String getKey() {
-         return "subtitle";
-      }
+          @Override
+          public String getKey() {
+             return "subtitle";
+          }
 
-      @Override
-      public String getLabel(Locale locale) {
-         return LanguageUtil.get(locale, "subtitle");
-      }
+          @Override
+          public String getLabel(Locale locale) {
+             return LanguageUtil.get(locale, "subtitle");
+          }
 
-      @Override
-      public String getType() {
-         return "text";
-      }
+          @Override
+          public String getType() {
+             return "text";
+          }
 
-      @Override
-      public String getValue(BlogsEntry blogsEntry, Locale locale) {
-         return blogsEntry.getSubtitle();
-      }
-    }
-
-Now we can select it when mapping a field
+          @Override
+          public String getValue(BlogsEntry blogsEntry, Locale locale) {
+             return blogsEntry.getSubtitle();
+          }
+        }
+        
+Now you can select the Blogs Entry Title as a field to be used in an Asset 
+Display Page. You can create additional display contributor field classes for
+any fields that you need to map for Asset Display Pages.
 
 ![Figure 1: You can now select the Blogs Entry Title field in the mapping selecting.](../../../images/mapping-fields.png)
 
