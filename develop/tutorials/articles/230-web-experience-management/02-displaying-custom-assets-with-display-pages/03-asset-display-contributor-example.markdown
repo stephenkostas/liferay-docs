@@ -1,4 +1,4 @@
-# Asset Display Contributor Example
+# Asset Display Contributor Example [](id=asset-display-contributor-example)
 
 Now, to put your knowledge to the use, create an Asset Display Contributor for 
 the Blogs application. Remember the two main steps:
@@ -12,7 +12,7 @@ In this example, you'll create the Asset Display Contributor, and then create
 one Asset Display Contributor Field for the Blogs Entry Title.
     
 
-## Creating the Blogs Contributor
+## Creating the Blogs Contributor [](id=creating-the-blogs-contributor)
 
 First you have to create the contributor.
 
@@ -51,7 +51,7 @@ This will add Blogs Entries to the list of asset types eligible for use with Ass
 
 3.  Select the *Display Pages* tab.
 
-4.  Add icon (![Add Display Page](../../../../images/icon-add.png)) to create a new Display Page.
+4.  Add icon (![Add Display Page](../../../images/icon-add.png)) to create a new Display Page.
 
 5.  In the Display Page editor, click *Mapping* from the menu on the right side.
 
@@ -62,7 +62,7 @@ This will add Blogs Entries to the list of asset types eligible for use with Ass
 This isn't complete yet because while you can select the asset type, you don't 
 have any fields that can be mapped.
 
-## Creating the Blogs Entry Title Field Contributor
+## Creating the Blogs Entry Title Field Contributor [](id=creating-the-blogs-entry-title-field-contributor)
 
 Now, create a display contributor field for the Blogs Entry Title so that you can map it to the page.
 
@@ -103,5 +103,5 @@ Now you can select the Blogs Entry Title as a field to be used in an Asset
 Display Page. You can create additional display contributor field classes for
 any fields that you need to map for Asset Display Pages.
 
-![Figure 1: You can now select the Blogs Entry Title field in the mapping selecting.](../../../images/mapping-fields.png)
+![Figure 2: You can now select the Blogs Entry Title field in the mapping selecting.](../../../images/mapping-fields.png)
 

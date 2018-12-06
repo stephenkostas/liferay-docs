@@ -1,4 +1,4 @@
-# Asset Display Contributor Fields 
+# Defining Asset Display Contributor Fields [](id=asset-display-contributor-fields)
 
 Once you have created the Asset Display Contributor, the next step is to create 
 the `AssetDisplayContributorField`. To do this, you must implement the 
@@ -7,7 +7,7 @@ the `AssetDisplayContributorField`. To do this, you must implement the
 will require its own class. You could do this for one of your assets field
 or all of them.
 
-## AssetDisplayContributorFields
+## AssetDisplayContributorFields [](id=assetdisplaycontributorfields)
 
 The `AssetDisplayContributorFields` interface looks like this:
 
