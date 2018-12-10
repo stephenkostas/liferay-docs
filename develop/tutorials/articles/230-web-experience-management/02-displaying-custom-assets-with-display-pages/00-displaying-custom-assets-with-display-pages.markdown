@@ -13,3 +13,6 @@ The primary point of integration between an application and Asset Display Pages
 is making the asset's fields available for display as part of an Asset 
 Display Page. This is accomplished by [creating a Display Contributor](/develop/tutorials/-/knowledge_base/7-1/creating-a-display-contributor) 
 class that extends `BaseAssetDisplayContributor` and [defining fields to contribute](/develop/tutorials/-/knowledge_base/7-1/asset-display-contributor-fields) by implementing `AssetDisplayContributorFields`.
+
+Once you configure your application for Asset Display Pages, you can use the
+Asset Display Page taglib to [integrate Asset Display Pages into asset creation](/develop/tutorials/-/knowledge_base/7-1/asset-display-contributor-fields).
