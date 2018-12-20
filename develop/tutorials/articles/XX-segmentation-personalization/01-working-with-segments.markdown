@@ -2,27 +2,57 @@
 
 Segments are groups of Users or user-related entities (like Organizations) that 
 meet a certain criteria. There is a large pool of criteria you can use to 
-define Segments, ranging from a user's profile information, like their date of 
-birth or job title, to context information, like their current browser or what 
-page they last visited. You can also define a segment that is a static set of
+define Segments, ranging from a user's profile information, like date of 
+birth or job title, to context information, like the current browser or what 
+last visited page. You can also define a segment that is a static set of
 manually selected members.
 
-## Managing segments
+## Segment Lifecycle
 
-The API to manage segments in Liferay is provided by the 
-`com.liferay.segments.api module`. The `SegmentsEntryService` provides the methods to perform permission aware operations on segments. 
-For instance, this code snippet retrieves an ordered range of active segments of user type, within a site identified by a groupId.
+To develop with Segments, you must understand the lifecycle of how to process 
+Segment criteria for displaying content.
+
+1.  Retrieve the list of active Segments.
+
+2.  Evaluate which (if any) Segments apply to the current user.
+
+3.  Determine what content to display based on the Segment criteria.
+
+To use Segments to personalize how assets are displayed to users, you must use 
+Liferay's API provided by the `com.liferay.segments.api module`. Its 
+`SegmentsEntryService` provides methods to perform permission aware operations 
+on segments.
+
+To better understand this, you'll create a simple application that displays relevant information for a partner portal. [??]
+
+[need a more concrete example with complete code]
+
+### Getting Segments
+
+The first step is to retrieve the active segments. `SegmentEntryService` can 
+provide a `List` of with an ordered range of active segments of user type, 
+within a site identified by a groupId with a snippet like this:
 
     List<SegmentsEntry> segmentsEntries = 
       segmentsEntryService.getSegmentsEntries(groupId, true, 
           User.class.getName(), 0, 10, orderByComparator);
 
-For a complete reference of the segment services, review the Javadoc. [Pending]
+
+1.  Create a module.
+
+2.  Paste in this code in this class:
+
+[Code for Segment?]
+
+You can see a complete list of services and how to best access them here 
+[javadoc link].
 
 ### Assigning members to segments
 
-The segmentsEntry criteria field determines the conditions that an entity must meet to be assigned to the segment. The conditions can be both profile- and context-based. 
+The `segmentsEntry` criteria field determines the conditions that an entity must meet to be assigned to the segment. The conditions can be both profile- and context-based. 
+
 Profile-based conditions work as search filters in the Liferay Index. For instance, a profile-based condition for user type segments filters users based on indexed fields such as jobTitle, organizationIds, etc. For further information, see UserIndexer.
+
 To abstract the developer from the query language used by the search index engine, profile-based criteria queries are written in oData, the same filtering language used by the new headless APIs in Liferay 7.2.
 The following snippet shows how to create an active segment that contains users whose jobTitle is ‘Developer’:
 
