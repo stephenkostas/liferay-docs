@@ -1,11 +1,10 @@
 # Defining Asset Display Contributor Fields [](id=asset-display-contributor-fields)
 
 Once you have created the Asset Display Contributor, the next step is to create 
-the `AssetDisplayContributorField`. To do this, you must implement the 
-`AssetDisplayContributorFields` interface, and reference 
-`AssetDisplayContributorField.class` in your service declaration. Each field 
-will require its own class. You could do this for one of your assets field
-or all of them.
+the `AssetDisplayContributorFields`. To do this, you must implement the 
+`AssetDisplayContributorFields` interface and reference 
+`AssetDisplayContributorField.class` in your service declaration. Each field
+requires its own class. You could do this for any or all of your asset's fields.
 
 ## AssetDisplayContributorFields [](id=assetdisplaycontributorfields)
 
@@ -25,19 +24,20 @@ The `AssetDisplayContributorFields` interface looks like this:
 
 The methods work as follows:
 
-* *getkey()* returns the asset field name. 
+* `getkey()` returns the asset field name. 
 
-* *getLabel(Locale locale)* passes in the `locale` paramter and returns the 
-    language key for the field's display title.
+* `getLabel(Locale locale)` passes in the `locale` parameter and returns the 
+  language key for the field's display title.
 
-* *getType()* returns the type for the asset field (i.e. text, image, html).
+* `getType()` returns the type for the asset field (i.e. text, image, html).
 
-* *getValue(T model, Locale locale)* passes in the model type and a `locale` 
-    as, and returns the field data.
+* `getValue(T model, Locale locale)` passes in the model type and a `locale` 
+  and returns the field data.
 
-Each field that you want to contribute for use in an Asset Display Page will 
-have it's own implementation of `AssetDisplayContributorFields`. For an example 
-implementation you can look at the `JournalArticleLastEditorNameAssetDisplayContributorField`:
+Every field you want to contribute for use in an Asset Display Page must have
+its own implementation of `AssetDisplayContributorFields`. For an example
+implementation you can look at the
+`JournalArticleLastEditorNameAssetDisplayContributorField`:
 
         @Component(
           property = "model.class.name=com.liferay.journal.model.JournalArticle",
@@ -82,9 +82,9 @@ implementation you can look at the `JournalArticleLastEditorNameAssetDisplayCont
 
 The `JournalArticleLastEditorNameAssetDisplayContributorField` meets all of the 
 requirements as described above and also has a reference to `UserLocalService`
-which it needs to access the user data for determining who really was the last 
-editor of the asset. Your Asset Display Contributor Field could also contain 
-additional logic or references needed to provide the necessary information for 
-the methods being implemented.
+to access the user data for determining who really was the last editor of the
+asset. Your Asset Display Contributor Field could also contain additional logic
+or references needed to provide the necessary information for the methods being
+implemented.
 
 
