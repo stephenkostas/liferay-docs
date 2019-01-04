@@ -1,30 +1,28 @@
 # Creating a Display Contributor [](id=creating-a-display-contributor)
 
-All the logic related to Asset Display Contributors, such as reading fields and 
-their values, is contained in the `AssetDisplayContributor` class. This 
-makes integrating it with your application as simple as creating a class that 
-references the `AssetDislayContributor` service, extends 
-`BaseAssetDisplayContributor` and implements it's `getClassName()` and 
-`getClassTypeValue()` methods in your module.
+All the logic for Asset Display Contributors, such as reading fields and their
+values, goes in the `AssetDisplayContributor` class. To integrate it with your
+application, create a class that references the `AssetDislayContributor`
+service, extends `BaseAssetDisplayContributor` and implements its
+`getClassName()` and `getClassTypeValue()` methods in your module.
 
-It is possible to implement `AssetDisplayContributor` and --- instead of 
-extending `BaseAssetDisplayContributor` --- implement the logic yourself.
-However, the recommended method is to use the pattern described here.
- 
+You can also implement the `AssetDisplayContributor` interface instead of
+extending `BaseAssetDisplayContributor`. However, the recommended method is to
+use the pattern described here.
 
 ## AssetDisplayContributor [](id=assetdisplaycontributor)
 
-Unless you want to write all the logic yourself, your custom 
-`*AssetDisplayContributor` must implement `BaseAssetDisplayContributor` and 
-provide the class name and and the fields for the that you are contributing 
-fields from. The first method, `getClassName`, must return the class name for 
-your asset type. The `getClassTypeValues` method returns a `Map` of the field 
-names and values for that asset. Since you will use 
-`AssetDisplayContributorFields` to define the fields for the Display Page, the 
-`getClassTypeValues` method can be set to return null, and no further methods 
-are necessary.
+Your `*AssetDisplayContributor` should extend `BaseAssetDisplayContributor` and
+provide the entity's class name and fields to be displayed. The first method,
+`getClassName`, must return your asset type's class name. The
+`getClassTypeValues` method returns a `Map` of the asset's field names and
+values. Since you will use `AssetDisplayContributorFields` to
+define the fields for the Display Page, the `getClassTypeValues` method can be
+set to return null, and no further methods are necessary.
 
-The final class can be very small and simple like this:
+<!--Why? How does this work? What are the components? -Rich -->
+
+The final class can be small and simple like this:
 
     @Component(immediate = true, service = AssetDisplayContributor.class)
     public class YourAppEntryAssetDisplayContributor
@@ -43,6 +41,6 @@ The final class can be very small and simple like this:
       }
 
     }
-    
+ 
 After you create the `*AssetDisplayContributor` class, you must create a class
 for each asset field that you want to use with Display Pages.
