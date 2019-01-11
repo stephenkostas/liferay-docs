@@ -12,7 +12,7 @@ create the Asset. The `<liferay-asset:select-asset-display-page />` taglib
 renders a form field which allows you to select an Asset Display Page for
 the specific asset type.
 
-![Figure 1: You can now select the Blogs Asset Type.](../../../images/select-default-display-page.png)
+![Figure 1: You need to add the Display Page selection to your asset's create/edit page to define the Display Page for each instance of that asset.](../../../images/display-pages-select-default-display-page.png)
 
 There are three options when selecting a display page:
 

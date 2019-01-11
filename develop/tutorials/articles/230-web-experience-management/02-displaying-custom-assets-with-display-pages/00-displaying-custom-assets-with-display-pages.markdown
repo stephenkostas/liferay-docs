@@ -7,7 +7,16 @@ asset can then be displayed on a page using the Page Fragment as a
 template.
 
 For example, you could use this to have a specific design for displaying 
-Web Content Articles by following these steps: 
+Web Content Articles. Web Content articles have three primary fields that an
+author can enter content into, the *Title*, *Summary*, and *Body*.
+
+![Figure 1: Creating a Web Content Article with a title, summary, and body.](../../../images/display-pages-creating-default-web-content.png) 
+
+
+The default display will only display the Title and Body, but you could use a 
+Display Page to view the article with the Summary with the following steps:
+
+![Figure 2: The default display for a Web Content article with only the title and body.](../../../images/display-pages-default-web-content.png) 
 
 1.  Create a Page Fragment which contains editable elements for each of the 
     entity fields that you want to display, like the title, abstract, 
@@ -22,6 +31,8 @@ Web Content Articles by following these steps:
 4.  Links to the full content of your article will now display a Display Page 
     with the content from the article and the design and styling from the Page 
     Fragment.
+    
+![Figure 3: The Display Page both changes the style, and displays additional fields.](../../../images/display-pages-web-content-with-display-page.png) 
 
 In addition to doing this with the default assets, if you integrate your 
 application's entities with the [Asset Framework](/develop/tutorials/-/knowledge_base/7-2/asset-framework) you can 
