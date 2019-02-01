@@ -1,8 +1,8 @@
 # Using the Fragment Generator
 
 After you setup the generator and create your first project by running
-`yo liferay-fragment` you will have the basic structure created, but there's
-still more that the generator can help you with.
+`yo liferay-fragments` you will have the basic structure created, but there's
+still more that the generator can help you with. You can see all of the available tasks inside the `scripts` section in `package.json`.
 
 ## Creating Collections
 

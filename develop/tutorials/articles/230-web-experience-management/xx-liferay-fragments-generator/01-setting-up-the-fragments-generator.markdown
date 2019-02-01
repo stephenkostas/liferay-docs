@@ -14,7 +14,7 @@ will need installed to use it:
 If you don't already have node.js and NPM installed, [follow these instructions](link). Once you have them installed, installing the Fragment 
 Generator only takes a couple steps.
 
-1.  From the command line, run `npm install -g yo` to install Yeoman.
+1.  From the command line, run `npm-install -g yo` to install Yeoman.
 
 2.  Run, `npm-install -g generator liferay-fragments` to install the Fragment 
     Generator.
