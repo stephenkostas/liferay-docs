@@ -55,6 +55,19 @@ module:
 
 2.  Copy a Fragment Collection into the folder. You can learn how to create a
     Fragment Collection in the [Creating Fragments section](link).
+
+3.  Create a file named `collections.json` in the same folder with this format:
+
+        {
+        	"fragments": [
+        		"[fragment-1]",
+        		"[fragment-2]",
+        		"[fragment-3]",
+                ...
+        	],
+        	"name": "[collection-name]"
+        }
+
     
 You can also provide thumbnail images for reference for your fragments:
 
@@ -62,6 +75,9 @@ You can also provide thumbnail images for reference for your fragments:
 
 2.  Copy thumbnail images into the folder with the format \[fragment-name\].png 
     for each fragment.
+
+| **Note:** All fragments added through a Contributed Fragment Collection
+| will be available globally to all Sites.
 
 ## Deploy the Contributed Fragment Collection
 
