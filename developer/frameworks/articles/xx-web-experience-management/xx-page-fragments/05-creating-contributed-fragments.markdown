@@ -53,8 +53,8 @@ module:
 
 1.  In your module's `resources/` folder, create the folder structure `/com/liferay/fragments/collection/contributor/demo`.
 
-2.  Copy a Fragment Collection into the folder. You can learn how to create a
-    Fragment Collection in the [Creating Fragments section](link).
+2.  Copy the Fragments you want to distribute into the folder. You can learn 
+    how to create a Fragments in the [Creating Fragments section](link).
 
 3.  Create a file named `collections.json` in the same folder with this format:
 
@@ -67,7 +67,9 @@ module:
         	],
         	"name": "[collection-name]"
         }
-
+    
+    If a fragment is not listed in `collections.json` it will not be available
+    in the Contributed Collection, even if the files are included in the module.
     
 You can also provide thumbnail images for reference for your fragments:
 
