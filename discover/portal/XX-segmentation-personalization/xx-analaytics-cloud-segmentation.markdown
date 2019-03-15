@@ -65,6 +65,8 @@ in @product@, you can also use or customize it there.
 
 2.  Click on *Homepage Visitors*.
 
+![Figure X: When you see Analytics Cloud Segments in the list of Segments, they will be marked with the Analytics Cloud icon.](../../images/segments-ac-list-item.png)
+
 So far this Segment is blank, since while you defined criteria for analytics, 
 you have not defined any specific behavior to define it for this specific portal. [need more specific data on the usage here]
 
