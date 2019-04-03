@@ -2,7 +2,11 @@
 
 Analytics Cloud is a Liferay service that provides in depth information on who
 is using your site, and how they are using. It can also be integrated with 
-Segmentation to expand your ability to personalize content for your users.
+Segmentation to expand your ability to personalize content for your users. 
+Analytics Cloud is a key component to fully utilizing Segments and 
+Personalization, since it enables you to see the full picture of how users and 
+visitors on your site are behaving and interacting with both standard and 
+targeted content.
 
 To get started, you'll need connect your DXP data source to Analytics Cloud and 
 enable synchronization of user and analytics  For more information about 
@@ -31,29 +35,13 @@ Dynamic Segments are defined based on the specified criteria, and will include
 any users that meet that criteria, while Static segments are manually selected, 
 and do not update dynamically.
 
-## Defining Segment Criteria in Analytics Cloud
-
-The Segment criteria for Analytics Cloud is different than the Segment criteria 
-for creating Segments in @product@. See the [Analytics Cloud 
-documentation](link) for more information. Now, define the criteria for your
-segment:
-    
-1.  Click *Create Criteria*.
-
-2.  For the criteria type, select *Individuals with Behavior* and leave the 
-    second selector as *Has*.
-
-3.  Click *Select Activity* and select *Visited*.
-
-4.  Click *Select Asset* and select your *Welcome Page*.
-
-5.  Click *Since* and select *7 Days Ago*.
-    
-6.  Click Create.
-
-You will see a preview of the number of users as you create the segment. From 
-here you can view a customizable collection of analytics data for the 
-users in your segments.
+Initially when you create a Segment in Analytics Cloud, there is a more limited 
+set of criteria available. Once the Segment has been created and synced to DXP, 
+you can define more detailed criteria. See the [Analytics Cloud 
+documentation](link) for more information on Analytics Cloud Segments. Once a 
+Segment is created, you can view the analytics data for that Segment. Since 
+there is currently not criteria defined, the data will not be particularly 
+interesting or useful.
 
 ![Figure X: You can view all of the analytics data for your new segment in Analytics Cloud.](../../images/sements-ac-analytics.png)
 
@@ -61,7 +49,7 @@ Next, you can use this Segment to define behaviors on your server.
 
 ## Getting Segment Analytics
 
-After you create a Segment in Analytics Cloud, and it finished syncing, you can view it in @product@, and customize it there as well.
+After you create a Segment in Analytics Cloud, and it finishes syncing, you can view it in @product@, and customize it there as well.
 
 1.  Go to the *Segments* page.
 
@@ -69,6 +57,7 @@ After you create a Segment in Analytics Cloud, and it finished syncing, you can 
 
 ![Figure X: When you see Analytics Cloud Segments in the list of Segments, they will be marked with the Analytics Cloud icon.](../../images/segments-ac-list-item.png)
 
-So far this Segment is blank, since while you defined criteria for analytics, 
-you have not defined any specific behavior to define it for this specific portal. [need more specific data on the usage here]
+Now, let's define criteria for this segment, and view the analytics data.
+
+
 
