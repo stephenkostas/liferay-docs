@@ -1,12 +1,10 @@
 # Extending the Simulation Menu
 
-First, you must get accustomed to using panel categories/apps. This is
-covered in detail in the
-[Customizing The Product Menu](/develop/tutorials/-/knowledge_base/7-1/customizing-the-product-menu)
-tutorial. Once you know how to create panel categories and panel apps, continue
-with this tutorial.
+[TOC levels=1-4]
 
-There are few differences between the Simulation Menu and Product Menu, mostly
+If you haven't yet, read [Customizing The Product Menu](/develop/tutorials/-/knowledge_base/7-2/customizing-the-product-menu) to learn the basics of panel categories and apps, then continue on to apply those concepts to the Simulation Menu.
+
+Working with the Simulation Menu is similar to working with the Product Menu 
 because they extend the same base classes. The Simulation Menu, by default, is
 made up of only one panel category and one panel app. Liferay provides the
 [`SimulationPanelCategory`](@app-ref@/web-experience/latest/javadocs/com/liferay/product/navigation/simulation/application/list/SimulationPanelCategory.html)
@@ -22,14 +20,14 @@ divide up your panel apps. This tutorial covers the simpler case of creating
 a panel app for the already present hidden category.
 
 1.  Follow the steps documented in 
-    [Adding Custom Panel Apps](/develop/tutorials/-/knowledge_base/7-0/customizing-the-product-menu#adding-custom-panel-apps)
+    [Adding Custom Panel Apps](/develop/tutorials/-/knowledge_base/7-2/customizing-the-product-menu#adding-custom-panel-apps)
     for creating custom panel apps. Once you've created the foundation 
     of your panel app, move on to learn how to tweak it so it customizes the
     Simulation Menu.
 
     You can generate a Simulation Panel App by using Blade CLI's
-    [Simulation Panel Entry template](/develop/reference/-/knowledge_base/7-1/simulation-panel-entry-template).
-    You can also refer to the [Simulation Panel App sample](/develop/reference/-/knowledge_base/7-1/simulation-panel-app)
+    [Simulation Panel Entry template](/develop/reference/-/knowledge_base/7-2/simulation-panel-entry-template).
+    You can also refer to the [Simulation Panel App sample](/develop/reference/-/knowledge_base/7-2/simulation-panel-app)
     for a working example.
 
 2.  Since this tutorial assumes you're providing more functionality to the
@@ -69,7 +67,7 @@ a panel app for the already present hidden category.
             super.setServletContext(servletContext);
         }
 
-    As explained in [Customizing The Product Menu](/develop/tutorials/-/knowledge_base/7-0/customizing-the-product-menu),
+    As explained in [Customizing The Product Menu](/develop/tutorials/-/knowledge_base/7-2/customizing-the-product-menu),
     a panel app should be associated with a portlet. This makes the panel app 
     visible only when the user has permission to view the portlet.
     This panel app is associated to the Simulation Device portlet using these
@@ -111,6 +109,6 @@ a panel app for the already present hidden category.
         iframe.setAttribute('src', newUrlWithCustomParameters);
 
 Now that you know how to extend the necessary panel categories and panel apps to
-modify the Simulation Menu, [create a module](/develop/tutorials/-/knowledge_base/7-1/starting-module-development#creating-a-module) 
+modify the Simulation Menu, [create a module](/develop/tutorials/-/knowledge_base/7-2/starting-module-development#creating-a-module) 
 of your own and customize the Simulation Menu so it's most helpful for your 
 needs.

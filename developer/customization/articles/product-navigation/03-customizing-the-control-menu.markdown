@@ -1,9 +1,10 @@
 # Creating Control Menu Entries
 
-Now you'll create entries to customize the Control Menu. Make sure to read
+[TOC levels=1-4]
+
+Now you'll create entries to customize the Control Menu. Make you're familiar with
 [Adding Custom Panel Categories](/develop/tutorials/-/knowledge_base/7-1/adding-custom-panel-categories)
-before beginning this tutorial. This tutorial assumes you know how to create a 
-panel category. Creating a Control Menu Entry follows the same pattern as
+before continuing. Creating a Control Menu Entry follows the same pattern as
 creating a category:
 
 1.  Create the OSGi structure and metadata.
@@ -14,7 +15,7 @@ creating a category:
 
 ## Creating the OSGi Module [](id=creating-the-osgi-module)
 
-First you must create the project.
+First, create the project.
 
 1.  Create a generic OSGi module. Your module must contain a Java class, 
     `bnd.bnd` file, and build file (e.g., `build.gradle` or `pom.xml`). You'll 
@@ -27,7 +28,7 @@ First you must create the project.
 
 ## Implementing Liferay's Frameworks [](id=implementing-liferays-frameworks)
 
-Next, you need to connect your OSGi module to Liferay's frameworks and use those
+Next, connect your OSGi module to Liferay's frameworks and use those
 to define information about your entry.
 
 1.  Directly above the class's declaration, insert this code:
@@ -73,12 +74,12 @@ to define information about your entry.
     extend `BaseJSPProductNavigationControlMenuEntry` to save time. This
     is covered in more detail below.
 
-## Defining the Control Menu Entry [](id=defining-the-control-menu-entry)
+## Defining the Control Menu Entry
 
-Now you must define your Control Menu Entry. Here are some examples for defining
+Now define your Control Menu Entry. Here are some examples for defining
 your entry.
 
-### Control Menu Examples [](id=control-menu-examples)
+### Control Menu Examples
 
 The
 [`IndexingProductNavigationControlMenuEntry`](https://github.com/liferay/liferay-portal/blob/7.0.3-ga4/modules/apps/foundation/portal-search/portal-search-web/src/main/java/com/liferay/portal/search/web/internal/product/navigation/control/menu/IndexingProductNavigationControlMenuEntry.java)
@@ -143,7 +144,7 @@ module:
             super.setServletContext(servletContext);
         }
 
-### Displaying Your Control Menu Entry [](id=displaying-your-control-menu-entry)
+### Displaying Your Control Menu Entry
 
 Part of creating the entry is defining when it appears. The Control Menu
 shows different entries depending on the displayed page. You can specify when
@@ -191,7 +192,7 @@ appear. The staging entry never appears if the page is an administration page
             return true;
         }
 
-### Defining Dependencies [](id=defining-dependencies)
+### Defining Dependencies 
 
 Define dependencies for your Control Menu Entry in your build file (e.g., 
 `build.grade` or `pom.xml`). For example, some popular dependencies (in Gradle
@@ -212,3 +213,65 @@ functionality.
 Excellent! You've created your entry in one of the three default panel
 categories in the Control Menu. You learned a basic way and an advanced way of
 providing that entry, and learned how to apply both.
+
+## Defining Icons and Tooltips
+
+You can use icons in addition to or in place of text. You can also use tooltips 
+to provide a more in depth explanation.
+
+### Control Menu Entry Icons
+
+You can provide a Lexicon or CSS icon in your `*ControlMenuEntry`. To use a 
+Lexicon icon, you should override the methods in 
+`ProductMenuProductNavigationControlMenuEntry` like this one:
+
+        public String getIconCssClass(HttpServletRequest request) {
+            return "";
+        }
+
+        public String getIcon(HttpServletRequest request) {
+            return "lexicon-icon";
+        }
+
+        public String getMarkupView(HttpServletRequest request) {
+            return "lexicon";
+        }
+
+Likewise, you can use a CSS icon by overriding the
+`ProductMenuProductNavigationControlMenuEntry` methods like this one:
+
+        public String getIconCssClass(HttpServletRequest request) {
+            return "icon-css";
+        }
+
+        public String getIcon(HttpServletRequest request) {
+            return "";
+        }
+
+        public String getMarkupView(HttpServletRequest request) {
+            return "";
+        }
+
+You can find these icons in
+the [icons-lexicon](https://liferay.github.io/clay/content/icons-lexicon/)
+and [icons-font-awesome](https://liferay.github.io/clay/content/icons-font-awesome/)
+components, respectively.
+
+### Control Menu Entry Tooltips
+
+To provide a tooltip for the Control Menu entry, create a `getLabel` method like
+this:
+
+        @Override
+        public String getLabel(Locale locale) {
+            ResourceBundle resourceBundle = ResourceBundleUtil.getBundle(
+                "content.Language", locale, getClass());
+
+            return LanguageUtil.get(
+                resourceBundle, "the-portal-is-currently-reindexing");
+        }
+
+You need to create a `Language.properties` to store your labels. You can learn 
+more about resource bundles in the 
+[Internationalization](/develop/tutorials/-/knowledge_base/7-1/internationalization)
+tutorials.

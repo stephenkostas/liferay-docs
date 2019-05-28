@@ -1,5 +1,7 @@
 # Providing the User Personal Bar
 
+[TOC levels=1-4]
+
 The User Personal Bar can be seen as a placeholder in every Liferay theme. By
 default, Liferay provides one sample *User Personal Bar* portlet that fills that
 placeholder, but the portlet Liferay provides can be replaced by other portlets.

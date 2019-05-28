@@ -1,11 +1,13 @@
 # Adding Custom Panel Apps
 
+[TOC levels=1-4]
+
 After you have created a Category, create a Panel app to go in it:
 
 1.  Create an OSGi module using your favorite third party tool, or use
-    [Blade CLI](/develop/tutorials/-/knowledge_base/7-0/blade-cli). Blade CLI
+    [Blade CLI](/develop/tutorials/-/knowledge_base/7-2/blade-cli). Blade CLI
     offers a
-    [Panel App](/develop/reference/-/knowledge_base/7-0/panel-app-template)
+    [Panel App](/develop/reference/-/knowledge_base/7-2/panel-app-template)
     template to help generate a basic panel category and panel app.
 
 2.  Create a unique package name in the module's `src` directory, and create a
@@ -25,7 +27,7 @@ After you have created a Category, create a Panel app to go in it:
 
     These properties and attributes are similar to those discussed  in
     the previous
-    [tutorial](/develop/tutorials/-/knowledge_base/7-1/adding-custom-panel-categories).
+    [tutorial](/develop/tutorials/-/knowledge_base/7-2/adding-custom-panel-categories).
     The `panel.category.key` assigns your panel app to a panel category. The
     `panel.app.order:Integer` property specifies the order your panel app
     appears among other panel apps in the same category. For example, if you

@@ -1,9 +1,8 @@
 # Adding Custom Panel Categories
 
-This tutorial explains how to add new Panel
-Categories to the menu. Adding new Panel Apps is covered in the next section.
+[TOC levels=1-4]
 
-There are three steps to creating a new category:
+There are three steps to creating a new Panel category:
 
 1.  Create the OSGi structure and metadata.
 
@@ -11,14 +10,14 @@ There are three steps to creating a new category:
 
 3.  Define the Control Menu Category.
 
-## Creating the OSGi Module [](id=creating-the-osgi-module)
+## Creating the OSGi Module
 
-First you must create the project.
+First create the project.
 
 1.  Create an OSGi module using your favorite third party tool, or use
-    [Blade CLI](/develop/tutorials/-/knowledge_base/7-1/blade-cli). Blade CLI
+    [Blade CLI](/develop/tutorials/-/knowledge_base/7-2/blade-cli). Blade CLI
     offers a 
-    [Panel App](/develop/reference/-/knowledge_base/7-1/panel-app-template) template,
+    [Panel App](/develop/reference/-/knowledge_base/7-2/panel-app-template) template,
     which is for creating a panel category and panel app.
 
 2.  Create a unique package name in the module's `src` directory and create
@@ -26,9 +25,9 @@ First you must create the project.
     class a unique name followed by `PanelCategory` (e.g.,
     `ControlPanelCategory`).
 
-## Implementing Liferay's Frameworks [](id=implementing-liferays-frameworks)
+## Implementing Liferay's Frameworks
 
-Next, you must connect your OSGi module to Liferay's frameworks and use those to
+Next, connect your OSGi module to Liferay's frameworks and use those to
 define information about your entry. This takes only two steps: 
 
 1.  Insert the `@Component` annotation declaring the panel category keys. 
@@ -37,7 +36,7 @@ define information about your entry. This takes only two steps:
 
 Both of these steps are described below. 
 
-### Insert the `@Component` Annotation [](id=insert-the-component-annotation)
+### Insert the `@Component` Annotation
 
 Directly above the class's declaration, insert the following annotation:
 
@@ -91,7 +90,7 @@ a `panel.category.order:Integer` of 150.
 
 $$$
 
-### Implement the `PanelCategory` Interface [](id=implement-the-panelcategory-interface)
+### Implement the `PanelCategory` Interface
 
 The `PanelCategory` interface requires you to implement the following methods:
 
@@ -129,7 +128,7 @@ implementing `PanelCategory` to use other technologies such as FreeMarker.
 
 $$$
 
-## Defining the Control Menu Category [](id=defining-the-control-menu-category)
+## Defining the Control Menu Category
 
 After establishing the framework you're using to create the category, you  must 
 add any other methods that are necessary to create your custom panel category. 
@@ -149,7 +148,7 @@ the panel category name.
             return LanguageUtil.get(locale, "control-panel");
         }
 
-### BaseJSPPanelCategory [](id=basejsppanelcategory)
+### BaseJSPPanelCategory
 
 If you need more complex functionality, extend `BaseJSPPanelCategory` and use
 JSPs to render the panel category. For example, the
